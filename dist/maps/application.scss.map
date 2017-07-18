@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../scss/application.scss"],"names":[],"mappings":"AAAA;EACE,0BAAiB;EAAjB,iBAAiB;CAClB","file":"../../scss/application.scss","sourcesContent":["body {\n  transition: all 2s;\n}\n"]}
