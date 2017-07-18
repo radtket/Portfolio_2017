@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     watch: {
-      files: ['scss/**/*.scss', 'js/*.js'],
+      files: ['src/scss/**/*.scss', 'src/js/*.js'],
       tasks: ['sass:dev', 'postcss', 'uglify:dev']
     },
 
@@ -13,7 +13,7 @@ module.exports = function(grunt) {
           sourcemap: 'none',
         },
         files: {
-          'dist/application.css': 'scss/application.scss'
+          'dist/css/application.css': 'src/scss/application.scss'
         },
       },
       build: {
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
           sourcemap: 'none',
         },
         files: {
-          'dist/application.css': 'scss/application.scss'
+          'dist/css/application.css': 'src/scss/application.scss'
         },
       },
     },
@@ -31,8 +31,8 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src: [
-            'dist/*.css',
-            'dist/*.js',
+            'dist/css/*.css',
+            'dist/js/*.js',
             '*.html',
             'clients/*.html'
           ]
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'dist/application.css',
+        src: 'dist/css/application.css',
       },
     },
 
@@ -70,8 +70,8 @@ module.exports = function(grunt) {
         options: {
           compress: true
         },
-        src: ['js/main.js'],
-        dest: 'dist/script.min.js',
+        src: ['src/js/main.js'],
+        dest: 'dist/js/script.min.js',
       },
       dev: {
         options: {
@@ -79,8 +79,8 @@ module.exports = function(grunt) {
           compress: false,
           preserveComments: 'all'
         },
-        src: ['js/main.js'],
-        dest: 'dist/script.min.js',
+        src: ['src/js/plugins.js', 'src/js/main.js'],
+        dest: 'dist/js/script.min.js',
       }
     },
 
