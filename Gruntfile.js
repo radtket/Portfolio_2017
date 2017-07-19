@@ -9,8 +9,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          style: 'expanded',
-          sourcemap: 'none',
+          style: 'expanded'
         },
         files: {
           'dist/css/application.css': 'src/scss/application.scss'

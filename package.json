@@ -19,6 +19,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "pixrem": "^4.0.1",
-    "postcss-scss": "^1.0.2"
+    "postcss-scss": "^1.0.2",
+    "sass-mediaqueries": "^1.6.1"
   }
 }

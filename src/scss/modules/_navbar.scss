@@ -1,0 +1,73 @@
+$navbar__height--mobile: 37.5px;
+$navbar__height: 55px;
+$navbar__height--large: 75px;
+
+
+.navbar {
+  width: 100%;
+  background: red;
+
+  &__wrap {
+    max-width: 100%;
+    margin: 0 $base-spacing;
+    position: relative;
+  }
+
+  &__logo {
+    display: inline-block;
+    height: $navbar__height;
+    line-height: $navbar__height;
+    float: left;
+    > img {
+      height: 35px;
+    }
+  }
+
+
+  &__nav {
+    @include mq($max-width:768px) {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      overflow-y: hidden;
+      background: rgba(16,16,16,0.97);
+    }
+
+    @include mq($min-width:768px) {
+      float: right;
+    }
+  }
+
+  &__item {
+    display: block;
+    height: $navbar__height--mobile;
+    line-height: $navbar__height--mobile;
+    @include mq($max-width:768px) {
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    @include mq($min-width:768px) {
+      display: inline-block;
+      height: $navbar__height;
+      line-height: $navbar__height;
+    }
+
+    &--link {
+      @extend %type--navigation;
+      display: inherit;
+      padding: 0 $base-spacing;
+      color: $white;
+
+      @include mq($max-width: 768px) {
+        &:hover {
+          background: rgba(16,16,16,0.9);
+          color: #c0a062;
+        }
+      }
+
+      @include mq($min-width:768px) {
+        color: $dark-gray;
+      }
+    }
+  }
+}
