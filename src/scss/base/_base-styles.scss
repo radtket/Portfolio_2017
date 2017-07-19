@@ -57,10 +57,22 @@ main {
 
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
+  // DO I NEED TO MAKE IT 62.5% ALSO?
+  /**
+   * 1. Correct the line height in all browsers.
+   * 2. Prevent adjustments of font size after orientation changes in
+   *    IE on Windows Phone and in iOS.
+   */
   // -ms-text-size-adjust: 100%;
   // -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -114,32 +126,4 @@ img,
 svg,
 video {
     vertical-align: middle;
-}
-
-audio,
-video {
-    display: inline-block;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-
-img {
-  border-style: none;
 }

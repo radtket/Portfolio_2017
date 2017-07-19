@@ -20,7 +20,6 @@ $light-gray: #ddd;
 
 $base-gray: #666;
 $color-gold: #c0a062;
-// $color-gold:#a49260;
 $black-matte: #101010;
 
 // Font Colors
@@ -31,6 +30,13 @@ $action-color: $color-gold;
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+
 // Typography
 $base-font-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Oswald',sans-serif;;
@@ -40,9 +46,14 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
+$base-border-radius: 3px;
 $base-spacing: 2.4rem;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
 
 // Font Weights
 $font-weight--thin       : 100;
@@ -63,3 +74,9 @@ $column-margin: 4% !default; // space between columns
 
 // Misc
 $global-radius: 4px !default;
+
+
+// Nabvar Sizes
+$navbar__height--mobile: 35px;
+$navbar__height: 55px;
+$navbar__height--large: 75px;

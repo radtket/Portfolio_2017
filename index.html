@@ -14,13 +14,10 @@
         <link rel="stylesheet" href="dist/css/application.css">
         <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
-    <body>
+    <body class="test">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        <!-- Add your site or application content here -->
-
 
       <header class="navbar">
         <div class="navbar__wrap clearfix">
@@ -31,7 +28,16 @@
           </a>
           <!-- END // Logo -->
 
-          <nav class="navbar__nav">
+          <!-- Hamburger Button -->
+          <button class="hamburger" type="button">
+            <span class="hamburger__box">
+              <span class="visuallyhidden">Menu</span>
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+          <!-- END // Hamburger Button -->
+
+          <nav class="navbar__nav navigation-open">
             <ul>
               <li class="navbar__item">
                 <a class="navbar__item--link" href="#about">About</a>
