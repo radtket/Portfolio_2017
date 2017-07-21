@@ -5,13 +5,13 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="dist/css/application.css">
+        <link rel="stylesheet" href="css/application.css">
         <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
     <body class="test">
@@ -24,7 +24,7 @@
 
           <!-- Logo -->
           <a href="index.html" class="navbar__logo">
-            <img src="src/img/logo__primary.svg" alt="">
+            <img src="img/logo__primary.svg" alt="">
           </a>
           <!-- END // Logo -->
 
@@ -61,8 +61,22 @@
       </header>
 
 
+
+<div class="container">
+  <div class="row" style="margin-top: 150px">
+
+    <picture>
+    	<source srcset="img/1-large.jpg" media="(min-width: 800px)">
+    	<source srcset="img/1-medium.jpg" media="(min-width: 640px)">
+      <source srcset="img/1-small.jpg" media="(min-width: 320px)">
+    	<img src="runner-square.jpg" alt="Photograph of a man running along a pier at sunrise, with a harbour in the background">
+    </picture>
+
+  </div>
+</div>
+
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="dist/js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="dist/js/script.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/script.min.js"></script>
     </body>
 </html>
