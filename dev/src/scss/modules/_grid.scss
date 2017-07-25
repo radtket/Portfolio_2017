@@ -27,12 +27,11 @@ $article-layout-grid--large-up: (
 
 .container {
   @include grid-container;
-  position: relative;
+  max-width: $container-width;
   width: 100%;
-  // max-width: $container-width;
   margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
+  // padding: 0 15px;
+  // position: relative;
 }
 
 

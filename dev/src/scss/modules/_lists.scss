@@ -3,24 +3,14 @@
   margin-bottom: $base-spacing;
   display: block;
   li {
-    // ADD TO TYPOGRAPHY LIST
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    color: $base-gray;
-    font-family: $heading-font-family;
-    letter-spacing: 1.5px;
     line-height: 1;
-    margin-bottom: $small-spacing;
     position: relative;
+    vertical-align: middle;
     &:before {
-      // content: "\f00c";
-      // font-family: fontawesome;
-      // color: $color-gold;
-      // margin-right: $small-spacing;
       content: '';
       display: inline-block;
-      height: 1.4rem;
-      width: 1.4rem;
+      height: $small-spacing;
+      width: $small-spacing;
       background-image: url('../img/check-mark.png?text=fallback'); // Fallback PNG
       background-image: url('../img/check-mark.svg');
       background-size: contain;

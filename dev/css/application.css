@@ -292,7 +292,6 @@ p {
   font-family: "Oswald", sans-serif;
   font-size: 2rem;
   letter-spacing: .3rem;
-  text-indent: -.3rem;
   text-transform: uppercase;
   margin-bottom: 1.2rem;
 }
@@ -309,6 +308,15 @@ p {
   .hero--profile__position {
     margin-bottom: 3.6rem;
   }
+}
+
+.list--skills li {
+  color: #666;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: .10em;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
 }
 
 .navbar__item--link {
@@ -337,11 +345,9 @@ p {
 * Sass Version by Seth Coelen https://github.com/whatsnewsaes
 */
 .container {
-  position: relative;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
 }
 .container::after {
   clear: both;
@@ -544,20 +550,15 @@ p {
   display: block;
 }
 .list--skills li {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  color: #666;
-  font-family: "Oswald", sans-serif;
-  letter-spacing: 1.5px;
   line-height: 1;
-  margin-bottom: 1.2rem;
   position: relative;
+  vertical-align: middle;
 }
 .list--skills li:before {
   content: '';
   display: inline-block;
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 1.2rem;
+  width: 1.2rem;
   background-image: url("../img/check-mark.png?text=fallback");
   background-image: url("../img/check-mark.svg");
   background-size: contain;

@@ -85,7 +85,7 @@ p {
   font-family: $heading-font-family;
   font-size: 2rem;
   letter-spacing: .3rem;
-  text-indent: -.3rem;
+  // text-indent: -.3rem;
   text-transform: uppercase;
   margin-bottom: $small-spacing;
 }
@@ -103,6 +103,17 @@ p {
     margin-bottom: $base-spacing * 1.5;
   }
 }
+
+// Font Size 14px
+.list--skills li {
+  color: $base-gray;
+  font-family: $heading-font-family;
+  font-size: 1.4rem;
+  letter-spacing: .10em;
+  margin-bottom: $small-spacing;
+  text-transform: uppercase;
+}
+
 
 
 // Font Size 12px
