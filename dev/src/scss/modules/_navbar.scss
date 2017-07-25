@@ -7,13 +7,6 @@
   background-color: rgba($white, .97);
   box-shadow: 0 1px 1px rgba($black, .1);
 
-  &__wrap {
-    @include grid-container;
-    max-width: 100%;
-    margin: 0 $small-spacing;
-    position: relative;
-  }
-
   &__logo {
     display: inline-block;
     width: $navbar__height;

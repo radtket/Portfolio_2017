@@ -25,6 +25,14 @@ $article-layout-grid--large-up: (
 );
 
 
+.container__full {
+  @include grid-container;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 $small-spacing;
+  position: relative;
+}
+
 .container {
   @include grid-container;
   max-width: $container-width;
