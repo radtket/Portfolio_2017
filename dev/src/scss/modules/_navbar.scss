@@ -8,6 +8,7 @@
   box-shadow: 0 1px 1px rgba($black, .1);
 
   &__wrap {
+    @include grid-container;
     max-width: 100%;
     margin: 0 $small-spacing;
     position: relative;
@@ -20,7 +21,7 @@
     line-height: $navbar__height;
     float: left;
     text-align: center;
-    > img {
+    img {
       height: $navbar__height--mobile;
     }
   }

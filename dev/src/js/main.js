@@ -14,6 +14,12 @@ $(function() {
   init_nav_menu();
 });
 
+$(window).on('resize', function() {
+
+});
+
+
+
 
 // Mobile Nav
 function init_nav_menu() {

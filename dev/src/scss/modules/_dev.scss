@@ -1,3 +1,122 @@
 body.test {
-    height: 10000px;
+  height: 10000px;
+}
+
+.page-section,
+.small-section {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 140px 0;
+  @include mq($max-width: 1024px) {
+    padding: 120px 0;
+  }
+  @include mq($max-width: 768px) {
+    padding: 80px 0;
+  }
+  @include mq($max-width: 480px) {
+    padding: 60px 0;
+  }
+}
+/* ==============================
+   IOS Background Fix
+   ============================== */
+.mobile .home-section,
+.mobile .page-section,
+.mobile .small-section {
+  background-attachment: scroll;
+}
+
+
+
+$article-layout-grid: ( columns: 1, gutter: $base-spacing, );
+$article-layout-grid--tablet-up: ( columns: 12, gutter: $base-spacing, media: "(min-width: 800px)", );
+$article-layout-grid--large-up: ( columns: 12, gutter: $base-spacing, media: "(min-width: 1024px)", );
+
+.hero {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  background-color: $hero__bgimage--color;
+  background-image: url('../img/optimize-me---hero.jpg');
+  text-align: center;
+  padding: 120px 0;
+  @include mq($max-width: 1024px) {
+    padding: 120px 0;
+    background-attachment: scroll;
+  }
+  @include mq($max-width: 799px) {
+    padding: 80px 0;
+    background-size: contain;
+  }
+
+  &--wrap {
+    @include grid-container;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    @include mq($max-width: 799px) {
+      width: 85%;
+    }
+    @include mq($max-width: 600px) {
+      width: 90%;
+    }
+  }
+
+  &--profile {
+    @include grid-column(1, $article-layout-grid);
+    margin-bottom: $base-spacing;
+    @include grid-media($article-layout-grid--tablet-up) {
+       @include grid-column(6);
+    }
+    @include grid-media($article-layout-grid--large-up) {
+       @include grid-column(5);
+    }
+
+    &__text {
+      font-weight: $font-weight--light;
+      color: $light-gray;
+      text-align: left;
+      @include mq($min-width: 600px) {
+        text-align: justify;
+      }
+    }
+  }
+
+  &--signature {
+    text-align: right;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 50%;
+    }
+  }
+
+  &--image {
+    @include grid-column(1, $article-layout-grid);
+    margin-bottom: $base-spacing;
+    @include grid-media($article-layout-grid--tablet-up) {
+       @include grid-column(6);
+    }
+    @include grid-media($article-layout-grid--large-up) {
+       @include grid-column(5);
+      @include grid-push(1);
+    }
+
+    img {
+      display: inline-block;
+    }
+  }
 }

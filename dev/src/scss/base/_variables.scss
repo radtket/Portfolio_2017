@@ -21,6 +21,7 @@ $light-gray: #ddd;
 $base-gray: #666;
 $color-gold: #c0a062;
 $black-matte: #101010;
+$hero__bgimage--color: #212121;
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -46,6 +47,7 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
+$base-letter-spacing: .05rem;
 $base-border-radius: 3px;
 $base-spacing: 2.4rem;
 $small-spacing: $base-spacing / 2;
@@ -65,7 +67,8 @@ $font-weight--black      : 900;
 
 
 //Grid Variables
-$container-width: 960px !default;
+// $container-width: 960px !default;
+$container-width: 1200px !default;
 $container-width-larger-than-mobile: 85% !default;
 $container-width-larger-than-phablet: 80% !default;
 $total-columns: 12 !default;
