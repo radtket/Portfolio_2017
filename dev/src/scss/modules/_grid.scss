@@ -7,6 +7,24 @@
 * 12/9/2014
 * Sass Version by Seth Coelen https://github.com/whatsnewsaes
 */
+
+$article-layout-grid: (
+  columns: 1,
+  gutter: $base-spacing
+);
+
+$article-layout-grid--tablet-up: (
+  columns: 12,
+  gutter: $base-spacing,
+  media: "(min-width: 800px)",
+);
+$article-layout-grid--large-up: (
+  columns: 12,
+  gutter: $base-spacing,
+  media: "(min-width: 1024px)",
+);
+
+
 .container {
   @include grid-container;
   position: relative;

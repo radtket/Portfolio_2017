@@ -182,6 +182,7 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
   margin: 0;
   font-weight: 400;
 }
@@ -246,10 +247,10 @@ p {
   line-height: 1.75;
 }
 
-.page-headline {
+.headline--primary {
   position: relative;
 }
-.page-headline h3 {
+.headline--primary h3 {
   color: #101010;
   display: inline-block;
   font-size: 3rem;
@@ -259,7 +260,7 @@ p {
   text-transform: uppercase;
   z-index: 1;
 }
-.page-headline h3:after {
+.headline--primary h3:after {
   content: '';
   position: absolute;
   top: 0;
@@ -268,7 +269,7 @@ p {
   height: 2px;
   background-color: #c0a062;
 }
-.page-headline span {
+.headline--primary span {
   display: block;
   position: absolute;
   top: 0;
@@ -287,13 +288,22 @@ p {
   text-transform: uppercase;
 }
 
+.headline--secondary {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  text-indent: -.3rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
 .hero--profile__position {
   color: #666;
   font-size: 2rem;
-  letter-spacing: .30em;
-  margin-bottom: 2.4rem;
-  text-indent: .30em;
+  letter-spacing: .3rem;
+  text-indent: -.3rem;
   text-transform: uppercase;
+  margin-bottom: 2.4rem;
 }
 @media only screen and (min-height: 600px) {
   .hero--profile__position {
@@ -317,160 +327,6 @@ p {
 }
 
 /* Modules */
-body.test {
-  height: 10000px;
-}
-
-.page-section,
-.small-section {
-  width: 100%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  box-sizing: border-box;
-  padding: 140px 0;
-}
-@media only screen and (max-width: 1024px) {
-  .page-section,
-  .small-section {
-    padding: 120px 0;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .page-section,
-  .small-section {
-    padding: 80px 0;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .page-section,
-  .small-section {
-    padding: 60px 0;
-  }
-}
-
-/* ==============================
-   IOS Background Fix
-   ============================== */
-.mobile .home-section,
-.mobile .page-section,
-.mobile .small-section {
-  background-attachment: scroll;
-}
-
-.hero {
-  width: 100%;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center top;
-  background-size: cover;
-  background-color: #212121;
-  background-image: url("../img/optimize-me---hero.jpg");
-  text-align: center;
-  padding: 120px 0;
-}
-@media only screen and (max-width: 1024px) {
-  .hero {
-    padding: 120px 0;
-    background-attachment: scroll;
-  }
-}
-@media only screen and (max-width: 799px) {
-  .hero {
-    padding: 80px 0;
-    background-size: contain;
-  }
-}
-.hero--wrap {
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-}
-.hero--wrap::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-@media only screen and (max-width: 799px) {
-  .hero--wrap {
-    width: 85%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .hero--wrap {
-    width: 90%;
-  }
-}
-.hero--profile {
-  width: calc(100% - 4.8rem);
-  float: left;
-  margin-left: 2.4rem;
-  margin-bottom: 2.4rem;
-}
-@media (min-width: 800px) {
-  .hero--profile {
-    width: calc(50% - 3.6rem);
-    float: left;
-    margin-left: 2.4rem;
-  }
-}
-@media (min-width: 1024px) {
-  .hero--profile {
-    width: calc(41.66667% - 3.4rem);
-    float: left;
-    margin-left: 2.4rem;
-  }
-}
-.hero--profile__text {
-  font-weight: 300;
-  color: #ddd;
-  text-align: left;
-}
-@media only screen and (min-width: 600px) {
-  .hero--profile__text {
-    text-align: justify;
-  }
-}
-.hero--signature {
-  text-align: right;
-}
-.hero--signature img {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
-}
-.hero--image {
-  width: calc(100% - 4.8rem);
-  float: left;
-  margin-left: 2.4rem;
-  margin-bottom: 2.4rem;
-}
-@media (min-width: 800px) {
-  .hero--image {
-    width: calc(50% - 3.6rem);
-    float: left;
-    margin-left: 2.4rem;
-  }
-}
-@media (min-width: 1024px) {
-  .hero--image {
-    width: calc(41.66667% - 3.4rem);
-    float: left;
-    margin-left: 2.4rem;
-    margin-left: calc(8.33333% - 2.6rem + 4.8rem);
-  }
-}
-.hero--image img {
-  display: inline-block;
-}
-
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -678,6 +534,48 @@ body.test {
   background-color: #c0a062;
 }
 
+.list--skills {
+  margin-bottom: 2.4rem;
+  display: block;
+}
+.list--skills::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.list--skills li {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #666;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+.list--skills li:before {
+  content: '';
+  display: inline-block;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-image: url("../img/check-mark.png?text=fallback");
+  background-image: url("../img/check-mark.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 1.2rem;
+}
+@media only screen and (min-width: 450px) {
+  .list--skills li {
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .list--skills li {
+    width: 33.33333%;
+  }
+}
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -842,6 +740,182 @@ body.test {
   top: 0;
   transform: rotate(-90deg);
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hero {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  background-color: #212121;
+  background-image: url("../img/optimize-me---hero.jpg");
+  text-align: center;
+  padding: 120px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .hero {
+    padding: 120px 0;
+    background-attachment: scroll;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .hero {
+    padding: 80px 0;
+    background-size: contain;
+  }
+}
+.hero--wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+.hero--wrap::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+@media only screen and (max-width: 799px) {
+  .hero--wrap {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero--wrap {
+    width: 90%;
+  }
+}
+.hero--profile {
+  width: calc(100% - 4.8rem);
+  float: left;
+  margin-left: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 800px) {
+  .hero--profile {
+    width: calc(50% - 3.6rem);
+    float: left;
+    margin-left: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero--profile {
+    width: calc(41.66667% - 3.4rem);
+    float: left;
+    margin-left: 2.4rem;
+  }
+}
+.hero--profile__text {
+  font-weight: 300;
+  color: #ddd;
+  text-align: left;
+}
+@media only screen and (min-width: 600px) {
+  .hero--profile__text {
+    text-align: justify;
+  }
+}
+.hero--signature {
+  text-align: right;
+}
+.hero--signature img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+}
+.hero--image {
+  width: calc(100% - 4.8rem);
+  float: left;
+  margin-left: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 800px) {
+  .hero--image {
+    width: calc(50% - 3.6rem);
+    float: left;
+    margin-left: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero--image {
+    width: calc(41.66667% - 3.4rem);
+    float: left;
+    margin-left: 2.4rem;
+    margin-left: calc(8.33333% - 2.6rem + 4.8rem);
+  }
+}
+.hero--image img {
+  display: inline-block;
+}
+
+.page-section,
+.small-section {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 140px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .page-section,
+  .small-section {
+    padding: 120px 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-section,
+  .small-section {
+    padding: 80px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .page-section,
+  .small-section {
+    padding: 60px 0;
+  }
+}
+
+/* ==============================
+   IOS Background Fix
+   ============================== */
+.mobile .home-section,
+.mobile .page-section,
+.mobile .small-section {
+  background-attachment: scroll;
+}
+
+.section--description {
+  width: calc(100% - 4.8rem);
+  float: left;
+  margin-left: 2.4rem;
+}
+@media (min-width: 800px) {
+  .section--description {
+    width: calc(25% - 3rem);
+    float: left;
+    margin-left: 2.4rem;
+  }
+}
+
+.section--content {
+  width: calc(100% - 4.8rem);
+  float: left;
+  margin-left: 2.4rem;
+}
+@media (min-width: 800px) {
+  .section--content {
+    width: calc(75% - 4.2rem);
+    float: left;
+    margin-left: 2.4rem;
+  }
 }
 
 /*# sourceMappingURL=application.css.map */

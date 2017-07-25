@@ -4,6 +4,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
   // margin: 0 0 $small-spacing;
+  text-transform: uppercase;
   margin: 0;
   font-weight: 400;
 }
@@ -31,7 +32,7 @@ p {
 }
 
 
-.page-headline {
+.headline--primary {
   position: relative;
   h3 {
     color: $black-matte;
@@ -68,6 +69,8 @@ p {
 }
 
 
+
+
 // Font Size 24px
 .hero--profile__name {
   color: $white;
@@ -78,13 +81,23 @@ p {
 
 
 // Font Size 20px
+.headline--secondary {
+  font-family: $heading-font-family;
+  font-size: 2rem;
+  letter-spacing: .3rem;
+  text-indent: -.3rem;
+  text-transform: uppercase;
+  margin-bottom: $small-spacing;
+}
+
+
 .hero--profile__position {
   color: $base-gray;
   font-size: 2rem;
-  letter-spacing: .30em;
-  margin-bottom: $base-spacing;
-  text-indent: .30em;
+  letter-spacing: .3rem;
+  text-indent: -.3rem;
   text-transform: uppercase;
+  margin-bottom: $base-spacing;
 
   @include mq($min-height: 600px) {
     margin-bottom: $base-spacing * 1.5;
