@@ -18,11 +18,36 @@ $article-layout-grid--tablet-up: (
   gutter: $base-spacing,
   media: "(min-width: 800px)",
 );
+
 $article-layout-grid--large-up: (
   columns: 12,
   gutter: $base-spacing,
   media: "(min-width: 1024px)",
 );
+
+
+
+
+
+$home-section__layout--large-up: (
+  columns: 12,
+  gutter: $base-spacing,
+  media: "(min-width: 1000px)",
+);
+
+
+
+$hero-layout-grid--tablet-up: (
+  columns: 12,
+  gutter: $base-spacing,
+  media: "(min-width: 800px)",
+);
+$hero-layout-grid--large-up: (
+  columns: 12,
+  gutter: $base-spacing,
+  media: "(min-width: 1024px)",
+);
+
 
 
 .container__full {
@@ -36,30 +61,32 @@ $article-layout-grid--large-up: (
 .container {
   @include grid-container;
   max-width: $container-width;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 5%;
+
   // padding: 0 15px;
   // position: relative;
 }
 
 
-@media (min-width: 768px) {
-  .container {
-      width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-      width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-      width: 1170px;
-  }
-}
+// @media (min-width: 768px) {
+//   .container {
+//       width: 750px;
+//   }
+// }
+//
+// @media (min-width: 992px) {
+//   .container {
+//       width: 970px;
+//   }
+// }
+//
+// @media (min-width: 1200px) {
+//   .container {
+//       width: 1170px;
+//   }
+// }
 
 .column,
 .columns {

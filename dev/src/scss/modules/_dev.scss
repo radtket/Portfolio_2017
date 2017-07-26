@@ -41,7 +41,7 @@
 .section--description {
   @include grid-column(1, $article-layout-grid);
 
-  @include grid-media($article-layout-grid--tablet-up) {
+  @include grid-media($home-section__layout--large-up) {
      @include grid-column(3);
   }
 }
@@ -49,7 +49,225 @@
 .section--content {
   @include grid-column(1, $article-layout-grid);
 
-  @include grid-media($article-layout-grid--tablet-up) {
+  @include grid-media($home-section__layout--large-up) {
      @include grid-column(9);
   }
+}
+
+
+
+
+
+
+.contact__wrap {
+  line-height: 1;
+  @include mq($min-width: 800px) {
+    float: left;
+  }
+}
+.contact__item {
+  margin-bottom: $base-spacing;
+  @include mq($min-width: 800px) {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+.contact__info {
+  color: #999;
+  padding-top: $small-spacing / 2;
+  padding-bottom: $small-spacing / 2;
+  text-align: center;
+  @include mq($min-width: 800px) {
+    display: inline-block;
+    text-align: right;
+    margin-right: $small-spacing;
+    padding-right: $small-spacing;
+    border-right: 1px solid $form-box-border;
+  }
+  &--headline {
+    @extend %small-footer-font;
+    margin-bottom: $small-spacing / 2;
+  }
+  &--desc {
+    color: inherit;
+    margin-bottom: 0;
+  }
+}
+
+.contact__icon {
+  width: 45px;
+  max-height: 20px;
+  @include mq($max-width: 800px) {
+    height: 20px + 12px;
+    max-height: 20px + 12px;
+    padding-bottom: 12px;
+    margin: 0 auto 6px;
+    border-bottom: 1px solid $form-box-border;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  @include mq($min-width: 800px) {
+    float: right;
+    width: calc(100% - 300px);
+    margin-left: $base-spacing;
+  }
+}
+
+
+
+
+
+
+
+
+
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: $small-spacing / 2;
+  padding: 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: $small-spacing / 2;
+}
+
+input,
+select {
+  // display: block;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: 1.6rem;
+}
+
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+textarea,
+input[type="subject"],
+select[multiple],
+input[type="subject"],
+select[multiple] {
+  background-color: $white;
+  background-image: none;
+  border-radius: 0;
+  border: 1px solid $form-box-border;
+  box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  color: $medium-gray;
+  font-family: $base-font-family;
+  font-size: 1.2rem;
+  height: 38px;
+  letter-spacing: $base-letter-spacing;
+  margin-bottom: $small-spacing;
+  outline: 0;
+  padding: ($small-spacing / 2) $small-spacing;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+  transition: border-color $base-duration $base-timing;
+  vertical-align: middle;
+  width: 100%;
+
+  &:hover {
+    border-color: shade($base-border-color, 20%);
+  }
+
+  &:focus {
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+    // color: #111;
+    // border-color: rgba(0,0,0, .7);
+    color: $dark-gray;
+    border-color: $dark-gray;
+    box-shadow: 0 0 3px rgba(0,0,0, .3);
+  }
+
+  &:disabled {
+    background-color: shade($white, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+}
+
+textarea {
+  resize: vertical;
+  appearance: none;
+  background-color: $white;
+  height: 38px;
+  min-height: 65px;
+  padding: $small-spacing; // The 6px vertically centers text on FF, ignored by Webkit
+}
+
+// Removes awkward default styles on some inputs for iOS
+input {
+  &[type="email"],
+  &[type="number"],
+  &[type="search"],
+  &[type="text"],
+  &[type="tel"],
+  &[type="url"],
+  &[type="password"],
+  &[type="subject"] {
+    appearance: none;
+  }
+}
+
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+}
+
+[type="file"] {
+  margin-bottom: $small-spacing;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $base-spacing;
+  max-width: 100%;
+  width: auto;
 }

@@ -36,10 +36,10 @@
   &--profile {
     @include grid-column(1, $article-layout-grid);
     margin-bottom: $base-spacing;
-    @include grid-media($article-layout-grid--tablet-up) {
+    @include grid-media($hero-layout-grid--tablet-up) {
        @include grid-column(6);
     }
-    @include grid-media($article-layout-grid--large-up) {
+    @include grid-media($hero-layout-grid--large-up) {
        @include grid-column(5);
     }
 
@@ -66,10 +66,10 @@
   &--image {
     @include grid-column(1, $article-layout-grid);
     margin-bottom: $base-spacing;
-    @include grid-media($article-layout-grid--tablet-up) {
+    @include grid-media($hero-layout-grid--tablet-up) {
        @include grid-column(6);
     }
-    @include grid-media($article-layout-grid--large-up) {
+    @include grid-media($hero-layout-grid--large-up) {
        @include grid-column(5);
       @include grid-push(1);
     }
