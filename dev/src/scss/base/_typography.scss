@@ -27,9 +27,19 @@ h6 { font-size: 1.5rem; line-height: 1.6;  }
 }
 
 p {
+  color: $base-gray;
   margin: 0 0 $small-spacing;
   line-height: 1.75;
+  letter-spacing: .05rem;
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -109,13 +119,16 @@ p {
 }
 
 // Font Size 14px
-.list--skills li {
+%small--uppercase {
   color: $base-gray;
   font-family: $heading-font-family;
   font-size: 1.4rem;
   letter-spacing: .10em;
   margin-bottom: $small-spacing;
   text-transform: uppercase;
+}
+.list--skills li {
+  @extend %small--uppercase;
 }
 
 
@@ -128,10 +141,14 @@ p {
   text-transform: uppercase;
 }
 
-.hero--signature__footer {
-  color: $base-gray;
+%small-footer-font {
   font-size: 1.2rem;
-  font-weight: $font-weight--bold;
-  letter-spacing: .10em;
+  font-weight: 600;
+  letter-spacing: .05rem;
   text-transform: uppercase;
+}
+
+.hero--signature__footer {
+  @extend %small-footer-font;
+  color: $base-gray;
 }

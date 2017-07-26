@@ -48,10 +48,14 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-letter-spacing: .05rem;
-$base-border-radius: 3px;
 $base-spacing: 2.4rem;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+
+// Border radius
+$base-border-radius : 2px;
+$round-border-radius : 50%;
+
 
 // Animations
 $base-duration: 150ms;
