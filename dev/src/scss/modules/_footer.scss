@@ -1,0 +1,92 @@
+// Forms
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.footer {
+  background: white;
+  text-align: center;
+  @include mq($max-width: 600px) {
+    padding-top: $small-spacing;
+    padding-bottom: $small-spacing;
+  }
+
+  &__copyright {
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: .30em;
+    text-indent: .30em;
+    margin-bottom: $small-spacing;
+
+    > span {
+      color: $color-gold;
+    }
+
+    @include mq($min-width: 600px) {
+      margin: 0;
+      float: left;
+      height: $navbar__height;
+      line-height: $navbar__height;
+    }
+  }
+
+  &__social {
+    display: inline-block;
+    @include mq($min-width: 600px) {
+      float: right;
+    }
+
+    li {
+      margin-right: 1.6rem;
+      float: left;
+      position: relative;
+      @include mq($min-width: 600px) {
+        height: $navbar__height;
+        line-height: $navbar__height;
+      }
+    }
+
+    &--link {
+      width: $navbar__height / 2;
+      height: $navbar__height / 2;
+      line-height: $navbar__height / 2 !important;
+      position: relative;
+      display: inline-block;
+      color: $dark-gray;
+      transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+
+      svg {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 60%;
+        fill: $dark-gray;
+        height: 60%;
+        transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+      }
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        border: 1px solid $dark-gray;
+        border-radius: $base-border-radius;
+        transform: rotate(45deg);
+        transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+      }
+
+      &:hover {
+        svg {
+          fill: $white;
+        }
+
+        &:before {
+          background: $dark-gray;
+        }
+      }
+    }
+  }
+}

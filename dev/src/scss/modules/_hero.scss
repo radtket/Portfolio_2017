@@ -11,6 +11,7 @@
   background-image: url('../img/optimize-me---hero.jpg');
   text-align: center;
   padding: 120px 0;
+
   @include mq($max-width: 1024px) {
     padding: 120px 0;
     background-attachment: scroll;
@@ -34,7 +35,7 @@
   }
 
   &--profile {
-    @include grid-column(1, $article-layout-grid);
+    // @include grid-column(1, $article-layout-grid);
     margin-bottom: $base-spacing;
     @include grid-media($hero-layout-grid--tablet-up) {
        @include grid-column(6);
@@ -55,7 +56,6 @@
 
   &--signature {
     text-align: right;
-
     img {
       display: inline-block;
       vertical-align: middle;
@@ -64,8 +64,9 @@
   }
 
   &--image {
-    @include grid-column(1, $article-layout-grid);
-    margin-bottom: $base-spacing;
+    // @include grid-column(1, $article-layout-grid);
+    @extend %mobile__max-width;
+
     @include grid-media($hero-layout-grid--tablet-up) {
        @include grid-column(6);
     }
@@ -73,7 +74,6 @@
        @include grid-column(5);
       @include grid-push(1);
     }
-
     img {
       display: inline-block;
     }

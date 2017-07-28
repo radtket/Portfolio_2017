@@ -1,7 +1,12 @@
 // Typography
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $heading-font-family;
   // margin: 0 0 $small-spacing;
   text-transform: uppercase;
@@ -9,50 +14,77 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-h1 { font-size: 4.0rem; line-height: 1.2;  }
-h2 { font-size: 3.6rem; line-height: 1.25; }
-h3 { font-size: 3.0rem; line-height: 1.3;  }
-h4 { font-size: 2.4rem; line-height: 1.35; }
-h5 { font-size: 1.8rem; line-height: 1.5;  }
-h6 { font-size: 1.5rem; line-height: 1.6;  }
+h1 {
+  font-size: 4.0rem;
+  line-height: 1.2;
+}
 
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
 // Larger than phablet
 @media (#{$bp-larger-than-phablet}) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.5rem; }
+  h1 {
+    font-size: 5.0rem;
+  }
+
+  h2 {
+    font-size: 4.2rem;
+  }
+
+  h3 {
+    font-size: 3.6rem;
+  }
+
+  h4 {
+    font-size: 3.0rem;
+  }
+
+  h5 {
+    font-size: 2.4rem;
+  }
+
+  h6 {
+    font-size: 1.5rem;
+  }
 }
 
 p {
   color: $base-gray;
   margin: 0 0 $small-spacing;
   line-height: 1.75;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Font Size 30px
 .headline--primary {
   position: relative;
+
   h3 {
     color: $black-matte;
     display: inline-block;
     font-size: 3rem;
-    letter-spacing: .10em;
+    letter-spacing: 0.10em;
     margin-bottom: 6rem;
     position: relative;
     text-transform: uppercase;
@@ -81,70 +113,59 @@ p {
     z-index: 0;
   }
 }
-
-
-
-
 // Font Size 24px
 .hero--profile__name {
   color: $white;
   font-size: 2.4rem;
-  letter-spacing: .10em;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
 }
-
-
 // Font Size 20px
 .headline--secondary {
   font-family: $heading-font-family;
   font-size: 2rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   // text-indent: -.3rem;
   text-transform: uppercase;
   margin-bottom: $small-spacing;
 }
 
-
 .hero--profile__position {
   color: $base-gray;
   font-size: 2rem;
-  letter-spacing: .3rem;
+  letter-spacing: 0.3rem;
   text-indent: -.3rem;
   text-transform: uppercase;
   margin-bottom: $base-spacing;
-
   @include mq($min-height: 600px) {
     margin-bottom: $base-spacing * 1.5;
   }
 }
-
 // Font Size 14px
 %small--uppercase {
   color: $base-gray;
   font-family: $heading-font-family;
   font-size: 1.4rem;
-  letter-spacing: .10em;
+  letter-spacing: 0.10em;
   margin-bottom: $small-spacing;
   text-transform: uppercase;
 }
+
 .list--skills li {
   @extend %small--uppercase;
 }
-
-
-
 // Font Size 12px
 %type--navigation {
   font-family: $heading-font-family;
   font-size: 1.2rem;
-  letter-spacing: .30em;
+  letter-spacing: 0.30em;
   text-transform: uppercase;
 }
 
 %small-footer-font {
   font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: .05rem;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
 }
 

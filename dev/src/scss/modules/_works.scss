@@ -1,6 +1,5 @@
 .work-item {
-  max-width: 500px;
-  margin: auto;
+  @extend %mobile__max-width;
   @include mq($max-width: 800px) {
     margin-bottom: $employers-gutter;
   }
@@ -75,11 +74,11 @@
     	transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     }
     .work-title {
-      line-height: 1.2;
+      line-height: $heading-line-height;
       margin-bottom: $small-spacing / 2;
     }
     .work-descr {
-      line-height: 1.2;
+      line-height: $heading-line-height;
       @extend %small--uppercase
     }
 	}

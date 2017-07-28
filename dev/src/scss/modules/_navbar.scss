@@ -107,7 +107,7 @@ $hamburger-hover-transition-timing-function: linear !default;
   overflow: visible;
 
   @include mq($max-width: 768px) {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
   }
@@ -119,7 +119,9 @@ $hamburger-hover-transition-timing-function: linear !default;
   &__box {
     width: $navbar__height--mobile;
     height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
-    display: inline-block;
+    display: block;
+    margin: auto;
+    vertical-align: middle;
     position: relative;
   }
 

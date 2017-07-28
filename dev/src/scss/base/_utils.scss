@@ -19,7 +19,12 @@
   float: left;
 }
 
-
+%mobile__max-width {
+  @include mq($max-width: 800px) {
+    max-width: 500px;
+    margin: auto;
+  }
+}
 
 /* ==========================================================================
    Browser Upgrade Prompt

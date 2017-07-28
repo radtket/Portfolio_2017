@@ -13,6 +13,12 @@ $article-layout-grid: (
   gutter: $base-spacing
 );
 
+$article-layout-grid--mobile-up: (
+  columns: 2,
+  gutter: $base-spacing,
+  media: "(min-width: 600px)",
+);
+
 $article-layout-grid--tablet-up: (
   columns: 12,
   gutter: $base-spacing,
@@ -48,22 +54,84 @@ $hero-layout-grid--large-up: (
   media: "(min-width: 1024px)",
 );
 
+.page-section,
+.small-section {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 140px 0;
+  @include mq($max-width: 1024px) {
+    padding: 120px 0;
+  }
+  @include mq($max-width: 768px) {
+    padding: 80px 0;
+  }
+  @include mq($max-width: 480px) {
+    padding: 60px 0;
+  }
+}
+
+
+.page-section {
+  border-bottom: $base-border;
+}
+/* ==============================
+   IOS Background Fix
+   ============================== */
+.mobile .home-section,
+.mobile .page-section,
+.mobile .small-section {
+  background-attachment: scroll;
+}
+
+
+
+
+
+.section--description {
+  @include grid-column(1, $article-layout-grid);
+
+  @include grid-media($home-section__layout--large-up) {
+     @include grid-column(3);
+  }
+}
+
+.section--content {
+  @include grid-column(1, $article-layout-grid);
+
+  @include grid-media($home-section__layout--large-up) {
+     @include grid-column(9);
+  }
+}
+
+
+
+
+
 
 
 .container__full {
   @include grid-container;
+  margin: 0 auto;
   max-width: 100%;
-  width: 100%;
-  margin: 0 $small-spacing;
+  padding: 0 $small-spacing;
   position: relative;
+  width: 100%;
 }
 
 .container {
   @include grid-container;
+  margin: auto;
   max-width: $container-width;
   max-width: 1200px;
-  width: 90%;
-  margin: 0 5%;
+  padding: 0 $small-spacing;
+  width: 100%;
 
   // padding: 0 15px;
   // position: relative;
