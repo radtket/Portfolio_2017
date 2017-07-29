@@ -4,6 +4,8 @@
 textarea {
   min-height: $form-height * 2;
   resize: vertical;
+  padding-top: .8rem; // offset for lineheight
+  padding-bottom: .8rem; // offset for lineheight
 }
 
 textarea,

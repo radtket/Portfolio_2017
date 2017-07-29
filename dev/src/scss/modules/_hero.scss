@@ -56,10 +56,11 @@
 
   &--signature {
     text-align: right;
-    img {
+    svg {
       display: inline-block;
       vertical-align: middle;
       width: 50%;
+      height: 100px;
     }
   }
 

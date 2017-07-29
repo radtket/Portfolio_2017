@@ -724,8 +724,8 @@ button:focus {
   height: 1.2rem;
   margin-right: 6px;
   margin-right: 0.6rem;
-  background: url("../img/send-mail.png");
-  background: url("../img/send-mail.svg"), none;
+  background: url("../img/icons/icon__mail--send.png");
+  background: url("../img/icons/icon__mail--send.svg"), none;
   background-repeat: no-repeat !important;
   background-size: contain !important;
   background-position: center center !important;
@@ -755,8 +755,8 @@ button:focus {
   height: 1.2rem;
   width: 12px;
   width: 1.2rem;
-  background-image: url("../img/check-mark.png?text=fallback");
-  background-image: url("../img/check-mark.svg");
+  background-image: url("../img/icons/icon__check-mark.png?text=fallback");
+  background-image: url("../img/icons/icon__check-mark.svg");
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 12px;
@@ -777,6 +777,10 @@ button:focus {
 textarea {
   min-height: 76px;
   resize: vertical;
+  padding-top: 8px;
+  padding-top: .8rem;
+  padding-bottom: 8px;
+  padding-bottom: .8rem;
 }
 
 textarea,
@@ -860,8 +864,12 @@ input[type="password"]:focus {
   float: left;
   text-align: center;
 }
-.navbar__logo img {
-  height: 35px;
+.navbar__logo svg {
+  max-width: 65%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  fill: #333;
 }
 @media only screen and (max-width: 768px) {
   .navbar__nav {
@@ -1200,10 +1208,11 @@ input[type="password"]:focus {
 .hero--signature {
   text-align: right;
 }
-.hero--signature img {
+.hero--signature svg {
   display: inline-block;
   vertical-align: middle;
   width: 50%;
+  height: 100px;
 }
 @media (min-width: 800px) {
   .hero--image {
@@ -1511,8 +1520,8 @@ svg.contact__icon {
   display: inline-block;
   height: 18px;
   width: 18px;
-  background-image: url(../img/icon--information.png?text=fallback);
-  background-image: url(../img/icon--information.svg);
+  background-image: url(../img/icons/icon__information.png?text=fallback);
+  background-image: url(../img/icons/icon__information.svg);
   background-position: center 2px;
   background-size: 12px;
   background-repeat: no-repeat;

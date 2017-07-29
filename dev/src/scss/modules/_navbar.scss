@@ -14,8 +14,12 @@
     line-height: $navbar__height;
     float: left;
     text-align: center;
-    img {
-      height: $navbar__height--mobile;
+    svg {
+      max-width: 65%;
+      height: 100%;
+      display: block;
+      margin: auto;
+      fill: $dark-gray;
     }
   }
 
