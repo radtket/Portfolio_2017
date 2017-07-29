@@ -51,9 +51,37 @@ svg.contact__icon {
 
 .contact__form {
   @extend %mobile__max-width;
+  margin-bottom: $small-spacing;
   @include mq($min-width: 800px) {
     float: right;
     width: calc(100% - 300px);
     margin-left: $base-spacing;
+  }
+  > nav {
+    padding: ($small-spacing / 2) 0;
+  }
+  &--tip {
+    font-size: 1.2rem;
+    color: $medium-gray;
+    float: left;
+    position: relative;
+    line-height: 1;
+    margin-bottom: $small-spacing;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      background-image: url(../img/icon--information.png?text=fallback);
+      background-image: url(../img/icon--information.svg);
+      background-position: center 2px;
+      background-size: 12px;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+  }
+  &--button {
+    float: right;
+    text-align: right;
   }
 }

@@ -334,7 +334,7 @@ p {
 }
 
 .hero--profile__position {
-  color: #666;
+  color: #c0a062;
   font-size: 20px;
   font-size: 2rem;
   letter-spacing: 3px;
@@ -464,6 +464,12 @@ p {
     float: left;
     margin-left: 2.4rem;
   }
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .container__full {
@@ -645,28 +651,6 @@ p {
     margin-left: 52%;
   }
 }
-.btn__icon:before {
-  content: "";
-  display: block;
-  float: left;
-  width: 16px;
-  height: 12px;
-  height: 1.2rem;
-  margin-right: 6px;
-  margin-right: 0.6rem;
-  background: url("../img/mail-send.png");
-  background: url("../img/mail-send.svg"), none;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
-  background-position: center center !important;
-  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-}
-.btn__icon:hover:before {
-  background: url("../img/mail-send--white.png");
-  background: url("../img/mail-send--white.svg"), none;
-}
-
 .btn,
 button {
   -webkit-font-smoothing: antialiased;
@@ -701,10 +685,10 @@ button:focus {
 }
 
 .btn {
-  background-color: transparent;
-  border-radius: 4px;
-  border: 2px solid #333;
-  color: #333;
+  background: #333;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  color: #fff;
   line-height: 1;
   padding: 12px 24px;
   padding: 1.2rem 2.4rem;
@@ -727,6 +711,26 @@ button:focus {
 .btn:active {
   cursor: pointer !important;
   outline: none !important;
+}
+.btn--circle {
+  border-radius: 30px;
+}
+.btn--icon:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 16px;
+  height: 12px;
+  height: 1.2rem;
+  margin-right: 6px;
+  margin-right: 0.6rem;
+  background: url("../img/send-mail.png");
+  background: url("../img/send-mail.svg"), none;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center center !important;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
 }
 
 .list--skills {
@@ -1477,12 +1481,46 @@ svg.contact__icon {
   }
 }
 
+.contact__form {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
 @media only screen and (min-width: 800px) {
   .contact__form {
     float: right;
     width: calc(100% - 300px);
     margin-left: 2.4rem;
   }
+}
+.contact__form > nav {
+  padding: 6px 0;
+  padding: 0.6rem 0;
+}
+.contact__form--tip {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #999;
+  float: left;
+  position: relative;
+  line-height: 1;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
+.contact__form--tip:before {
+  content: '';
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  background-image: url(../img/icon--information.png?text=fallback);
+  background-image: url(../img/icon--information.svg);
+  background-position: center 2px;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.contact__form--button {
+  float: right;
+  text-align: right;
 }
 
 /*# sourceMappingURL=maps/application.css.map */

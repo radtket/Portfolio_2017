@@ -113,7 +113,9 @@ $hero-layout-grid--large-up: (
 
 
 
-
+.clearfix {
+  @include grid-container;
+}
 
 
 .container__full {

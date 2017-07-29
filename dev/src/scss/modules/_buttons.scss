@@ -34,29 +34,6 @@
 // }
 
 
-.btn__icon {
-  &:before {
-    content: "";
-    display: block;
-    float: left;
-    width: 16px;
-    height: 1.2rem;
-    margin-right: $small-spacing / 2;
-    background: url("../img/mail-send.png");
-    background: url("../img/mail-send.svg"), none;
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    background-position: center center !important;
-    transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
-  }
-  &:hover {
-    &:before {
-      background: url("../img/mail-send--white.png");
-      background: url("../img/mail-send--white.svg"), none;
-    }
-  }
-}
-
 
 
 .btn,
@@ -87,10 +64,10 @@ button {
 
 .btn {
   @extend %small-footer-font;
-  background-color: transparent;
-  border-radius: $global-radius;
-  border: 2px solid $dark-gray;
-  color: $dark-gray;
+  background: $dark-gray;
+  border-radius: 2px;
+  border: 2px solid transparent;
+  color: $white;
   line-height: 1;
   padding: $small-spacing $base-spacing;
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
@@ -114,4 +91,33 @@ button {
     cursor: pointer !important;
     outline: none !important;
   }
+
+  &--circle {
+    border-radius: 30px;
+  }
+
+  &--icon {
+    &:before {
+      content: "";
+      display: block;
+      float: left;
+      width: 16px;
+      height: 1.2rem;
+      margin-right: $small-spacing / 2;
+      background: url("../img/send-mail.png");
+      background: url("../img/send-mail.svg"), none;
+      background-repeat: no-repeat !important;
+      background-size: contain !important;
+      background-position: center center !important;
+      transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+    }
+    &:hover {
+      // &:before {
+      //   background: url("../img/sent-mail--white.png");
+      //   background: url("../img/sent-mail--white.svg"), none;
+      // }
+    }
+  }
+
+
 }
