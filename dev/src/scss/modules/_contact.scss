@@ -21,7 +21,6 @@
   padding-bottom: $small-spacing / 2;
   text-align: center;
   @include mq($min-width: 800px) {
-    display: inline-block;
     text-align: right;
     margin-right: $small-spacing;
     padding-right: $small-spacing;
@@ -37,7 +36,7 @@
   }
 }
 
-.contact__icon {
+svg.contact__icon {
   width: 45px;
   max-height: 20px;
   @include mq($max-width: 800px) {

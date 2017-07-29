@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         watch: {
             scss: {
                 files: ['dev/src/scss/**/*.scss'],
-                tasks: ['sass:dev', 'postcss:dev'],
+                tasks: ['sass:dev', 'postcss'],
             },
             js: {
                 files: ['dev/src/js/*.js'],
@@ -22,15 +22,6 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'dev/css/application.css': 'dev/src/scss/application.scss'
-                },
-            },
-            build: {
-                options: {
-                    style: 'compressed',
-                    sourcemap: 'none',
-                },
-                files: {
-                    'dist/css/application.css': 'dev/src/scss/application.scss'
                 },
             },
         },
@@ -52,40 +43,21 @@ module.exports = function(grunt) {
         },
 
         postcss: {
-            dev: {
-                options: {
-                    map: {
-                        inline: false, // save all sourcemaps as separate files...
-                        annotation: 'dev/css/maps/', // ...to the specified directory
-                        syntax: require('postcss-scss'),
-                    },
-                    processors: [
-                        require('pixrem')(), // add fallbacks for rem units
-                        require('autoprefixer')({
-                            browsers: ['last 2 versions', 'ie >= 10']
-                        }), // add vendor prefixes
-                    ]
-                },
-                dist: {
-                    src: 'dev/css/application.css',
-                },
+          options: {
+            map: {
+                inline: false, // save all sourcemaps as separate files...
+                annotation: 'dev/css/maps/', // ...to the specified directory
             },
-            build: {
-                options: {
-                    processors: [
-                        require('pixrem')(), // add fallbacks for rem units
-                        require('autoprefixer')({
-                            browsers: ['last 2 versions', 'ie >= 10']
-                        }), // add vendor prefixes
-                        require('cssnano')() // minify the result
-                    ]
-                },
-                dist: {
-                    src: 'dist/css/application.css',
-                },
-            },
+            processors: [
+              require('pixrem')(), // add fallbacks for rem units
+              require('postcss-flexboxfixer'),
+              require('autoprefixer')({browsers: ['last 2 versions', 'ie >= 9']}), // add vendor prefixes
+            ]
+          },
+          dist: {
+            src: 'dev/css/application.css',
+          },
         },
-
 
         uglify: {
             build: {
@@ -105,7 +77,6 @@ module.exports = function(grunt) {
                 dest: 'dev/js/script.min.js',
             }
         },
-
 
         htmlmin: {
             build: {
@@ -152,7 +123,11 @@ module.exports = function(grunt) {
         imagemin: {
             dynamic: {
                 options: {
-                    svgoPlugins: [{removeViewBox: false}],
+                    svgoPlugins: [
+                      {removeViewBox: true},               // don't remove the viewbox atribute from the SVG
+                    	{removeUselessStrokeAndFill: true},  // don't remove Useless Strokes and Fills
+                    	{removeEmptyAttrs: true}             // don't remove Empty Attributes from the SVG
+                    ],
                     use: [mozjpeg(), svgo()],
                 },
                 files: [{
@@ -161,7 +136,23 @@ module.exports = function(grunt) {
                     src: ['**/*.{png,jpg,gif,svg}'],
                     dest: 'dist/img/'
                 }]
-            }
+            },
+        },
+
+        cssmin: {
+          options: {
+            // report: 'min',  <--- default
+            report: 'gzip'
+          },
+          target: {
+            files: [{
+              expand: true,
+              cwd: 'dev/css',
+              src: ['application.css'],
+              dest: 'dist/css',
+              ext: '.css'
+            }]
+          }
         }
 
 
@@ -176,8 +167,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-responsive-images');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss:dev', 'uglify:dev', 'htmlmin:dev', 'responsive_images:dev', 'watch']);
-    grunt.registerTask('build', ['sass:build', 'postcss:build', 'uglify:build', 'htmlmin:build', 'imagemin']);
+    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'uglify:dev', 'htmlmin:dev', 'responsive_images:dev', 'watch']);
+    grunt.registerTask('build', ['cssmin', 'uglify:build', 'htmlmin:build', 'imagemin']);
 
 };

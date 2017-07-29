@@ -11,7 +11,8 @@
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   outline: none;
 }
 
@@ -59,7 +60,8 @@ main {
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   /**
@@ -101,6 +103,7 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px solid 1px solid #ddd;
+  margin: 24px 0;
   margin: 2.4rem 0;
   padding: 0;
 }
@@ -126,12 +129,14 @@ img {
 
 .u-full-width {
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .u-max-full-width {
   max-width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .u-pull-right {
@@ -156,6 +161,7 @@ img {
   margin-top: 55px;
   text-align: center;
   background: #ddd;
+  padding: 12px 0;
   padding: 1.2rem 0;
 }
 
@@ -200,31 +206,37 @@ h6 {
 }
 
 h1 {
+  font-size: 40px;
   font-size: 4.0rem;
   line-height: 1.2;
 }
 
 h2 {
+  font-size: 36px;
   font-size: 3.6rem;
   line-height: 1.25;
 }
 
 h3 {
+  font-size: 30px;
   font-size: 3.0rem;
   line-height: 1.3;
 }
 
 h4 {
+  font-size: 24px;
   font-size: 2.4rem;
   line-height: 1.35;
 }
 
 h5 {
+  font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.5;
 }
 
 h6 {
+  font-size: 15px;
   font-size: 1.5rem;
   line-height: 1.6;
 }
@@ -256,8 +268,10 @@ h6 {
 }
 p {
   color: #666;
+  margin: 0 0 12px;
   margin: 0 0 1.2rem;
   line-height: 1.75;
+  letter-spacing: 0.5px;
   letter-spacing: 0.05rem;
 }
 
@@ -267,8 +281,10 @@ p {
 .headline--primary h3 {
   color: #101010;
   display: inline-block;
+  font-size: 30px;
   font-size: 3rem;
   letter-spacing: 0.10em;
+  margin-bottom: 60px;
   margin-bottom: 6rem;
   position: relative;
   text-transform: uppercase;
@@ -279,6 +295,7 @@ p {
   position: absolute;
   top: 0;
   right: 0;
+  width: 20px;
   width: 2rem;
   height: 2px;
   background-color: #c0a062;
@@ -287,7 +304,9 @@ p {
   display: block;
   position: absolute;
   top: 0;
+  left: -15px;
   left: -1.5rem;
+  font-size: 60px;
   font-size: 6rem;
   color: rgba(51, 51, 51, 0.1);
   font-weight: 700;
@@ -297,6 +316,7 @@ p {
 
 .hero--profile__name {
   color: #fff;
+  font-size: 24px;
   font-size: 2.4rem;
   letter-spacing: 0.10em;
   text-transform: uppercase;
@@ -304,18 +324,25 @@ p {
 
 .headline--secondary {
   font-family: "Oswald", sans-serif;
+  font-size: 20px;
   font-size: 2rem;
+  letter-spacing: 3px;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+  margin-bottom: 12px;
   margin-bottom: 1.2rem;
 }
 
 .hero--profile__position {
   color: #666;
+  font-size: 20px;
   font-size: 2rem;
+  letter-spacing: 3px;
   letter-spacing: 0.3rem;
+  text-indent: -3px;
   text-indent: -.3rem;
   text-transform: uppercase;
+  margin-bottom: 24px;
   margin-bottom: 2.4rem;
 }
 @media only screen and (min-height: 600px) {
@@ -327,20 +354,24 @@ p {
 .list--skills li, .work-item > a .work-descr {
   color: #666;
   font-family: "Oswald", sans-serif;
+  font-size: 14px;
   font-size: 1.4rem;
   letter-spacing: 0.10em;
+  margin-bottom: 12px;
   margin-bottom: 1.2rem;
   text-transform: uppercase;
 }
 
 .navbar__item--link {
   font-family: "Oswald", sans-serif;
+  font-size: 12px;
   font-size: 1.2rem;
   letter-spacing: 0.30em;
   text-transform: uppercase;
 }
 
 .hero--signature__footer, .btn, .employers__details--timeframe, .contact__info--headline {
+  font-size: 12px;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.10em;
@@ -371,7 +402,8 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 140px 0;
 }
 @media only screen and (max-width: 1024px) {
@@ -409,6 +441,7 @@ p {
 .section--description {
   width: calc(100% - 4.8rem);
   float: left;
+  margin-left: 24px;
   margin-left: 2.4rem;
 }
 @media (min-width: 1000px) {
@@ -422,6 +455,7 @@ p {
 .section--content {
   width: calc(100% - 4.8rem);
   float: left;
+  margin-left: 24px;
   margin-left: 2.4rem;
 }
 @media (min-width: 1000px) {
@@ -435,6 +469,7 @@ p {
 .container__full {
   margin: 0 auto;
   max-width: 100%;
+  padding: 0 12px;
   padding: 0 1.2rem;
   position: relative;
   width: 100%;
@@ -449,6 +484,7 @@ p {
   margin: auto;
   max-width: 1200px;
   max-width: 1200px;
+  padding: 0 12px;
   padding: 0 1.2rem;
   width: 100%;
 }
@@ -462,7 +498,8 @@ p {
 .columns {
   width: 100%;
   float: left;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (min-width: 550px) {
@@ -613,13 +650,16 @@ p {
   display: block;
   float: left;
   width: 16px;
+  height: 12px;
   height: 1.2rem;
+  margin-right: 6px;
   margin-right: 0.6rem;
   background: url("../img/mail-send.png");
   background: url("../img/mail-send.svg"), none;
   background-repeat: no-repeat !important;
   background-size: contain !important;
   background-position: center center !important;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
 }
 .btn__icon:hover:before {
@@ -630,17 +670,24 @@ p {
 .btn,
 button {
   -webkit-font-smoothing: antialiased;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: transparent;
   border-color: transparent;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
   display: inline-block;
   outline: 0;
   text-align: center;
   text-decoration: none;
-  touch-action: manipulation;
-  user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 }
@@ -648,7 +695,8 @@ button {
 button:hover,
 button:focus {
   border-color: transparent;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   outline: 0;
 }
 
@@ -658,7 +706,9 @@ button:focus {
   border: 2px solid #333;
   color: #333;
   line-height: 1;
+  padding: 12px 24px;
   padding: 1.2rem 2.4rem;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
 }
 .btn:hover, .btn:focus {
@@ -680,6 +730,7 @@ button:focus {
 }
 
 .list--skills {
+  margin-bottom: 24px;
   margin-bottom: 2.4rem;
   display: block;
 }
@@ -696,12 +747,15 @@ button:focus {
 .list--skills li:before {
   content: '';
   display: inline-block;
+  height: 12px;
   height: 1.2rem;
+  width: 12px;
   width: 1.2rem;
   background-image: url("../img/check-mark.png?text=fallback");
   background-image: url("../img/check-mark.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  margin-right: 12px;
   margin-right: 1.2rem;
 }
 @media only screen and (min-width: 450px) {
@@ -737,18 +791,25 @@ input[type="password"] {
   background-image: none;
   border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 3px rgba(16, 16, 16, 0.06);
+  -webkit-box-shadow: inset 0 1px 3px rgba(16, 16, 16, 0.06);
+          box-shadow: inset 0 1px 3px rgba(16, 16, 16, 0.06);
   display: inline-block;
   height: 38px;
+  padding: 6px 12px;
   padding: 0.6rem 1.2rem;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  -webkit-transition: border-color 150ms ease;
   transition: border-color 150ms ease;
+  margin-bottom: 12px;
   margin-bottom: 1.2rem;
   vertical-align: middle;
   width: 100%;
   color: #999;
   font-family: "Open Sans", sans-serif;
+  font-size: 12px;
   font-size: 1.2rem;
+  letter-spacing: 0.5px;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
@@ -773,7 +834,8 @@ input[type="password"]:focus {
   outline: 0;
   color: #333;
   border-color: #333;
-  box-shadow: 0 0 3px rgba(16, 16, 16, 0.3);
+  -webkit-box-shadow: 0 0 3px rgba(16, 16, 16, 0.3);
+          box-shadow: 0 0 3px rgba(16, 16, 16, 0.3);
 }
 
 .navbar {
@@ -783,7 +845,8 @@ input[type="password"]:focus {
   left: 0;
   z-index: 99;
   background-color: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .navbar__logo {
   display: inline-block;
@@ -861,9 +924,14 @@ input[type="password"]:focus {
   width: 55px;
   height: 55px;
   cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
   font: inherit;
   color: inherit;
   text-transform: none;
@@ -875,8 +943,12 @@ input[type="password"]:focus {
 @media only screen and (max-width: 768px) {
   .hamburger {
     display: block;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .hamburger:hover {
@@ -894,16 +966,22 @@ input[type="password"]:focus {
   display: block;
   margin-top: -2px;
   bottom: 0;
-  transition-duration: 0.13s;
-  transition-delay: 0.13s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition-duration: 0.13s;
+          transition-duration: 0.13s;
+  -webkit-transition-delay: 0.13s;
+          transition-delay: 0.13s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 .hamburger__inner, .hamburger__inner::before, .hamburger__inner::after {
   width: 35px;
   height: 4px;
   background-color: #333;
   position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
   transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
 .hamburger__inner::before, .hamburger__inner::after {
   content: "";
@@ -911,27 +989,40 @@ input[type="password"]:focus {
 }
 .hamburger__inner::before {
   top: -10px;
+  -webkit-transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 .hamburger__inner::after {
   bottom: -10px;
   top: -20px;
+  -webkit-transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
   transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
 }
 .hamburger.is-active .hamburger__inner {
-  transform: translate3d(0, -10px, 0) rotate(-45deg);
-  transition-delay: 0.22s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+          transform: translate3d(0, -10px, 0) rotate(-45deg);
+  -webkit-transition-delay: 0.22s;
+          transition-delay: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .hamburger.is-active .hamburger__inner::after {
   top: 0;
   opacity: 0;
+  -webkit-transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
   transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
 }
 .hamburger.is-active .hamburger__inner::before {
   top: 0;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .footer {
@@ -947,9 +1038,11 @@ input[type="password"]:focus {
 .footer__copyright {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  font-size: 12px;
   font-size: 1.2rem;
   letter-spacing: .30em;
   text-indent: .30em;
+  margin-bottom: 12px;
   margin-bottom: 1.2rem;
 }
 .footer__copyright > span {
@@ -972,6 +1065,7 @@ input[type="password"]:focus {
   }
 }
 .footer__social li {
+  margin-right: 16px;
   margin-right: 1.6rem;
   float: left;
   position: relative;
@@ -989,6 +1083,7 @@ input[type="password"]:focus {
   position: relative;
   display: inline-block;
   color: #333;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .footer__social--link svg {
@@ -998,6 +1093,7 @@ input[type="password"]:focus {
   max-width: 60%;
   fill: #333;
   height: 60%;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .footer__social--link:before {
@@ -1010,7 +1106,10 @@ input[type="password"]:focus {
   display: inline-block;
   border: 1px solid #333;
   border-radius: 2px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .footer__social--link:hover svg {
@@ -1067,6 +1166,7 @@ input[type="password"]:focus {
   }
 }
 .hero--profile {
+  margin-bottom: 24px;
   margin-bottom: 2.4rem;
 }
 @media (min-width: 800px) {
@@ -1121,8 +1221,10 @@ input[type="password"]:focus {
 }
 
 .timeline {
+  border-left: 1.25px solid;
   border-left: 0.125rem solid;
   margin-left: calc(1rem - 0.125rem);
+  padding-left: 24px;
   padding-left: 2.4rem;
   position: relative;
 }
@@ -1130,30 +1232,43 @@ input[type="password"]:focus {
   position: relative;
 }
 .timeline__item--point {
+  width: 10px;
   width: 1rem;
+  height: 10px;
   height: 1rem;
   position: absolute;
+  top: 3px;
   top: .3rem;
+  left: -31px;
   left: -3.1rem;
   border-radius: 50%;
-  box-shadow: 0 0 0 6px #fff;
+  -webkit-box-shadow: 0 0 0 6px #fff;
+          box-shadow: 0 0 0 6px #fff;
   background: #c0a062;
 }
 
 .employers {
+  padding-bottom: 48px;
   padding-bottom: 4.8rem;
 }
 @media only screen and (min-width: 1000px) {
   .employers {
     margin-right: -4.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     position: relative;
   }
 }
 .employers__details > li {
+  margin-bottom: 6px;
   margin-bottom: 0.6rem;
   line-height: 1.2;
+  letter-spacing: 0.5px;
   letter-spacing: .05rem;
 }
 .employers__details--timeframe {
@@ -1161,6 +1276,7 @@ input[type="password"]:focus {
 }
 .employers__details--heading {
   color: #101010;
+  font-size: 20px;
   font-size: 2.0rem;
 }
 .employers__details--title {
@@ -1168,22 +1284,31 @@ input[type="password"]:focus {
 }
 .employers__details--location {
   color: #999;
+  font-size: 12px;
   font-size: 1.2rem;
 }
 @media only screen and (min-width: 1000px) {
   .employers__details {
-    flex-basis: 40%;
-    flex-grow: 1;
-    flex-shrink: 0;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     overflow: hidden;
     padding-right: 4.8rem;
   }
 }
 @media only screen and (min-width: 1000px) {
   .employers__description {
-    flex-basis: 60%;
-    flex-grow: 1;
-    flex-shrink: 0;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     overflow: hidden;
     padding-right: 4.8rem;
   }
@@ -1207,6 +1332,7 @@ input[type="password"]:focus {
 }
 .work-item > a {
   display: block;
+  padding-bottom: 60px;
   padding-bottom: 6rem;
   position: relative;
 }
@@ -1215,7 +1341,9 @@ input[type="password"]:focus {
 }
 .work-item > a:hover .work-intro {
   color: #fff;
-  transform: translateY(-7.2rem);
+  -webkit-transform: translateY(-7.2rem);
+      -ms-transform: translateY(-7.2rem);
+          transform: translateY(-7.2rem);
   z-index: 3;
 }
 .work-item > a:hover .work-title {
@@ -1228,7 +1356,9 @@ input[type="password"]:focus {
   background: rgba(16, 16, 16, 0.85);
 }
 .work-item > a:hover .work-img > img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .work-item > a .work-img {
   display: block;
@@ -1244,11 +1374,13 @@ input[type="password"]:focus {
   top: 0;
   left: 0;
   background: rgba(16, 16, 16, 0);
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .work-item > a .work-img > img {
   width: 100%;
   display: block;
+  -webkit-transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.3s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .work-item > a .work-intro {
@@ -1256,14 +1388,18 @@ input[type="password"]:focus {
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 60px;
   height: 6rem;
+  padding: 12px 24px 0 24px;
   padding: 1.2rem 2.4rem 0 2.4rem;
   text-align: center;
   overflow: hidden;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .work-item > a .work-title {
   line-height: 1.2;
+  margin-bottom: 6px;
   margin-bottom: 0.6rem;
 }
 .work-item > a .work-descr {
@@ -1280,26 +1416,37 @@ input[type="password"]:focus {
 }
 
 .contact__item {
+  margin-bottom: 24px;
   margin-bottom: 2.4rem;
 }
 @media only screen and (min-width: 800px) {
   .contact__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .contact__info {
   color: #999;
+  padding-top: 6px;
   padding-top: 0.6rem;
+  padding-bottom: 6px;
   padding-bottom: 0.6rem;
   text-align: center;
 }
 @media only screen and (min-width: 800px) {
   .contact__info {
-    display: inline-block;
     text-align: right;
     margin-right: 1.2rem;
     padding-right: 1.2rem;
@@ -1307,6 +1454,7 @@ input[type="password"]:focus {
   }
 }
 .contact__info--headline {
+  margin-bottom: 6px;
   margin-bottom: 0.6rem;
 }
 .contact__info--desc {
@@ -1314,12 +1462,12 @@ input[type="password"]:focus {
   margin-bottom: 0;
 }
 
-.contact__icon {
+svg.contact__icon {
   width: 45px;
   max-height: 20px;
 }
 @media only screen and (max-width: 800px) {
-  .contact__icon {
+  svg.contact__icon {
     height: 32px;
     max-height: 32px;
     padding-bottom: 12px;
@@ -1337,4 +1485,4 @@ input[type="password"]:focus {
   }
 }
 
-/*# sourceMappingURL=application.css.map */
+/*# sourceMappingURL=maps/application.css.map */

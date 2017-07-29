@@ -13,6 +13,8 @@
     "cssnano": "^3.10.0",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-htmlmin": "^2.4.0",
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-sass": "^1.0.0",
@@ -20,12 +22,14 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-responsive-images": "^1.10.1",
+    "grunt-svgmin": "^4.0.0",
     "imagemin-gifsicle": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.2",
     "mozjpeg": "^4.1.1",
     "pixrem": "^4.0.1",
+    "postcss-flexboxfixer": "0.0.5",
     "postcss-scss": "^1.0.2",
     "sass-mediaqueries": "^1.6.1"
   }
