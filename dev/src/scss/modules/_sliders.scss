@@ -1,0 +1,101 @@
+.swiper__clients {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+.swiper__clients--item {
+  display: block;
+  float: left;
+  height: 100px;
+  transform-style: preserve-3d;
+  img,
+  svg,
+  object {
+    max-height: 75%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    // transform: perspective(1px) translateY(-50%);
+    display: block;
+    margin: auto;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    // opacity: 0.65;
+    &:hover {
+      // opacity: 1;
+    }
+  }
+}
+
+// IE Fix
+.flexbox.flexboxlegacy {
+  .swiper__clients--item {
+    display: flex;
+    float: none;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    img,
+    svg,
+    object {
+      top: 0;
+      transform: none;
+    }
+  }
+}
+
+
+object {
+  display: block;
+  width: 100%;
+  // height: 100%;
+}
+
+
+.swiper__nav--prev,
+.swiper__nav--next {
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  font-size: 0;
+  margin: $small-spacing ($small-spacing / 4);
+  position: relative;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+
+  svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 65%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    fill: $dark-gray;
+  }
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $white;
+    display: inline-block;
+    border: 1px solid $dark-gray;
+    border-radius: $base-border-radius;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  }
+
+  &:hover {
+
+    svg {
+      fill: $white;
+    }
+
+    &:before {
+      background: $dark-gray;
+    }
+  }
+}

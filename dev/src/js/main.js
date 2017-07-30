@@ -46,16 +46,16 @@ function init_nav_menu() {
 
 function init_sliders() {
   //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.swiper__clients', {
     pagination: '.swiper__pagination',
     slidesPerView: 3,
     paginationClickable: true,
     spaceBetween: 48,
     setWrapperSize: true,
 
-    slideClass: 'clients__swiper--item',
-    nextButton: '.swiper-next',
-    prevButton: '.swiper-prev',
+    slideClass: 'swiper__clients--item',
+    nextButton: '.swiper__nav--next',
+    prevButton: '.swiper__nav--prev',
     breakpoints: {
         1024: {
             slidesPerView: 3,
