@@ -1532,4 +1532,104 @@ svg.contact__icon {
   text-align: right;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.clients__swiper--item {
+  display: block;
+  float: left;
+  height: 100px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.clients__swiper--item img {
+  max-height: 75%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  margin: auto;
+  opacity: 0.65;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+.clients__swiper--item img:hover {
+  opacity: 1;
+}
+
+.flexbox.flexboxlegacy .clients__swiper--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.flexbox.flexboxlegacy .clients__swiper--item img {
+  top: 0;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.swiper-prev,
+.swiper-next {
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  font-size: 0;
+  margin: 12px 6px;
+  margin: 1.2rem 0.6rem;
+  position: relative;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+.swiper-prev svg,
+.swiper-next svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 65%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  fill: #333;
+}
+.swiper-prev:before,
+.swiper-next:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  content: "";
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 2px;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+.swiper-prev:hover svg,
+.swiper-next:hover svg {
+  fill: #fff;
+}
+.swiper-prev:hover:before,
+.swiper-next:hover:before {
+  background: #333;
+}
+
 /*# sourceMappingURL=maps/application.css.map */

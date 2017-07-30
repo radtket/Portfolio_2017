@@ -16,6 +16,7 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
   <link rel="stylesheet" href="css/application.css">
 
   <!-- Modernizr JS -->
@@ -40,14 +41,7 @@
   </symbol>
 
 
-  <symbol id="icon-mail" viewBox="0 0 241.061 241.061">
-    <path d="M198.602,70.402l-78.063,68.789l-78.08-68.79c-3.109-2.739-7.848-2.438-10.586,0.669c-2.737,3.108-2.439,7.847,0.67,10.586
-  		l83.039,73.159c1.417,1.248,3.188,1.872,4.958,1.872s3.542-0.624,4.959-1.873l83.022-73.159c3.107-2.738,3.406-7.478,0.668-10.586
-  		C206.449,67.964,201.711,67.664,198.602,70.402z"/>
-  	<path d="M218.561,38.529H22.5c-12.406,0-22.5,10.093-22.5,22.5v119.002c0,12.407,10.094,22.5,22.5,22.5h196.061
-  		c12.406,0,22.5-10.093,22.5-22.5V61.029C241.061,48.623,230.967,38.529,218.561,38.529z M226.061,180.031
-  		c0,4.135-3.364,7.5-7.5,7.5H22.5c-4.136,0-7.5-3.365-7.5-7.5V61.029c0-4.135,3.364-7.5,7.5-7.5h196.061c4.136,0,7.5,3.365,7.5,7.5
-  		V180.031z"/>
+  <symbol id="icon-mail" viewBox="0 0 241.061 241.061"><path d="M198.602 70.402l-78.063 68.789-78.08-68.79a7.5 7.5 0 1 0-9.916 11.255l83.039 73.159c1.417 1.248 3.188 1.872 4.958 1.872s3.542-.624 4.959-1.873l83.022-73.159a7.502 7.502 0 0 0 .668-10.586 7.505 7.505 0 0 0-10.587-.667z"/><path d="M218.561 38.529H22.5c-12.406 0-22.5 10.093-22.5 22.5v119.002c0 12.407 10.094 22.5 22.5 22.5h196.061c12.406 0 22.5-10.093 22.5-22.5V61.029c0-12.406-10.094-22.5-22.5-22.5zm7.5 141.502c0 4.135-3.364 7.5-7.5 7.5H22.5c-4.136 0-7.5-3.365-7.5-7.5V61.029c0-4.135 3.364-7.5 7.5-7.5h196.061c4.136 0 7.5 3.365 7.5 7.5v119.002z"/>
   </symbol>
 
 
@@ -145,7 +139,16 @@
   <path class="st0" d="M483.2 482.6H0V.2h483.2v482.4zM48 434.6h387.2V48.2H48v386.4z"/><path class="st0" d="M188.6 83.7V138h-53.3v262.8h-53V83.7h106.3zM397 400.8h-64L230.1 235.1h60.6c6.6 0 13.3-1 19.6-3 6-1.8 11.5-4.9 16.2-8.9 4.7-4.1 8.5-9.3 10.9-15.1 2.7-6.1 4-13.3 4-21.8s-1.4-15.6-4.2-21.4c-2.6-5.8-6.4-11-11.2-15.1-4.8-4-10.3-7-16.2-8.9-6.1-2-12.5-3-19-3h-87V83.3h87.3c12.4 0 24.7 1.3 36.8 4 11.8 2.7 22.8 8.4 33 17.2 10.7 9.4 19.2 21 24.8 34.1 5.9 13.6 8.9 28.2 8.8 43-.1 14-2.4 27.9-7 41.1-4.7 13.9-11.5 25.5-20.4 34.8-7.4 7.9-14.7 13.7-21.9 17.2-8.1 3.9-16.6 6.9-25.3 9.1l77.1 117z"/>
 </symbol>
 
-</svg>
+
+<symbol id="icon-left" viewBox="0 0 257.6 451.8">
+  <path d="M9.3,203.6,203.6,9.3A31.6,31.6,0,0,1,248.3,54L76.4,225.9,248.3,397.8a31.6,31.6,0,0,1-44.7,44.7L9.3,248.3a31.6,31.6,0,0,1,0-44.7Z"/>
+</symbol>
+
+<symbol id="icon-right" viewBox="0 0 257.6 451.8">
+  <path d="M248.3,248.3,54,442.6A31.6,31.6,0,1,1,9.3,397.8L181.2,225.9,9.3,54A31.6,31.6,0,1,1,54,9.3L248.3,203.6a31.6,31.6,0,0,1,0,44.7Z"/></symbol></svg>
+
+
+
 
   <!-- Navbar -->
   <header class="navbar">
@@ -449,6 +452,95 @@
 
 
 
+  <!-- Clients Section -->
+  <section class="page-section">
+    <div class="container">
+
+      <aside class="section--description">
+        <div class="headline--primary">
+          <h3>Clients</h3>
+          <span>04</span>
+        </div>
+      </aside>
+
+      <article class="section--content">
+
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__twm.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__motleyFool.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__belleAndJames.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__aapa.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/client__atown.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__donTito.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__kabin.png" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__rs.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__brown.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__kulture.png" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__riffa.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__fish.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__phenom.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__beatdown.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__crva.svg" alt="">
+              </div>
+              <div class="clients__swiper--item">
+                <img src="img/logos/clients__kai.svg" alt="">
+              </div>
+            </div>
+            <nav>
+              <button class="swiper-prev">
+                <svg>
+                  <use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#icon-left"></use>
+                </svg>
+              </button>
+              <button class="swiper-next">
+                <svg>
+                  <use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#icon-right"></use>
+                </svg>
+              </button>
+            </nav>
+        </div>
+
+      </article>
+
+    </div>
+  </section>
+  <!-- END // Clients Section -->
+
+
+
+
+
   <!-- Contact Section -->
   <section class="page-section">
     <div class="container">
@@ -581,6 +673,12 @@
   <script>
     window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')
   </script>
+
+  <!-- cdnjs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script> -->
+
+  <!-- Local JS -->
   <script src="js/script.min.js"></script>
 </body>
 

@@ -12,6 +12,7 @@ $(window).on('load', function(){
 $(function() {
   $(window).trigger('resize');
   init_nav_menu();
+  init_sliders();
 });
 
 $(window).on('resize', function() {
@@ -38,4 +39,37 @@ function init_nav_menu() {
 			}
 		});
 	})
+};
+
+
+
+
+function init_sliders() {
+  //initialize swiper when document ready
+  var mySwiper = new Swiper ('.swiper-container', {
+    pagination: '.swiper__pagination',
+    slidesPerView: 3,
+    paginationClickable: true,
+    spaceBetween: 48,
+    setWrapperSize: true,
+
+    slideClass: 'clients__swiper--item',
+    nextButton: '.swiper-next',
+    prevButton: '.swiper-prev',
+    breakpoints: {
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 36
+        },
+        800: {
+            slidesPerView: 2,
+            spaceBetween: 36
+        },
+        600: {
+            slidesPerView: 1,
+            spaceBetween: 24
+        }
+    }
+
+  })
 };
