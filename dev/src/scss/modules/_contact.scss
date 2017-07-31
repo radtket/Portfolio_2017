@@ -22,9 +22,10 @@
   text-align: center;
   @include mq($min-width: 800px) {
     text-align: right;
-    margin-right: $small-spacing;
+    // margin-right: $small-spacing;
     padding-right: $small-spacing;
     border-right: 1px solid $form-box-border;
+    float: left;
   }
   &--headline {
     @extend %small-footer-font;
@@ -39,13 +40,16 @@
 svg.contact__icon {
   width: 45px;
   max-height: 20px;
+  display: block;
   @include mq($max-width: 800px) {
     height: 20px + 12px;
     max-height: 20px + 12px;
     padding-bottom: 12px;
     margin: 0 auto 6px;
     border-bottom: 1px solid $form-box-border;
-    display: block;
+  }
+  @include mq($min-width: 800px) {
+    float: right;
   }
 }
 

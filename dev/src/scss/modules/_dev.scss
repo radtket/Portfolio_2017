@@ -63,3 +63,35 @@
 /* ==============================
    Testimonial Slider
    ============================== */
+
+ blockquote {
+   max-width: 700px;
+   padding: 0 $base-spacing;
+   margin: auto;
+
+   span {
+     margin-bottom: $small-spacing;
+     display: block;
+     text-align: center;
+
+     img.avi {
+       width: 60px;
+       height: 60px;
+       display: inline-block;
+       border-radius: $round-border-radius;
+     }
+   }
+
+   p {
+     font-weight: $font-weight--light;
+     margin-bottom: $base-spacing;
+   }
+
+   cite {
+     @extend %small-footer-font;
+     margin-right: $small-spacing;
+     text-align: right;
+     color: $base-gray;
+     display: block;
+   }
+ }

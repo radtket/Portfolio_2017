@@ -109,4 +109,7 @@ function slick_slider() {
       }
     ]
   });
+
+
+  $('.slick__testimonial').slick();
 }
