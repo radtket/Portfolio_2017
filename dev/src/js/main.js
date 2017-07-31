@@ -13,7 +13,6 @@ $(function() {
   $(window).trigger('resize');
   init_nav_menu();
   init_sliders();
-  slick_slider();
 });
 
 $(window).on('resize', function() {
@@ -45,41 +44,15 @@ function init_nav_menu() {
 
 
 
+
+
+
+
 function init_sliders() {
-  //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper__clients', {
-    pagination: '.swiper__pagination',
-    slidesPerView: 3,
-    paginationClickable: true,
-    spaceBetween: 48,
-    setWrapperSize: true,
 
-    slideClass: 'swiper__clients--item',
-    nextButton: '.swiper__nav--next',
-    prevButton: '.swiper__nav--prev',
-    breakpoints: {
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 36
-        },
-        800: {
-            slidesPerView: 2,
-            spaceBetween: 36
-        },
-        600: {
-            slidesPerView: 1,
-            spaceBetween: 24
-        }
-    }
-
-  })
-};
-
-
-
-
-function slick_slider() {
+  // Clients Slider
   $('.slick__clients').slick({
+    lazyLoad: 'ondemand',
     infinite: true,
     speed: 300,
     slidesToShow: 3,
@@ -110,6 +83,9 @@ function slick_slider() {
     ]
   });
 
-
-  $('.slick__testimonial').slick();
+  // Testimonial Slider
+  $('.slick__testimonial').slick({
+    adaptiveHeight: true,
+    appendArrows: $(".swiper__nav")
+  });
 }

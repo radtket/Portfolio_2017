@@ -141,6 +141,12 @@ p {
     margin-bottom: $base-spacing * 1.5;
   }
 }
+
+%text__lead {
+  font-weight: $font-weight--light;
+  text-align: left;
+}
+
 // Font Size 14px
 %small--uppercase {
   color: $base-gray;

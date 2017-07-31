@@ -593,6 +593,11 @@ p {
   }
 }
 
+.hero--profile__text, blockquote p {
+  font-weight: 300;
+  text-align: left;
+}
+
 .list--skills li, .work-item > a .work-descr {
   color: #666;
   font-family: "Oswald", sans-serif;
@@ -1438,9 +1443,7 @@ input[type="password"]:focus {
   }
 }
 .hero--profile__text {
-  font-weight: 300;
   color: #ddd;
-  text-align: left;
 }
 @media only screen and (min-width: 600px) {
   .hero--profile__text {
@@ -1779,109 +1782,6 @@ svg.contact__icon {
   text-align: right;
 }
 
-.swiper__clients {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.swiper__clients--item {
-  display: block;
-  float: left;
-  height: 100px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-.swiper__clients--item img,
-.swiper__clients--item svg,
-.swiper__clients--item object {
-  max-height: 75%;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  display: block;
-  margin: auto;
-  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
-
-.flexbox.flexboxlegacy .swiper__clients--item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  float: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-.flexbox.flexboxlegacy .swiper__clients--item img,
-.flexbox.flexboxlegacy .swiper__clients--item svg,
-.flexbox.flexboxlegacy .swiper__clients--item object {
-  top: 0;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-}
-
-object {
-  display: block;
-  width: 100%;
-}
-
-.swiper__nav--prev,
-.swiper__nav--next {
-  width: 25px;
-  height: 25px;
-  line-height: 25px !important;
-  font-size: 0;
-  margin: 12px 3px;
-  margin: 1.2rem 0.3rem;
-  position: relative;
-  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
-.swiper__nav--prev svg,
-.swiper__nav--next svg {
-  position: relative;
-  top: 0;
-  left: 0;
-  max-width: 65%;
-  height: 100%;
-  display: block;
-  margin: auto;
-  fill: #333;
-}
-.swiper__nav--prev:before,
-.swiper__nav--next:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  display: inline-block;
-  border: 1px solid #333;
-  border-radius: 2px;
-  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
-.swiper__nav--prev:hover svg,
-.swiper__nav--next:hover svg {
-  fill: #fff;
-}
-.swiper__nav--prev:hover:before,
-.swiper__nav--next:hover:before {
-  background: #333;
-}
-
 /* ==============================
    Client Slider
    ============================== */
@@ -1951,33 +1851,79 @@ object {
    ============================== */
 blockquote {
   max-width: 700px;
-  padding: 0 24px;
-  padding: 0 2.4rem;
   margin: auto;
 }
-blockquote span {
-  margin-bottom: 12px;
-  margin-bottom: 1.2rem;
-  display: block;
+blockquote .testimonial__avatar {
   text-align: center;
 }
-blockquote span img.avi {
+blockquote .testimonial__avatar > img {
   width: 60px;
   height: 60px;
   display: inline-block;
   border-radius: 50%;
 }
 blockquote p {
-  font-weight: 300;
+  margin-top: 24px;
+  margin-top: 2.4rem;
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
 }
 blockquote cite {
-  margin-right: 12px;
-  margin-right: 1.2rem;
+  margin-right: 6px;
+  margin-right: 0.6rem;
   text-align: right;
   color: #666;
   display: block;
+}
+
+/* ==============================
+   Slider Nav
+   ============================== */
+.swiper__nav--prev,
+.swiper__nav--next {
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  font-size: 0;
+  margin: 12px 3px;
+  margin: 1.2rem 0.3rem;
+  position: relative;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+.swiper__nav--prev svg,
+.swiper__nav--next svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 65%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  fill: #333;
+}
+.swiper__nav--prev:before,
+.swiper__nav--next:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 2px;
+  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+}
+.swiper__nav--prev:hover svg,
+.swiper__nav--next:hover svg {
+  fill: #fff;
+}
+.swiper__nav--prev:hover:before,
+.swiper__nav--next:hover:before {
+  background: #333;
 }
 
 /*# sourceMappingURL=maps/application.css.map */
