@@ -52,12 +52,10 @@ function init_sliders() {
 
   // Clients Slider
   $('.slick__clients').slick({
-    lazyLoad: 'ondemand',
     infinite: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -77,7 +75,8 @@ function init_sliders() {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          arrows: false
         }
       }
     ]
@@ -85,7 +84,6 @@ function init_sliders() {
 
   // Testimonial Slider
   $('.slick__testimonial').slick({
-    adaptiveHeight: true,
-    appendArrows: $(".swiper__nav")
+
   });
 }

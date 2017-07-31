@@ -102,11 +102,12 @@
   display: block;
   height: 20px;
   width: 20px;
+  width: 24px;
+  width: 2.4rem;
+  height: 24px;
+  height: 2.4rem;
   line-height: 0;
   font-size: 0;
-  cursor: pointer;
-  background: transparent;
-  color: transparent;
   border: 1px solid #333;
   border-radius: 2px;
   top: 50%;
@@ -120,7 +121,7 @@
 .slick-prev:focus,
 .slick-prev:hover {
   outline: none;
-  background: transparent;
+  background: #333;
   color: transparent;
 }
 .slick-next:focus:before, .slick-next:hover:before,
@@ -134,48 +135,41 @@
 }
 .slick-next:before,
 .slick-prev:before {
-  opacity: 0.75;
   content: '';
-  display: inline-block;
+  opacity: 0.75;
+  display: block;
   height: 12px;
   height: 1.2rem;
-  width: 12px;
-  width: 1.2rem;
+  width: 100%;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .slick-prev {
-  left: -25px;
-}
-[dir="rtl"] .slick-prev {
-  left: auto;
-  right: -25px;
+  left: -24px;
+  left: -2.4rem;
 }
 .slick-prev:before {
-  background-image: url("../img/icons/icon__check-mark.png?text=fallback");
+  background-image: url("../img/icons/icon__arrow--leftpng?text=fallback");
   background-image: url("../img/icons/icon__arrow--left.svg");
 }
-[dir="rtl"] .slick-prev:before {
-  background-image: url("../img/icons/icon__check-mark.png?text=fallback");
-  background-image: url("../img/icons/icon__arrow--right.svg");
+.slick-prev:hover:before {
+  background-image: url("../img/icons/icon__arrow--left__white.png?text=fallback");
+  background-image: url("../img/icons/icon__arrow--left__white.svg");
 }
 
 .slick-next {
-  right: -25px;
-}
-[dir="rtl"] .slick-next {
-  left: -25px;
-  right: auto;
+  right: -24px;
+  right: -2.4rem;
 }
 .slick-next:before {
-  background-image: url("../img/icons/icon__check-mark.png?text=fallback");
+  background-image: url("../img/icons/icon__arrow--right.png?text=fallback");
   background-image: url("../img/icons/icon__arrow--right.svg");
 }
-[dir="rtl"] .slick-next:before {
-  background-image: url("../img/icons/icon__check-mark.png?text=fallback");
-  background-image: url("../img/icons/icon__arrow--left.svg");
+.slick-next:hover:before {
+  background-image: url("../img/icons/icon__arrow--right__white.png?text=fallback");
+  background-image: url("../img/icons/icon__arrow--right__white.svg");
 }
 
 /* Dots */
@@ -185,7 +179,8 @@
 
 .slick-dots {
   position: absolute;
-  bottom: -25px;
+  bottom: -24px;
+  bottom: -2.4rem;
   list-style: none;
   display: block;
   text-align: center;
@@ -1874,56 +1869,6 @@ blockquote cite {
   text-align: right;
   color: #666;
   display: block;
-}
-
-/* ==============================
-   Slider Nav
-   ============================== */
-.swiper__nav--prev,
-.swiper__nav--next {
-  width: 25px;
-  height: 25px;
-  line-height: 25px !important;
-  font-size: 0;
-  margin: 12px 3px;
-  margin: 1.2rem 0.3rem;
-  position: relative;
-  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
-.swiper__nav--prev svg,
-.swiper__nav--next svg {
-  position: relative;
-  top: 0;
-  left: 0;
-  max-width: 65%;
-  height: 100%;
-  display: block;
-  margin: auto;
-  fill: #333;
-}
-.swiper__nav--prev:before,
-.swiper__nav--next:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  display: inline-block;
-  border: 1px solid #333;
-  border-radius: 2px;
-  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
-}
-.swiper__nav--prev:hover svg,
-.swiper__nav--next:hover svg {
-  fill: #fff;
-}
-.swiper__nav--prev:hover:before,
-.swiper__nav--next:hover:before {
-  background: #333;
 }
 
 /*# sourceMappingURL=maps/application.css.map */

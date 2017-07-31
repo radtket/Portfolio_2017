@@ -46,9 +46,9 @@
     }
 
     &--link {
-      width: $navbar__height / 2;
-      height: $navbar__height / 2;
-      line-height: $navbar__height / 2 !important;
+      width: $icon__size;
+      height: $icon__size;
+      line-height: $icon__size !important;
       position: relative;
       display: inline-block;
       color: $dark-gray;
