@@ -13,6 +13,7 @@ $(function() {
   $(window).trigger('resize');
   init_nav_menu();
   init_sliders();
+  slick_slider();
 });
 
 $(window).on('resize', function() {
@@ -73,3 +74,39 @@ function init_sliders() {
 
   })
 };
+
+
+
+
+function slick_slider() {
+  $('.slick__clients').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+}
