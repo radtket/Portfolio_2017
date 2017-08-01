@@ -84,6 +84,13 @@ function init_sliders() {
 
   // Testimonial Slider
   $('.slick__testimonial').slick({
-
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   });
 }
