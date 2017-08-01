@@ -1134,7 +1134,7 @@ input[type="password"]:focus {
 }
 .navbar__item {
   display: block;
-  height: 35px;
+  height: 100%;
   line-height: 35px;
 }
 @media only screen and (max-width: 768px) {
@@ -1146,28 +1146,36 @@ input[type="password"]:focus {
 @media only screen and (min-width: 768px) {
   .navbar__item {
     display: inline-block;
-    height: 55px;
+    height: 100%;
     line-height: 55px;
   }
 }
+.navbar__item .btn--icon:before {
+  background: url("../img/icons/icon__resume.png");
+  background: url("../img/icons/icon__resume.svg"), none;
+}
 .navbar__item--link {
   display: inherit;
+  color: #333;
+  padding: 0 16px;
+  padding: 0 1.6rem;
 }
 @media only screen and (max-width: 768px) {
   .navbar__item--link {
-    padding: 0 1.2rem;
     color: #fff;
     text-align: right;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
   .navbar__item--link:hover {
     background: rgba(16, 16, 16, 0.9);
     color: #c0a062;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 850px) {
   .navbar__item--link {
-    padding: 0 2.4rem;
-    color: #333;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 }
 

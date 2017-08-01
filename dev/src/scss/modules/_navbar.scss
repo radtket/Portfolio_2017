@@ -45,7 +45,8 @@
 
   &__item {
     display: block;
-    height: $navbar__height--mobile;
+    // height: $navbar__height--mobile;
+    height: 100%;
     line-height: $navbar__height--mobile;
     @include mq($max-width: 768px) {
       overflow: hidden;
@@ -53,27 +54,37 @@
     }
     @include mq($min-width: 768px) {
       display: inline-block;
-      height: $navbar__height;
+      // height: $navbar__height;
+      height: 100%;
       line-height: $navbar__height;
+    }
+
+    .btn--icon {
+      &:before {
+        background: url("../img/icons/icon__resume.png");
+        background: url("../img/icons/icon__resume.svg"), none;
+      }
     }
 
     &--link {
       @extend %type--navigation;
       display: inherit;
+      color: $dark-gray;
+      padding: 0 1.6rem;
 
       @include mq($max-width: 768px) {
-        padding: 0 $small-spacing;
         color: $white;
         text-align: right;
+        padding-left: $small-spacing;
+        padding-right: $small-spacing;
         &:hover {
           background: rgba($black-matte, 0.9);
           color: $color-gold;
         }
       }
-
-      @include mq($min-width: 768px) {
-        padding: 0 $base-spacing;
-        color: $dark-gray;
+      @include mq($min-width: 850px) {
+        padding-left: $base-spacing;
+        padding-right: $base-spacing;
       }
     }
   }
