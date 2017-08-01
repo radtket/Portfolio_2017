@@ -31,8 +31,8 @@
 }
 
 .contact__item--icon {
-  height: 48px;
-  width: 48px;
+  height: $large-spacing;
+  width: $large-spacing;
   line-height: 1;
   text-align: center;
   @include mq($min-width: 800px) {
@@ -56,7 +56,7 @@
     width: 50%;
     fill: #333;
     // height: 100%;
-    height: 48px;
+    height: $large-spacing;
   }
 }
 

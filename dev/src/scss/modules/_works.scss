@@ -1,7 +1,7 @@
 .work-item {
   @extend %mobile__max-width;
   @include mq($max-width: 800px) {
-    margin-bottom: $employers-gutter;
+    margin-bottom: $large-spacing;
   }
   @include mq($min-width: 800px) {
     float: left;
