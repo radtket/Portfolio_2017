@@ -63,12 +63,11 @@ $base-duration: 150ms;
 $base-timing: ease;
 
 // Font Weights
-$font-weight--thin       : 100;
 $font-weight--light      : 300;
 $font-weight--regular    : 400;
 $font-weight--medium     : 500;
-$font-weight--bold       : 700;
-$font-weight--black      : 900;
+$font-weight--bold       : 600;
+$font-weight--black      : 700;
 
 
 //Grid Variables
@@ -92,8 +91,8 @@ $navbar__height--large: 75px;
 // Mobile Sizes
 $mobile__max-width: 500px;
 
-$icon__size: $navbar__height / 2;
-
+$icon-size: 16px;
+$footer__buttons: $navbar__height / 2;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba($black-matte, 0.06);

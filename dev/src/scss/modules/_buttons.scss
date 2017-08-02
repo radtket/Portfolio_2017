@@ -1,39 +1,17 @@
-// $_buttons-list: (
-//   "button",
-//   "[type='button']",
-//   "[type='reset']",
-//   "[type='submit']",
-// );
-//
-// $_button-background-color: $action-color;
-// $_button-background-color-hover: shade($action-color, 20%);
-//
-//
-// // #{$_buttons-list},
-// .btn {
-//   background-color: transparent;
-//   color: contrast-switch($_button-background-color);
-//   &:hover {
-//     background-color: $_button-background-color-hover;
-//     color: contrast-switch($_button-background-color-hover);
-//   }
-//
-//   &:focus {
-//     outline: $focus-outline;
-//     outline-offset: $focus-outline-offset;
-//   }
-//
-//   &:disabled {
-//     cursor: not-allowed;
-//     opacity: 0.5;
-//
-//     &:hover {
-//       background-color: $_button-background-color;
-//     }
-//   }
-// }
-
-
+%btn--icon--pseudo {
+  content: "";
+  display: block;
+  float: left;
+  width: $icon-size;
+  height: $small-spacing;
+  margin-right: $small-spacing / 2;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center center !important;
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  // background: url("../img/icons/icon__mail--send.png");
+  // background: url("../img/icons/icon__mail--send.svg"), none;
+}
 
 
 .btn,
@@ -65,7 +43,7 @@ button {
 .btn {
   @extend %small-footer-font;
   background: $dark-gray;
-  border-radius: 2px;
+  border-radius: $base-spacing;
   border: 2px solid transparent;
   color: $white;
   line-height: 1;
@@ -76,7 +54,6 @@ button {
     background-color: shade($action-color, 20%);
     background-color: rgba($black, 0.7);
     color: rgba($white, 0.85);
-    text-decoration: none;
   }
   &:disabled {
     cursor: not-allowed;
@@ -92,24 +69,9 @@ button {
     outline: none !important;
   }
 
-  &--circle {
-    border-radius: 30px;
-  }
-
   &--icon {
     &:before {
-      content: "";
-      display: block;
-      float: left;
-      width: 16px;
-      height: 1.2rem;
-      margin-right: $small-spacing / 2;
-      background: url("../img/icons/icon__mail--send.png");
-      background: url("../img/icons/icon__mail--send.svg"), none;
-      background-repeat: no-repeat !important;
-      background-size: contain !important;
-      background-position: center center !important;
-      transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+      @extend %btn--icon--pseudo;
     }
     &:hover {
       // &:before {
@@ -118,6 +80,4 @@ button {
       // }
     }
   }
-
-
 }

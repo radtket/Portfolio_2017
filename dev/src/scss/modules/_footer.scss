@@ -46,22 +46,16 @@
     }
 
     &--link {
-      width: $icon__size;
-      height: $icon__size;
-      line-height: $icon__size !important;
+      width: $footer__buttons;
+      height: $footer__buttons;
+      line-height: $footer__buttons !important;
       position: relative;
       display: inline-block;
       color: $dark-gray;
       transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 
       svg {
-        position: relative;
-        top: 0;
-        left: 0;
-        max-width: 60%;
-        fill: $dark-gray;
-        height: 60%;
-        transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+        @extend %svg__icon;
       }
 
       &:before {

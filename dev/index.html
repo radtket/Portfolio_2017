@@ -741,27 +741,21 @@
 
 
         <!-- Contact Form -->
-        <form class="contact__form" action="//formspree.io/taylorradtke@gmail.com" method="POST">
-            <!-- Name -->
-            <input type="text" name="_name" id="name" placeholder="Name" pattern=".{3,100}" required="">
-            <!-- Email -->
-            <input type="email" name="_email" id="email" placeholder="Email" pattern=".{5,100}" required="">
-            <!-- Subject -->
-            <input type="text" name="_subject" id="subject" placeholder="Subject">
-            <!-- Message -->
-            <textarea name="_message" id="message" placeholder="Message"></textarea>
+        <form id="js-contact-form" class="contact__form" action="https://formspree.io/taylorradtke@gmail.com" method="POST">
+          <!-- Name -->
+          <input type="text" name="_name" id="name" placeholder="Name" pattern=".{3,100}" required="">
+          <!-- Email -->
+          <input type="email" name="_email" id="email" placeholder="Email" pattern=".{5,100}" required="">
+          <!-- Subject -->
+          <input type="text" name="_subject" id="subject" placeholder="Subject">
+          <!-- Message -->
+          <textarea name="_message" id="message" placeholder="Message"></textarea>
 
           <nav class="clearfix">
-            <div class="contact__form--tip">
-              All the fields are required
-            </div>
-
-            <div class="contact__form--button">
-              <button id="submit_btn" class="btn btn--icon btn--circle" type="submit" value="Send">Submit</button>
-            </div>
+            <span class="contact__form--tip">All the fields are required</span>
+            <button id="submit_btn" class="btn btn--icon" type="submit" value="Send">Submit</button>
           </nav>
 
-          <div id="result"></div>
         </form>
         <!-- END // Contact Form -->
       </article>

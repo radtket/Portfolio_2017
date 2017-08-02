@@ -77,6 +77,7 @@ p {
   letter-spacing: 0.05rem;
 }
 // Font Size 30px
+
 .headline--primary {
   position: relative;
 
@@ -108,12 +109,13 @@ p {
     left: - 1.5rem;
     font-size: 6rem;
     color: rgba($dark-gray, 0.1);
-    font-weight: $font-weight--bold;
+    font-weight: $font-weight--black;
     opacity: 0.75;
     z-index: 0;
   }
 }
 // Font Size 24px
+
 .hero--profile__name {
   color: $white;
   font-size: 2.4rem;
@@ -121,6 +123,7 @@ p {
   text-transform: uppercase;
 }
 // Font Size 20px
+
 .headline--secondary {
   font-family: $heading-font-family;
   font-size: 2rem;
@@ -146,7 +149,6 @@ p {
   font-weight: $font-weight--light;
   text-align: left;
 }
-
 // Font Size 14px
 %small--uppercase {
   color: $base-gray;
@@ -161,6 +163,7 @@ p {
   @extend %small--uppercase;
 }
 // Font Size 12px
+
 %type--navigation {
   font-family: $heading-font-family;
   font-size: 1.2rem;
@@ -170,7 +173,7 @@ p {
 
 %small-footer-font {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: $font-weight--bold;
   letter-spacing: 0.10em;
   text-transform: uppercase;
 }
@@ -178,4 +181,14 @@ p {
 .hero--signature__footer {
   @extend %small-footer-font;
   color: $base-gray;
+}
+
+%svg__icon {
+  height: 100%;
+  width: $icon-size;
+  position: relative;
+  top: 0;
+  left: 0;
+  fill: $dark-gray;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }

@@ -50,13 +50,8 @@
   }
 
   svg {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 50%;
-    fill: #333;
-    // height: 100%;
-    height: $large-spacing;
+    @extend %svg__icon;
+    width: 40%;
   }
 }
 
@@ -70,29 +65,50 @@
   }
   > nav {
     padding: ($small-spacing / 2) 0;
+    .btn--icon {
+      float: right;
+      &:before {
+        background: url("../img/icons/icon__mail--send.png");
+        background: url("../img/icons/icon__mail--send.svg"), none;
+      }
+    }
   }
   &--tip {
+    float: left;
     font-size: 1.2rem;
     color: $medium-gray;
-    float: left;
     position: relative;
     line-height: 1;
     margin-bottom: $small-spacing;
     &:before {
-      content: '';
-      display: inline-block;
-      height: 18px;
-      width: 18px;
+      @extend %btn--icon--pseudo;
       background-image: url(../img/icons/icon__information.png?text=fallback);
       background-image: url(../img/icons/icon__information.svg);
-      background-position: center 2px;
-      background-size: 12px;
-      background-repeat: no-repeat;
-      vertical-align: middle;
     }
   }
-  &--button {
-    float: right;
-    text-align: right;
+}
+
+
+// Badges
+$badges: (
+  "loading": #f1c40f,
+  "error": #e74c3c,
+  "success": #2ecc71,
+);
+
+@each $badge-type, $color in $badges {
+  .alert {
+    margin-top: $small-spacing;
+    margin-bottom: $small-spacing;
+    text-align: center;
+    display: block;
+    line-height: 1;
+    padding-top: $small-spacing;
+    padding-bottom: $small-spacing;
+    &--#{$badge-type} {
+      background-color: lighten($color, 10%);
+      border-color: darken($color, 25%);
+      color: darken($color, 25%);
+    }
   }
 }
