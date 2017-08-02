@@ -1,7 +1,9 @@
 /* Base files. */
 @import "../../../node_modules/sass-mediaqueries/media-queries";
-@import "../../../neat/_neat.scss";
+
 @import "base/variables";
+
+@import "vendor/neat/neat";
 @import "vendor/slick/slick";
 @import "vendor/slick/slick-theme";
 
