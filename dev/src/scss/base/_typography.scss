@@ -185,7 +185,8 @@ p {
 
 %svg__icon {
   height: 100%;
-  width: $icon-size;
+  width: 50%;
+  max-width: $icon-size;
   position: relative;
   top: 0;
   left: 0;
