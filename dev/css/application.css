@@ -1150,15 +1150,13 @@ input[type="password"]:focus {
     line-height: 55px;
   }
 }
-.navbar__item .btn--icon:before {
-  background: url("../img/icons/icon__resume.png");
-  background: url("../img/icons/icon__resume.svg"), none;
-}
 .navbar__item--link {
   display: inherit;
   color: #333;
   padding: 0 16px;
   padding: 0 1.6rem;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
 }
 @media only screen and (max-width: 768px) {
   .navbar__item--link {
@@ -1176,6 +1174,51 @@ input[type="password"]:focus {
   .navbar__item--link {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar__item--btn {
+    background: #333;
+    border-radius: 2.4rem;
+    border: 2px solid transparent;
+    color: #fff;
+    line-height: 1;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    font-family: "Open Sans", sans-serif;
+  }
+  .navbar__item--btn:hover, .navbar__item--btn:focus {
+    background-color: shade(#c0a062, 20%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .navbar__item--btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  .navbar__item--btn:disabled:hover {
+    background-color: #c0a062;
+  }
+  .navbar__item--btn:active {
+    cursor: pointer !important;
+    outline: none !important;
+  }
+  .navbar__item--btn:before {
+    content: "";
+    display: block;
+    float: left;
+    width: 16px;
+    height: 1.2rem;
+    margin-right: 0.6rem;
+    background: url("../img/icons/icon__resume.png");
+    background: url("../img/icons/icon__resume.svg"), none;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center center !important;
+    -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+    transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   }
 }
 
