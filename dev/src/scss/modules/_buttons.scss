@@ -1,21 +1,21 @@
 %btn--icon--pseudo {
   content: "";
-  display: block;
-  float: left;
-  width: $icon-size;
-  height: $small-spacing;
-  margin-right: $small-spacing / 2;
+  background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
-  background-position: center center !important;
+  display: inline-block;
+  height: $small-spacing;
+  margin-right: $small-spacing / 2;
+  position: relative;
+  top: -1px;
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  vertical-align: middle;
+  width: $icon-size;
   // background: url("../img/icons/icon__mail--send.png");
   // background: url("../img/icons/icon__mail--send.svg"), none;
 }
 
-
-.btn,
-button {
+%button {
   -webkit-font-smoothing: antialiased;
   appearance: none;
   background-color: transparent;
@@ -38,9 +38,14 @@ button {
   }
 }
 
-
+button {
+  @extend %button;
+  padding: 0;
+  border: 0;
+}
 
 .btn {
+  @extend %button;
   @extend %small-footer-font;
   background: $dark-gray;
   border-radius: $base-spacing;

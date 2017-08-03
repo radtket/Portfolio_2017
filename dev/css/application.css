@@ -667,7 +667,7 @@ p {
   text-transform: uppercase;
 }
 
-.hero--signature__footer, .btn, .employers__details--timeframe, .contact__info--headline, blockquote cite {
+.hero--signature__footer, .btn, .work-nav span, .employers__details--timeframe, .contact__info--headline, blockquote cite {
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -960,24 +960,25 @@ p {
     margin-left: 52%;
   }
 }
-.btn--icon:before, .contact__form--tip:before {
+.btn--icon:before, .work-nav__next span:after {
   content: "";
-  display: block;
-  float: left;
-  width: 16px;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  display: inline-block;
   height: 12px;
   height: 1.2rem;
   margin-right: 6px;
   margin-right: 0.6rem;
-  background-repeat: no-repeat !important;
-  background-size: contain !important;
-  background-position: center center !important;
+  position: relative;
+  top: -1px;
   -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
   transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  vertical-align: middle;
+  width: 16px;
 }
 
-.btn,
-button {
+button, .btn, .work-nav {
   -webkit-font-smoothing: antialiased;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1000,13 +1001,16 @@ button {
   vertical-align: middle;
   white-space: nowrap;
 }
-.btn:hover, .btn:focus,
-button:hover,
-button:focus {
+button:hover, .btn:hover, .work-nav:hover, button:focus, .btn:focus, .work-nav:focus {
   border-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: 0;
+}
+
+button {
+  padding: 0;
+  border: 0;
 }
 
 .btn {
@@ -1208,7 +1212,6 @@ input[type="password"]:focus {
 @media only screen and (min-width: 768px) {
   .navbar__item {
     display: inline-block;
-    height: 100%;
     line-height: 55px;
   }
 }
@@ -1284,6 +1287,9 @@ input[type="password"]:focus {
   }
 }
 
+/* ==============================
+   Hamburger
+   ============================== */
 .hamburger {
   display: none;
   float: right;
@@ -1390,6 +1396,69 @@ input[type="password"]:focus {
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* ==============================
+   Work Navbar
+   ============================== */
+.work-nav {
+  padding: 0 24px;
+  padding: 0 2.4rem;
+  border: 0;
+  display: block;
+  color: #333;
+  width: 33.333%;
+  float: left;
+  line-height: 55px;
+  -webkit-transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+}
+.work-nav:hover {
+  color: #333;
+  background: #c0a062;
+}
+.work-nav__prev {
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  .work-nav__prev {
+    padding-left: 1.2rem;
+    padding-right: 0;
+  }
+}
+.work-nav__prev span:before {
+  background: url("../img/icons/left-arrow.svg");
+}
+.work-nav__all {
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .work-nav__all {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.work-nav__all span:before {
+  background: url("../img/icons/x-letter.svg");
+}
+.work-nav__next {
+  text-align: right;
+}
+@media only screen and (max-width: 600px) {
+  .work-nav__next {
+    padding-left: 0;
+    padding-right: 1.2rem;
+  }
+}
+.work-nav__next span:after {
+  background: url("../img/icons/right-arrow.svg");
+  margin-right: 0;
+  margin-left: 6px;
+  margin-left: 0.6rem;
+}
+.work-nav span {
+  line-height: 1;
+  display: inline-block;
 }
 
 .footer {
@@ -1845,10 +1914,10 @@ input[type="password"]:focus {
   padding: 6px 0;
   padding: 0.6rem 0;
 }
-.contact__form > nav .btn--icon {
+.contact__form > nav #submit_btn {
   float: right;
 }
-.contact__form > nav .btn--icon:before {
+.contact__form > nav #submit_btn:before {
   background: url("../img/icons/icon__mail--send.png");
   background: url("../img/icons/icon__mail--send.svg"), none;
 }

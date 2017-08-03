@@ -23,7 +23,6 @@
     }
   }
 
-
   &__nav {
     @include mq($max-width: 768px) {
       display: none;
@@ -55,7 +54,6 @@
     @include mq($min-width: 768px) {
       display: inline-block;
       // height: $navbar__height;
-      height: 100%;
       line-height: $navbar__height;
     }
 
@@ -134,15 +132,15 @@
 
 
 
-
+/* ==============================
+   Hamburger
+   ============================== */
 
 $hamburger-layer-height: 4px !default;
 $hamburger-layer-spacing: 6px !default;
 $hamburger-hover-transition-duration: 0.15s !default;
 $hamburger-hover-transition-timing-function: linear !default;
 
-// Hamburger
-// ==================================================
 .hamburger {
   display: none;
   float: right;
@@ -237,5 +235,66 @@ $hamburger-hover-transition-timing-function: linear !default;
         transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
     }
+  }
+}
+
+
+
+
+/* ==============================
+   Work Navbar
+   ============================== */
+
+.work-nav {
+  @extend %button;
+  padding: 0 $base-spacing;
+  border: 0;
+  display: block;
+  color: $dark-gray;
+  width: 33.333%;
+  float: left;
+  line-height: $navbar__height;
+  transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+  &:hover {
+    color: $dark-gray;
+    background: $color-gold;
+  }
+  &__prev {
+    text-align: left;
+    @include mq($max-width: 600px) {
+      padding-left: $small-spacing;
+      padding-right: 0;
+    }
+    span:before {
+      background: url("../img/icons/left-arrow.svg");
+    }
+  }
+  &__all {
+    text-align: center;
+    @include mq($max-width: 600px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    span:before {
+      background: url("../img/icons/x-letter.svg");
+    }
+  }
+  &__next {
+    text-align: right;
+    @include mq($max-width: 600px) {
+      padding-left: 0;
+      padding-right: $small-spacing;
+    }
+    span:after {
+      @extend %btn--icon--pseudo;
+      background: url("../img/icons/right-arrow.svg");
+      margin-right: 0;
+      margin-left: $small-spacing / 2;
+    }
+  }
+  span {
+    @extend %small-footer-font;
+    line-height: 1;
+    display: inline-block;
   }
 }
