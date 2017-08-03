@@ -95,6 +95,14 @@
   		<path d="M248.3,248.3,54,442.6A31.6,31.6,0,1,1,9.3,397.8L181.2,225.9,9.3,54A31.6,31.6,0,1,1,54,9.3L248.3,203.6a31.6,31.6,0,0,1,0,44.7Z"></path>
   	</symbol>
 
+    <symbol id="icon-down" viewBox="0 0 32 32" >
+      <style type="text/css">
+      .st0{fill:#101010;}
+      </style>
+      <path class="st0" d="M14.5,24.4L0.7,10.8c-0.9-0.9-0.9-2.2,0-3.1s2.3-0.9,3.2,0l12.1,12l12.1-12c0.9-0.9,2.3-0.9,3.2,0
+      	c0.9,0.9,0.9,2.2,0,3.1l0,0L17.6,24.4C16.7,25.2,15.3,25.2,14.5,24.4L14.5,24.4z"/>
+    </symbol>
+
   </svg>
 
 
@@ -113,6 +121,46 @@
   <!-- END // Work Navbar -->
 
 
+  <!-- Project Hero -->
+  <section class="project-hero">
+
+    <video class="project-hero__video" autoplay loop poster="videos/bg__project.jpg">
+        <source src="videos/bg__project.webm" type="video/webm">
+        <source src="videos/bg__project.mp4" type="video/mp4">
+    </video>
+
+    <div class="js-height-full container">
+
+      <!-- Project Hero Content -->
+      <div class="project-hero__table">
+        <div class="project-hero__table--cell">
+
+          <h2 class="project-hero__title">R&S Supply<span class="project-hero__title--date">2014</span></h2>
+          <div class="project-hero__wrap">
+            <span class="project-hero__line"></span>
+            <article class="project-hero__body">
+              <p class="project-hero__body--desc">R&S Supply is one of America's largest wholesale distributor of roofing, siding, window and gutter materials, tools and supplies. They approached me to evaluate their website, and was able to produce a complete branding and web reseign.</p>
+              <p class="project-hero__role">Role</p>
+              <p class="project-hero__role--desc">Branding, Design, Development</p>
+              <a class="project-hero__cta" href="//radtket.github.io/RandS/" target="_blank">Go check the website</a>
+            </article>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Project Hero Content -->
+
+      <!-- Scroll Down Icon -->
+      <a href="#" class="scroll-down">
+        <svg  class="scroll-down__icon">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-down"></use>
+        </svg>
+      </a>
+      <!-- END // Scroll Down Icon -->
+
+    </div>
+  </section>
+  <!-- END // Project Hero -->
 
 
 
@@ -168,15 +216,20 @@
   <script src="js/picturefill.min.js" async></script>
 
   <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-
   <script>window.jQuery || document.write('<script src="js/jquery-1.12.4.min.js"><\/script>')</script>
 
-  <!-- cdnjs -->
+  <!-- CDN JS -->
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 
   <!-- Local JS -->
   <script src="js/script.min.js"></script>
+
+  <!-- Page Specific Scripts -->
+  <script type="text/javascript" src="src/js/covervid.min.js"></script>
+  <script type="text/javascript">
+    $('.project-hero__video').coverVid(1920, 1080);
+  </script>
 </body>
 
 </html>

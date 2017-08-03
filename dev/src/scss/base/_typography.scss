@@ -124,12 +124,17 @@ p {
 }
 // Font Size 20px
 
-.headline--secondary {
+%headline--secondary {
   font-family: $heading-font-family;
   font-size: 2rem;
   letter-spacing: 0.3rem;
   // text-indent: -.3rem;
   text-transform: uppercase;
+  margin-bottom: $small-spacing;
+}
+
+.headline--secondary {
+  @extend %headline--secondary;
   margin-bottom: $small-spacing;
 }
 

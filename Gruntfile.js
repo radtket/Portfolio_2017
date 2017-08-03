@@ -64,7 +64,7 @@ module.exports = function(grunt) {
                 options: {
                     compress: true
                 },
-                src: ['dev/src/js/picturefill.min.js', 'dev/src/js/plugins.js', 'dev/src/js/main.js'],
+                src: ['dev/src/js/main.js'],
                 dest: 'dist/js/script.min.js',
             },
             dev: {
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
                     compress: false,
                     preserveComments: 'all'
                 },
-                src: ['dev/src/js/picturefill.min.js', 'dev/src/js/plugins.js', 'dev/src/js/main.js'],
+                src: ['dev/src/js/main.js'],
                 dest: 'dev/js/script.min.js',
             }
         },
