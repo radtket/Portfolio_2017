@@ -1,6 +1,38 @@
 // Utilities
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .u-full-width {
   width: 100%;
   box-sizing: border-box;

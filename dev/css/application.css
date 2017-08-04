@@ -419,6 +419,38 @@ img {
             transform: rotate(360deg);
   }
 }
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .u-full-width {
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -1012,6 +1044,15 @@ button:hover, .btn:hover, .work-nav:hover, button:focus, .btn:focus, .work-nav:f
           box-shadow: none;
   outline: 0;
 }
+button:active, .btn:active, .work-nav:active {
+  cursor: pointer !important;
+  outline: none !important;
+}
+button.disabled, .disabled.btn, .disabled.work-nav, button[disabled], [disabled].btn, [disabled].work-nav, button[disabled], [disabled].btn, [disabled].work-nav, button:disabled, .btn:disabled, .work-nav:disabled {
+  cursor: not-allowed;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
 
 button {
   padding: 0;
@@ -1034,16 +1075,8 @@ button {
   background-color: rgba(0, 0, 0, 0.7);
   color: rgba(255, 255, 255, 0.85);
 }
-.btn:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-.btn:disabled:hover {
+.btn.disabled:hover, .btn[disabled]:hover, .btn[disabled]:hover, .btn:disabled:hover {
   background-color: #c0a062;
-}
-.btn:active {
-  cursor: pointer !important;
-  outline: none !important;
 }
 
 .list--skills {
@@ -2416,6 +2449,51 @@ blockquote cite {
 .project-image {
   display: block;
   text-align: center;
+}
+
+.browser-mock {
+  max-width: 100%;
+  position: relative;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+}
+.browser-mock:last-of-type {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 600px) {
+  .browser-mock {
+    overflow: hidden;
+    margin-bottom: 80px;
+    display: inline-block;
+  }
+  .browser-mock:before {
+    text-align: left;
+    font-size: 1.5em;
+    display: block;
+    padding: 2px 8px 6px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    content: "● ● ●";
+    color: #999;
+    background: #ddd;
+    border: 1px solid #999;
+  }
+  .browser-mock img {
+    border: 1px solid #999;
+    border-top: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .browser-mock--outline:before {
+    content: "○ ○ ○";
+    color: #ccc;
+    background: transparent;
+    border: 1px solid #ccc;
+  }
+  .browser-mock--outline img {
+    border-color: #ccc;
+  }
 }
 
 /*# sourceMappingURL=maps/application.css.map */
