@@ -101,13 +101,13 @@ module.exports = function(grunt) {
           dev: {
             options: {
               sizes: [{
-                width: 320,
+                width: 440,
                 name: 'small'
               }, {
                 width: 640,
                 name: 'medium'
               }, {
-                width: 800,
+                width: 840,
                 name: 'large'
               }]
             },

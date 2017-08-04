@@ -338,7 +338,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid 1px solid #ddd;
+  border-top: 1px solid #ddd;
   margin: 24px 0;
   margin: 2.4rem 0;
   padding: 0;
@@ -672,7 +672,7 @@ p {
   text-transform: uppercase;
 }
 
-.hero--signature__footer, .btn, .work-nav span, .employers__details--timeframe, .contact__info--headline, blockquote cite, .project-hero__role, .colors__text {
+.hero--signature__footer, .btn, .work-nav span, .employers__details--timeframe, .contact__info--headline, blockquote cite, .project-hero__role, .project-colors__text {
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -2309,59 +2309,41 @@ blockquote cite {
 /* ==============================
  Branding Colors
 ============================== */
-.colors {
+.project-colors {
   padding-top: 24px;
   padding-top: 2.4rem;
   padding-bottom: 24px;
   padding-bottom: 2.4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: wrap;
-      flex-flow: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
 }
-@media only screen and (min-width: 600px) {
-  .colors {
-    padding-bottom: 4.8rem;
-    padding-top: 4.8rem;
-  }
-}
-.colors__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 60px 0px;
-          flex: 0 60px 0;
+.project-colors__item {
   padding: 12px;
   padding: 1.2rem;
+  display: inline-block;
 }
 @media only screen and (min-width: 600px) {
-  .colors__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 120px;
-            flex: 0 0 120px;
+  .project-colors__item {
     padding: 2.4rem;
+    min-width: 80px;
   }
 }
-.colors__color {
+.project-colors__color {
   border-radius: 100%;
-  -webkit-box-shadow: 0 0 0 4px #101010, 0 0 0 5px #333;
-          box-shadow: 0 0 0 4px #101010, 0 0 0 5px #333;
-  height: 0;
-  padding-bottom: 100%;
-  width: 40px;
+  width: 60px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 6px solid #101010;
 }
 @media only screen and (min-width: 600px) {
-  .colors__color {
-    -webkit-box-shadow: 0 0 0 9px #101010, 0 0 0 10px #333;
-            box-shadow: 0 0 0 9px #101010, 0 0 0 10px #333;
+  .project-colors__color {
     margin-bottom: 1.2rem;
     width: 80px;
+    height: 80px;
+    border: 6px solid #101010;
   }
 }
-.colors__text {
+.project-colors__text {
   border-radius: 100px;
   border: 1px solid #333;
   color: #666;
@@ -2374,9 +2356,66 @@ blockquote cite {
   padding: 2px 1.2rem;
 }
 @media only screen and (max-width: 600px) {
-  .colors__text {
+  .project-colors__text {
     display: none;
   }
+}
+
+.flexbox.flexboxlegacy .project-colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.flexbox.flexboxlegacy .project-colors__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 60px 0px;
+          flex: 0 60px 0;
+  min-width: auto;
+}
+@media only screen and (min-width: 600px) {
+  .flexbox.flexboxlegacy .project-colors__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 120px;
+            flex: 0 0 120px;
+  }
+}
+.flexbox.flexboxlegacy .project-colors__color {
+  height: 0;
+  padding-bottom: 100%;
+  border: 0;
+  -webkit-box-shadow: 0 0 0 4px #101010, 0 0 0 5px #333;
+          box-shadow: 0 0 0 4px #101010, 0 0 0 5px #333;
+}
+@media only screen and (min-width: 600px) {
+  .flexbox.flexboxlegacy .project-colors__color {
+    -webkit-box-shadow: 0 0 0 9px #101010, 0 0 0 10px #333;
+            box-shadow: 0 0 0 9px #101010, 0 0 0 10px #333;
+  }
+}
+
+/* ==============================
+ Branding Logo
+============================== */
+.project-logo {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  height: 100%;
+  padding-bottom: 48px;
+  padding-bottom: 4.8rem;
+}
+
+/* ==============================
+ Client Images
+============================== */
+.project-image {
+  display: block;
+  text-align: center;
 }
 
 /*# sourceMappingURL=maps/application.css.map */

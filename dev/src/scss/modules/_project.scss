@@ -182,3 +182,102 @@
     }
   }
 }
+
+
+/* ==============================
+ Branding Colors
+============================== */
+
+.project-colors {
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+  text-align: center;
+
+  &__item {
+    padding: $small-spacing;
+    // No Flexbox
+    display: inline-block;
+    @include mq($min-width: 600px) {
+      padding: $base-spacing;
+      // No Flexbox
+      min-width: 80px;
+    }
+  }
+
+  &__color {
+    border-radius: 100%;
+    width: 60px;
+    // No Flexbox
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 6px solid $black-matte;
+    @include mq($min-width: 600px) {
+      margin-bottom: $small-spacing;
+      width: 80px;
+      // No Flexbox
+      height: 80px;
+      border: 6px solid $black-matte;
+    }
+  }
+
+  &__text {
+    @extend %small-footer-font;
+    border-radius: 100px;
+    border: 1px solid $dark-gray;
+    color: $base-gray;
+    display: inline-block;
+    letter-spacing: $base-letter-spacing;
+    margin-top: $x-small-spacing;
+    padding: 2px $small-spacing;
+    @include mq($max-width: 600px) {
+      display: none;
+    }
+  }
+}
+
+// IE Fix
+.flexbox.flexboxlegacy {
+  .project-colors {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    &__item {
+      flex: 0 60px 0;
+      min-width: auto;
+      @include mq($min-width: 600px) {
+        flex: 0 0 120px;
+      }
+    }
+    &__color {
+      height: 0;
+      padding-bottom: 100%;
+      border: 0;
+      box-shadow: 0 0 0 4px $black-matte, 0 0 0 5px $dark-gray;
+      @include mq($min-width: 600px) {
+        box-shadow: 0 0 0 9px $black-matte, 0 0 0 10px $dark-gray;
+      }
+    }
+  }
+}
+
+/* ==============================
+ Branding Logo
+============================== */
+
+.project-logo {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  height: 100%;
+  padding-bottom: $large-spacing;
+}
+
+/* ==============================
+ Client Images
+============================== */
+
+.project-image {
+  display: block;
+  text-align: center;
+}
