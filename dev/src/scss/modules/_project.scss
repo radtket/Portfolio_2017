@@ -53,7 +53,7 @@
     @extend %headline--secondary;
     color: $medium-gray;
     @include mq($max-width: 600px) {
-      padding-left: $small-spacing / 2;
+      padding-left: $x-small-spacing;
     }
   }
 }
@@ -67,10 +67,9 @@
 
 
 .project-hero__line {
-  display: block;
   height: 2px;
   margin: $small-spacing 0;
-  background-color: $color-gold;
+  border-top: 2px solid $color-gold;
   @include mq($min-width: 600px) {
     width: $base-spacing * 3;
     float: left;
@@ -80,7 +79,7 @@
 
 .project-hero__body {
   @include mq($min-width: 600px) {
-    margin-left: $base-spacing * 2;
+    margin-left: $large-spacing;
     float: left;
     width: 71%;
   }
@@ -102,7 +101,11 @@
   margin-bottom: $x-small-spacing;
   &--desc {
     color: #828282;
+    font-family: $base-font-family;
+    letter-spacing: $base-letter-spacing;
     line-height: $heading-line-height;
+    margin-bottom: $small-spacing;
+    text-transform: none;
   }
 }
 
@@ -217,17 +220,18 @@
       width: 80px;
       // No Flexbox
       height: 80px;
-      border: 6px solid $black-matte;
+      border: 6px solid $form-box-border;
     }
   }
 
   &__text {
     @extend %small-footer-font;
     border-radius: 100px;
-    border: 1px solid $dark-gray;
+    border: 1px solid $form-box-border;
     color: $base-gray;
     display: inline-block;
     letter-spacing: $base-letter-spacing;
+    margin-bottom: $x-small-spacing;
     margin-top: $x-small-spacing;
     padding: 2px $small-spacing;
     @include mq($max-width: 600px) {

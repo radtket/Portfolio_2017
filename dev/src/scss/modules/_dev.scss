@@ -24,11 +24,11 @@
 			content: "● ● ●";
 			color: $medium-gray;
 			background: $light-gray;
-			border: 1px solid $medium-gray;
+			border: 1px solid $form-box-border;
 		}
 
 		img {
-			border: 1px solid $medium-gray;
+			border: 1px solid $form-box-border;
 			border-top: 0;
 			border-bottom-right-radius: 3px;
 			border-bottom-left-radius: 3px;

@@ -527,8 +527,8 @@ h6 {
   font-weight: 400;
   margin: 0;
   text-transform: uppercase;
-  font-family: 16px;
-  font-family: 1.6rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 p {
@@ -2145,11 +2145,10 @@ blockquote cite {
 }
 
 .project-hero__line {
-  display: block;
   height: 2px;
   margin: 12px 0;
   margin: 1.2rem 0;
-  background-color: #c0a062;
+  border-top: 2px solid #c0a062;
 }
 @media only screen and (min-width: 600px) {
   .project-hero__line {
@@ -2186,7 +2185,13 @@ blockquote cite {
 }
 .project-hero__role--desc {
   color: #828282;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
   line-height: 1.2;
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  text-transform: none;
 }
 
 .project-hero__cta {
@@ -2314,16 +2319,18 @@ blockquote cite {
     margin-bottom: 1.2rem;
     width: 80px;
     height: 80px;
-    border: 6px solid #101010;
+    border: 6px solid rgba(0, 0, 0, 0.2);
   }
 }
 .project-colors__text {
   border-radius: 100px;
-  border: 1px solid #333;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   color: #666;
   display: inline-block;
   letter-spacing: 0.5px;
   letter-spacing: 0.05rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
   margin-top: 6px;
   margin-top: 0.6rem;
   padding: 2px 12px;
@@ -2418,10 +2425,10 @@ blockquote cite {
     content: "● ● ●";
     color: #999;
     background: #ddd;
-    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
   .browser-mock img {
-    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-top: 0;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
