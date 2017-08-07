@@ -11,7 +11,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['dev/src/js/*.js'],
-                tasks: ['uglify:dev'],
+                tasks: ['uglify:dev', 'uglify:dev_secondary'],
             },
         },
 
@@ -67,6 +67,13 @@ module.exports = function(grunt) {
                 src: ['dev/src/js/main.js'],
                 dest: 'dist/js/script.min.js',
             },
+            build_secondary: {
+                options: {
+                    compress: true
+                },
+                src: ['dev/src/js/vendor/covervid.min.js', 'dev/src/js/project-page.js'],
+                dest: 'dist/js/project-page.min.js',
+            },
             dev: {
                 options: {
                     beautify: true,
@@ -75,7 +82,16 @@ module.exports = function(grunt) {
                 },
                 src: ['dev/src/js/main.js'],
                 dest: 'dev/js/script.min.js',
-            }
+            },
+            dev_secondary: {
+                options: {
+                    beautify: true,
+                    compress: false,
+                    preserveComments: 'all'
+                },
+                src: ['dev/src/js/vendor/covervid.min.js', 'dev/src/js/project-page.js'],
+                dest: 'dev/js/project-page.min.js',
+            },
         },
 
         htmlmin: {
@@ -169,7 +185,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'uglify:dev', 'htmlmin:dev', 'responsive_images:dev', 'watch']);
-    grunt.registerTask('build', ['cssmin', 'uglify:build', 'htmlmin:build', 'imagemin']);
+    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'uglify:dev', 'uglify:dev_secondary', 'htmlmin:dev', 'responsive_images:dev', 'watch']);
+    grunt.registerTask('build', ['cssmin', 'uglify:build', 'uglify:build_secondary', 'htmlmin:build', 'imagemin']);
 
 };

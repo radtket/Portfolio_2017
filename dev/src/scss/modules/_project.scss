@@ -216,7 +216,7 @@
     margin-right: auto;
     border: 6px solid $black-matte;
     @include mq($min-width: 600px) {
-      margin-bottom: $small-spacing;
+      margin-bottom: $base-spacing;
       width: 80px;
       // No Flexbox
       height: 80px;
@@ -228,11 +228,7 @@
     @extend %small-footer-font;
     border-radius: 100px;
     border: 1px solid $form-box-border;
-    color: $base-gray;
-    display: inline-block;
     letter-spacing: $base-letter-spacing;
-    margin-bottom: $x-small-spacing;
-    margin-top: $x-small-spacing;
     padding: 2px $small-spacing;
     @include mq($max-width: 600px) {
       display: none;

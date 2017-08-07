@@ -25,6 +25,7 @@
     "grunt-svgmin": "^4.0.0",
     "imagemin-gifsicle": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",
+    "imagemin-mozjpeg": "^6.0.0",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.2",
     "mozjpeg": "^4.1.1",

@@ -90,7 +90,9 @@ a {
   color: $action-color;
   text-decoration: none;
   background-color: transparent;
+  letter-spacing: $base-letter-spacing;
   -webkit-text-decoration-skip: objects;
+
 
   &:hover {
     color: darken($action-color, 5%);

@@ -324,6 +324,8 @@ a {
   color: #c0a062;
   text-decoration: none;
   background-color: transparent;
+  letter-spacing: 0.5px;
+  letter-spacing: 0.05rem;
   -webkit-text-decoration-skip: objects;
 }
 a:hover {
@@ -2316,7 +2318,7 @@ blockquote cite {
 }
 @media only screen and (min-width: 600px) {
   .project-colors__color {
-    margin-bottom: 1.2rem;
+    margin-bottom: 2.4rem;
     width: 80px;
     height: 80px;
     border: 6px solid rgba(0, 0, 0, 0.2);
@@ -2325,14 +2327,8 @@ blockquote cite {
 .project-colors__text {
   border-radius: 100px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  color: #666;
-  display: inline-block;
   letter-spacing: 0.5px;
   letter-spacing: 0.05rem;
-  margin-bottom: 6px;
-  margin-bottom: 0.6rem;
-  margin-top: 6px;
-  margin-top: 0.6rem;
   padding: 2px 12px;
   padding: 2px 1.2rem;
 }
