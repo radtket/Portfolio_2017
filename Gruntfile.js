@@ -102,13 +102,15 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'dist/index.html': 'dev/index.html',
-                    // 'dist/contact.html': 'clients/*.html'
+                    'dist/client_r-s.html': 'dev/client_r-s.html',
+                    'dist/client_green-can.html': 'dev/client_green-can.html',
                 }
             },
             dev: {
                 files: {
                     'dev/index.html': 'dev/index.html',
-                    // 'dist/contact.html': 'clients/*.html'
+                    'dev/client_r-s.html': 'dev/client_r-s.html',
+                    'dev/client_green-can.html': 'dev/client_green-can.html',
                 }
             }
         },

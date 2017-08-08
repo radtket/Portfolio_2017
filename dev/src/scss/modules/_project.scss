@@ -52,9 +52,7 @@
   &--date {
     @extend %headline--secondary;
     color: $medium-gray;
-    @include mq($max-width: 600px) {
-      padding-left: $x-small-spacing;
-    }
+    padding-left: $x-small-spacing;
   }
 }
 
