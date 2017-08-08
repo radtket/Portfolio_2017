@@ -1,3 +1,9 @@
+<IfModule pagespeed_module>
+ModPagespeedRewriteLevel CoreFilters
+ModPagespeedEnableFilters extend_cache
+ModPagespeed on
+</IfModule>
+
 # Turn on Expires and set default to 0
 ExpiresActive On
 ExpiresDefault A0
