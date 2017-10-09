@@ -2232,6 +2232,9 @@ blockquote cite {
   text-align: center;
 }
 
+/* ==============================
+ Browser Mockup
+============================== */
 .browser-mock {
   max-width: 100%;
   position: relative;
@@ -2241,6 +2244,9 @@ blockquote cite {
 }
 .browser-mock:last-of-type {
   margin-bottom: 0;
+}
+.browser-mock picture {
+  display: block;
 }
 @media only screen and (min-width: 600px) {
   .browser-mock {
