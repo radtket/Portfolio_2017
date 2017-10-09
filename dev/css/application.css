@@ -1691,7 +1691,7 @@ input[type="password"]:focus {
   margin-bottom: 0.6rem;
 }
 .contact__info--desc {
-  color: inherit;
+  color: #666;
   margin-bottom: 0;
 }
 
