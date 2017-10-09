@@ -23,6 +23,7 @@ $(function() {
   init_nav_menu();
   init_sliders();
   init_smooth_scroll();
+  $('#mixItUp').mixItUp();
 });
 
 $(window).on('resize', function() {

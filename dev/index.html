@@ -495,52 +495,26 @@
       </aside>
 
       <article class="section--content">
-        <!-- Portfolio Item  -->
-        <figure class="work-item">
-          <a href="./client_r-s.html">
-            <picture class="work-img">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source srcset="img/clients/r-s/r-s__275.jpg" media="(min-width: 800px)">
-              <!--[if IE 9]></video><![endif]-->
-              <img src="img/clients/r-s/r-s__500.jpg" srcset="img/clients/r-s/r-s__500.jpg" alt="">
-            </picture>
-            <figcaption class="work-intro">
-              <p class="work-title">R&S Supply</p>
-              <h5 class="work-descr">Website</h5>
-            </figcaption>
-          </a>
-        </figure>
-        <!-- END // Portfolio Item  -->
 
+        <div class="controls">
+          <button class="filter" data-filter="all">All</button>
+          <button class="filter" data-filter=".category__website">Website</button>
+          <button class="filter" data-filter=".category__js-project">Javascript</button>
+        </div>
 
-        <!-- Portfolio Item  -->
-        <figure class="work-item">
-          <a href="./client_green-can.html">
-            <picture class="work-img">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source srcset="img/clients/green-can/green-can__275.jpg" media="(min-width: 800px)">
-              <!--[if IE 9]></video><![endif]-->
-              <img src="img/clients/green-can/green-can__500.jpg" srcset="img/clients/green-can/green-can__500.jpg" alt="">
-            </picture>
-            <figcaption class="work-intro">
-              <p class="work-title">Captain Jon's GCL</p>
-              <h5 class="work-descr">Website</h5>
-            </figcaption>
-          </a>
-        </figure>
-        <!-- END // Portfolio Item  -->
+        <div id="mixItUp" class="mix-container">
+          <div data-myorder="1" class="mix category__js-project"></div>
+          <div data-myorder="2" class="mix category__js-project"></div>
+          <div data-myorder="3" class="mix category__js-project"></div>
+          <div data-myorder="4" class="mix category__website"></div>
+          <div data-myorder="5" class="mix category__js-project"></div>
+          <div data-myorder="6" class="mix category__js-project"></div>
+          <div data-myorder="7" class="mix category__website"></div>
+          <div data-myorder="8" class="mix category__website"></div>
 
-
-        <!-- Portfolio Item  -->
-        <figure class="work-item">
-            <picture class="work-img">
-              <!--[if IE 9]><video style="display: none;"><![endif]-->
-              <source srcset="img/clients/construction__275.jpg" media="(min-width: 800px)">
-              <!--[if IE 9]></video><![endif]-->
-              <img src="img/clients/construction__500.jpg" srcset="img/clients/construction__500.jpg" alt="">
-            </picture>
-        </figure>
-        <!-- END // Portfolio Item  -->
+          <div class="gap"></div>
+          <div class="gap"></div>
+        </div>
 
       </article>
 
@@ -834,6 +808,7 @@
   <!-- CDN JS -->
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
 
   <!-- Local JS -->
   <script src="js/script.min.js"></script>

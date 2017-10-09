@@ -1,0 +1,74 @@
+$mix-half    : 49%;
+$mix-third   : 32%;
+$mix-quarter : 23.5%;
+
+.controls {
+	padding: 2% 0;
+  button {
+  	display: inline-block;
+  	padding: .4em .8em;
+  	border: 0;
+  	cursor: pointer;
+  	&:focus {
+  		outline: 0 none;
+  	}
+  	&+label {
+  		margin-left: 1em;
+  	}
+    &.active {
+    	background: #68b8c4;
+    }
+  }
+}
+
+.mix-container {
+	text-align: justify;
+	font-size: 0.1px;
+	background: #68b8c4;
+	-webkit-backface-visibility: hidden;
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+
+  // Mix Card Sizes
+  .mix,
+  .gap {
+    display: inline-block;
+    width: 100%;
+    @include mq($min-width: 420px) {
+      width: $mix-half;
+    }
+    @include mq($min-width: 640px) {
+      width: $mix-third;
+    }
+  }
+
+	.mix {
+		text-align: left;
+		background: #03899c;
+		margin-bottom: 2%;
+		display: none;
+    &.category__website {
+  		border-top: 2px solid limegreen;
+  	}
+  	&.category__js-project {
+  		border-top: 2px solid yellow;
+  	}
+		&:after {
+			content: attr(data-myorder);
+			color: $white;
+			font-size: 16px;
+			display: inline-block;
+			vertical-align: top;
+			padding: 4% 6%;
+			font-weight: 700;
+		}
+		&:before {
+			content: '';
+			display: inline-block;
+			padding-top: 60%;
+		}
+	}
+}
