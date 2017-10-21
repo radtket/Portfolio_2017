@@ -1,37 +1,54 @@
-
 .works--nav {
-	padding: 2% 0;
-  &__item {
-  	display: inline-block;
-  	padding: .4em .8em;
-  	border: 0;
-  	cursor: pointer;
-  	&:focus {
-  		outline: 0 none;
-  	}
-    &.active {
-    	background: #68b8c4;
-    }
-  }
+	@include mq($max-width: 500px) {
+		text-align: center;
+	}
+
+	&__item {
+		@extend %headline--secondary;
+		color: $medium-gray;
+		display: inline-block;
+		letter-spacing: 0.10em;
+		line-height: $base-line-height;
+		margin-bottom: $base-spacing;
+		margin-right: $base-spacing;
+		position: relative;
+		@include mq($max-width: 400px) {
+			margin: auto auto $small-spacing;
+			display: block;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&:focus {
+			outline: 0 none;
+		}
+
+		&.active {
+			color: $black-matte;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: $small-spacing;
+				height: 2px;
+				background-color: $color-gold;
+			}
+		}
+	}
 }
-
-
-
-
 $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 
 .mix-container {
 	@include grid-container;
-	padding: 0;
 	-webkit-backface-visibility: hidden;
+	padding: 0;
 	text-align: center;
-
-	// font-size: 0.1px;
-	// background: #68b8c4;
-
-  // Mix Card Sizes
-  .mix,
-  .gap {
+	// Mix Card Sizes
+	.gap,
+	.mix {
 		@include grid-column(1, $custom-grid--thirds);
 		overflow: hidden;
 		position: relative;
@@ -43,31 +60,36 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 			max-width: 350px;
 			width: 100%;
 		}
-  }
+	}
 
 	.mix {
 		display: none;
 		overflow: hidden;
 		position: relative;
-    &.category__website {
-  		border-top: 2px solid $color-gold;
-  	}
-  	&.category__js-project {
-  		border-top: 2px solid $light-gray;
-  	}
+
+		&.category__website {
+			border-top: 2px solid $color-gold;
+		}
+
+		&.category__js-project {
+			border-top: 2px solid $light-gray;
+		}
 
 		&:hover {
 			img {
 				transform: scale(1.4);
 			}
+
 			.works--item__title {
 				opacity: 0;
 				top: $base-spacing;
 			}
+
 			.works--item__category {
 				opacity: 0;
 				letter-spacing: 0.75em;
 			}
+
 			.works--item__zoom {
 				opacity: 1;
 				transform: scale(1);
@@ -102,7 +124,7 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 			top: $round-border-radius;
 			width: 33.3333%;
 			height: 33.3333%;
-			margin: 33.3333%  * -.5;
+			margin: 33.3333% * -.5;
 			border-radius: $round-border-radius;
 			background-color: rgba($color-gold, 0.85);
 			overflow: hidden;
@@ -115,9 +137,9 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 				position: absolute;
 				left: $round-border-radius;
 				top: $round-border-radius;
-				width: $round-border-radius * .5;
-				height: $round-border-radius * .5;
-				background: url('http://paul-themes.com/wp/go-arch/go-arch-light/wp-content/themes/goarch/img/img-icon/zoom.png') 0 0 no-repeat;
+				width: $round-border-radius * 0.5;
+				height: $round-border-radius * 0.5;
+				background: url('../img/icons/icon__zoom.png') 0 0 no-repeat;
 				background-size: cover;
 				transform: translate(-50%,-50%);
 			}
@@ -125,6 +147,8 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 
 		figure {
 			position: relative;
+			overflow: hidden;
+			outline: none;
 
 			&:after {
 				content: '';

@@ -90,7 +90,7 @@ p {
   text-indent: -.3rem;
   text-transform: uppercase;
   margin-bottom: $base-spacing;
-  @include mq($min-height: 600px) {
+  @include mq($min-width: 600px) {
     margin-bottom: $base-spacing * 1.5;
   }
 }

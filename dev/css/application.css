@@ -580,7 +580,7 @@ p {
   text-transform: uppercase;
 }
 
-.headline--secondary, .project-hero__title--date {
+.headline--secondary, .project-hero__title--date, .works--nav__item {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-size: 2rem;
@@ -603,7 +603,7 @@ p {
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
 }
-@media only screen and (min-height: 600px) {
+@media only screen and (min-width: 600px) {
   .hero--profile__position {
     margin-bottom: 3.6rem;
   }
@@ -2278,25 +2278,51 @@ blockquote cite {
   }
 }
 
-.works--nav {
-  padding: 2% 0;
+@media only screen and (max-width: 500px) {
+  .works--nav {
+    text-align: center;
+  }
 }
 .works--nav__item {
+  color: #999;
   display: inline-block;
-  padding: .4em .8em;
-  border: 0;
-  cursor: pointer;
+  letter-spacing: 0.10em;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  margin-right: 24px;
+  margin-right: 2.4rem;
+  position: relative;
+}
+@media only screen and (max-width: 400px) {
+  .works--nav__item {
+    margin: auto auto 1.2rem;
+    display: block;
+  }
+}
+.works--nav__item:last-of-type {
+  margin-right: 0;
 }
 .works--nav__item:focus {
   outline: 0 none;
 }
 .works--nav__item.active {
-  background: #68b8c4;
+  color: #101010;
+}
+.works--nav__item.active:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  width: 1.2rem;
+  height: 2px;
+  background-color: #c0a062;
 }
 
 .mix-container {
-  padding: 0;
   -webkit-backface-visibility: hidden;
+  padding: 0;
   text-align: center;
 }
 .mix-container::after {
@@ -2304,8 +2330,8 @@ blockquote cite {
   content: "";
   display: block;
 }
-.mix-container .mix,
-.mix-container .gap {
+.mix-container .gap,
+.mix-container .mix {
   width: calc(33.33333%);
   float: left;
   margin-left: 0px;
@@ -2313,14 +2339,14 @@ blockquote cite {
   position: relative;
 }
 @media only screen and (max-width: 800px) {
-  .mix-container .mix,
-  .mix-container .gap {
+  .mix-container .gap,
+  .mix-container .mix {
     width: 50%;
   }
 }
 @media only screen and (max-width: 500px) {
-  .mix-container .mix,
-  .mix-container .gap {
+  .mix-container .gap,
+  .mix-container .mix {
     float: none;
     max-width: 350px;
     width: 100%;
@@ -2405,7 +2431,7 @@ blockquote cite {
   top: 50%;
   width: 25%;
   height: 25%;
-  background: url("http://paul-themes.com/wp/go-arch/go-arch-light/wp-content/themes/goarch/img/img-icon/zoom.png") 0 0 no-repeat;
+  background: url("../img/icons/icon__zoom.png") 0 0 no-repeat;
   background-size: cover;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -2413,6 +2439,8 @@ blockquote cite {
 }
 .mix-container .mix figure {
   position: relative;
+  overflow: hidden;
+  outline: none;
 }
 .mix-container .mix figure:after {
   content: '';
