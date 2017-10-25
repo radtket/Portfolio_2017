@@ -134,7 +134,7 @@ module.exports = function(grunt) {
         },
 
         responsive_images: {
-          dev: {
+          clients: {
             options: {
               sizes: [{
                 width: 440,
@@ -149,7 +149,24 @@ module.exports = function(grunt) {
             },
             files: [{
               expand: true,
-              src: ['img/**/*.{jpg,gif,png}'],
+              src: ['img/clients/**/*.{jpg,gif,png}'],
+              cwd: 'dev/src',
+              dest: 'dev/'
+            }]
+          },
+          portfolio: {
+            options: {
+              sizes: [{
+                width: 3000,
+                name: 'small'
+              }, {
+                width: 600,
+                name: 'large'
+              }]
+            },
+            files: [{
+              expand: true,
+              src: ['img/works/*.{jpg,gif,png}'],
               cwd: 'dev/src',
               dest: 'dev/'
             }]
@@ -207,7 +224,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-babel');
 
-    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'babel', 'uglify:dev', 'uglify:dev_secondary', 'htmlmin:dev', 'responsive_images:dev', 'watch']);
+    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'babel', 'uglify:dev', 'uglify:dev_secondary', 'htmlmin:dev', 'responsive_images:clients', 'responsive_images:portfolio', 'watch']);
     grunt.registerTask('build', ['cssmin', 'babel', 'uglify:build', 'uglify:build_secondary', 'htmlmin:build', 'imagemin']);
 
 };

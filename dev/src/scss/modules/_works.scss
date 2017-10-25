@@ -58,9 +58,10 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 		@include grid-column(1, $custom-grid--thirds);
 		display: inline-block;
 		vertical-align: top;
-		max-width: 360px;
+		max-width: 300px;
 		@include mq($max-width: 800px) {
 			width: 50%;
+			max-width: 360px;
 		}
 		@include mq($max-width: 500px) {
 			float: none;

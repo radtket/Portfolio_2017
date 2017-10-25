@@ -1618,12 +1618,13 @@ input[type="password"]:focus {
   margin-left: 0px;
   display: inline-block;
   vertical-align: top;
-  max-width: 360px;
+  max-width: 300px;
 }
 @media only screen and (max-width: 800px) {
   .works--item,
   .works .gap {
     width: 50%;
+    max-width: 360px;
   }
 }
 @media only screen and (max-width: 500px) {
