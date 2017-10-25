@@ -10,23 +10,12 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 	&--category {
 		@extend %headline--secondary;
 		color: $medium-gray;
-		display: inline-block;
+		margin: auto auto $small-spacing;
+		display: block;
 		letter-spacing: 0.10em;
 		line-height: $base-line-height;
-		margin-bottom: $base-spacing;
-		margin-right: $base-spacing;
 		position: relative;
 		transition: all 0.5s;
-
-		@include mq($max-width: 400px) {
-			margin: auto auto $small-spacing;
-			display: block;
-		}
-
-		&:last-of-type {
-			margin-right: 0;
-		}
-
 		&:after {
 			content: '';
 			position: absolute;
@@ -39,8 +28,13 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 			transition: all 0.7s;
 		}
 
-		&:focus {
-			outline: 0 none;
+		@include mq($min-width: 400px) {
+			margin-bottom: $base-spacing;
+			margin-right: $base-spacing;
+			display: inline-block;
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 
 		&__active {
@@ -61,15 +55,16 @@ $custom-grid--thirds: ( columns: 3, gutter: 0px, );
 	// Mix Card Sizes
 	&--item,
 	.gap {
+		@include grid-column(1, $custom-grid--thirds);
 		display: inline-block;
 		vertical-align: top;
-		@include grid-column(1, $custom-grid--thirds);
+		max-width: 360px;
 		@include mq($max-width: 800px) {
 			width: 50%;
 		}
 		@include mq($max-width: 500px) {
 			float: none;
-			max-width: 350px;
+			// max-width: 350px;
 			width: 100%;
 		}
 	}

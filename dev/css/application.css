@@ -1563,25 +1563,14 @@ input[type="password"]:focus {
 
 .works--category {
   color: #999;
-  display: inline-block;
+  margin: auto auto 12px;
+  margin: auto auto 1.2rem;
+  display: block;
   letter-spacing: 0.10em;
   line-height: 1.5;
-  margin-bottom: 24px;
-  margin-bottom: 2.4rem;
-  margin-right: 24px;
-  margin-right: 2.4rem;
   position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-@media only screen and (max-width: 400px) {
-  .works--category {
-    margin: auto auto 1.2rem;
-    display: block;
-  }
-}
-.works--category:last-of-type {
-  margin-right: 0;
 }
 .works--category:after {
   content: '';
@@ -1596,8 +1585,15 @@ input[type="password"]:focus {
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
-.works--category:focus {
-  outline: 0 none;
+@media only screen and (min-width: 400px) {
+  .works--category {
+    margin-bottom: 2.4rem;
+    margin-right: 2.4rem;
+    display: inline-block;
+  }
+  .works--category:last-of-type {
+    margin-right: 0;
+  }
 }
 .works--category__active {
   color: #101010;
@@ -1617,11 +1613,12 @@ input[type="password"]:focus {
 }
 .works--item,
 .works .gap {
-  display: inline-block;
-  vertical-align: top;
   width: calc(33.33333%);
   float: left;
   margin-left: 0px;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 360px;
 }
 @media only screen and (max-width: 800px) {
   .works--item,
@@ -1633,7 +1630,6 @@ input[type="password"]:focus {
   .works--item,
   .works .gap {
     float: none;
-    max-width: 350px;
     width: 100%;
   }
 }
