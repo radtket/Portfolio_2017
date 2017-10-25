@@ -3,7 +3,7 @@
  --------------------------------------------- */
 
 // window - load
-$(window).on('load', function(){
+$(window).on('load', () => {
   $('body').imagesLoaded( {
       background: true,
     },
@@ -18,25 +18,26 @@ $(window).on('load', function(){
 });
 
 // document - ready
-$(function() {
+$(() => {
   $(window).trigger('resize');
   init_nav_menu();
   init_sliders();
   init_smooth_scroll();
-  $('#mixItUp').mixItUp();
 });
 
-$(window).on('resize', function() {
+$(window).on('resize', () => {
   js_height_init();
 });
 
 
 
 
-// Mobile Nav
+/* ---------------------------------------------
+ Mobile Nav
+ --------------------------------------------- */
 function init_nav_menu() {
-	var hamburger__toggle = $('.hamburger').unbind();
-	var navbar__nav = $('.navbar__nav');
+	const hamburger__toggle = $('.hamburger').unbind();
+	const navbar__nav = $('.navbar__nav');
 
 	navbar__nav.removeClass('navigation-open');
 
@@ -55,6 +56,9 @@ function init_nav_menu() {
 
 
 
+/* ---------------------------------------------
+ Smooth Scroll
+ --------------------------------------------- */
 function init_smooth_scroll() {
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -62,7 +66,7 @@ function init_smooth_scroll() {
   	// On-page links
   	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
   		// Figure out element to scroll to
-  		var target = $(this.hash);
+  		let target = $(this.hash);
   		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
   		// Does a scroll target exist?
   		if (target.length) {
@@ -73,7 +77,7 @@ function init_smooth_scroll() {
   			}, 1000, function() {
   				// Callback after animation
   				// Must change focus!
-  				var $target = $(target);
+  				const $target = $(target);
   				$target.focus();
   				if ($target.is(":focus")) { // Checking if the target was focused
   					return false;
@@ -90,7 +94,9 @@ function init_smooth_scroll() {
 
 
 
-
+/* ---------------------------------------------
+ Page Sliders
+ --------------------------------------------- */
 function init_sliders() {
 
   // Clients Slider
@@ -146,7 +152,7 @@ function init_sliders() {
 /* ---------------------------------------------
  Contact form
  --------------------------------------------- */
- var $contactForm = $('#js-contact-form');
+ const $contactForm = $('#js-contact-form');
  $contactForm.submit(function(e) {
  	e.preventDefault();
  	$.ajax({
@@ -154,14 +160,14 @@ function init_sliders() {
  		method: 'POST',
  		data: $(this).serialize(),
  		dataType: 'json',
- 		beforeSend: function() {
+ 		beforeSend: () => {
  			$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
  		},
- 		success: function(data) {
+ 		success: (data) => {
  			$contactForm.find('.alert--loading').hide();
  			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
  		},
- 		error: function(err) {
+ 		error: (err) => {
  			$contactForm.find('.alert--loading').hide();
  			$contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
  		}
@@ -179,3 +185,21 @@ function js_height_init() {
     });
   })(jQuery);
 }
+
+
+/* ---------------------------------------------
+ mixItUp
+ --------------------------------------------- */
+const mixItUp__wrapper = document.querySelector('.works--wrap');
+
+let mixer = mixitup(mixItUp__wrapper, {
+  selectors: {
+    target: '.works--item'
+  },
+  classNames: {
+    block: 'works',
+    elementFilter: 'category',
+    delineatorElement: '--',
+    delineatorModifier: '__'
+  }
+});

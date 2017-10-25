@@ -2,10 +2,10 @@
  Scripts initialization
  --------------------------------------------- */
 // window - load
-$(window).on('load', function() {
+$(window).on('load', () => {
 	$('body').imagesLoaded({
 		background: true,
-	}, function() {
+	}, () => {
 		$(".page-loader div").fadeOut();
 		$(".page-loader").delay(200).fadeOut("slow");
 	});
@@ -14,13 +14,13 @@ $(window).on('load', function() {
 });
 
 // document - ready
-$(function() {
+$(() => {
 	$(window).trigger('resize');
 	init_smooth_scroll();
 	init_project_colors();
 });
 
-$(window).on('resize', function() {
+$(window).on('resize', () => {
 	js_height_init();
 });
 

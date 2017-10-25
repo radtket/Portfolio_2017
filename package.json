@@ -10,8 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "babel-core": "^6.26.0",
+    "babel-minify": "^0.2.0",
+    "babel-plugin-uglify": "^1.0.2",
+    "babel-preset-env": "^1.6.1",
     "cssnano": "^3.10.0",
     "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^2.2.1",
@@ -33,5 +38,8 @@
     "postcss-flexboxfixer": "0.0.5",
     "postcss-scss": "^1.0.2",
     "sass-mediaqueries": "^1.6.1"
+  },
+  "dependencies": {
+    "mixitup": "^3.2.1"
   }
 }

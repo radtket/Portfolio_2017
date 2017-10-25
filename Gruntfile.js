@@ -1,6 +1,7 @@
 const mozjpeg = require('imagemin-mozjpeg');
 const svgo = require('imagemin-svgo');
 
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -11,7 +12,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['dev/src/js/*.js'],
-                tasks: ['uglify:dev', 'uglify:dev_secondary'],
+                tasks: ['babel', 'uglify:dev', 'uglify:dev_secondary']
             },
         },
 
@@ -44,10 +45,11 @@ module.exports = function(grunt) {
 
         postcss: {
           options: {
-            map: {
-                inline: false, // save all sourcemaps as separate files...
-                annotation: 'dev/css/maps/', // ...to the specified directory
-            },
+            // map: {
+            //     inline: false, // save all sourcemaps as separate files...
+            //     annotation: 'dev/css/maps/', // ...to the specified directory
+            // },
+            map: true,
             processors: [
               require('pixrem')(), // add fallbacks for rem units
               require('postcss-flexboxfixer'),
@@ -59,19 +61,34 @@ module.exports = function(grunt) {
           },
         },
 
+
+        babel: {
+            options: {
+              sourceMap: true,
+              presets: ['env']
+            },
+            dist: {
+              files: {
+                'dev/src/js/compiled/main.js': 'dev/src/js/main.js',
+                'dev/src/js/compiled/project-page.js': 'dev/src/js/project-page.js'
+              }
+            }
+      	},
+
+
         uglify: {
             build: {
                 options: {
                     compress: true
                 },
-                src: ['dev/src/js/main.js'],
+                src: ['dev/src/js/vendor/mixitup.min.js', 'dev/src/js/compiled/main.js'],
                 dest: 'dist/js/script.min.js',
             },
             build_secondary: {
                 options: {
                     compress: true
                 },
-                src: ['dev/src/js/vendor/covervid.min.js', 'dev/src/js/project-page.js'],
+                src: ['dev/src/js/vendor/covervid.min.js', 'dev/src/js/compiled/project-page.js'],
                 dest: 'dist/js/project-page.min.js',
             },
             dev: {
@@ -80,7 +97,7 @@ module.exports = function(grunt) {
                     compress: false,
                     preserveComments: 'all'
                 },
-                src: ['dev/src/js/main.js'],
+                src: ['dev/src/js/vendor/mixitup.min.js', 'dev/src/js/compiled/main.js'],
                 dest: 'dev/js/script.min.js',
             },
             dev_secondary: {
@@ -89,10 +106,11 @@ module.exports = function(grunt) {
                     compress: false,
                     preserveComments: 'all'
                 },
-                src: ['dev/src/js/vendor/covervid.min.js', 'dev/src/js/project-page.js'],
+                src: ['dev/src/js/vendor/covervid.min.js', 'dev/src/js/compiled/project-page.js'],
                 dest: 'dev/js/project-page.min.js',
             },
         },
+
 
         htmlmin: {
             build: {
@@ -186,8 +204,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-babel');
 
-    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'uglify:dev', 'uglify:dev_secondary', 'htmlmin:dev', 'responsive_images:dev', 'watch']);
-    grunt.registerTask('build', ['cssmin', 'uglify:build', 'uglify:build_secondary', 'htmlmin:build', 'imagemin']);
+    grunt.registerTask('default', ['browserSync', 'sass:dev', 'postcss', 'babel', 'uglify:dev', 'uglify:dev_secondary', 'htmlmin:dev', 'responsive_images:dev', 'watch']);
+    grunt.registerTask('build', ['cssmin', 'babel', 'uglify:build', 'uglify:build_secondary', 'htmlmin:build', 'imagemin']);
 
 };
