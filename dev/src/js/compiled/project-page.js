@@ -8,8 +8,8 @@ $(window).on('load', function () {
 	$('body').imagesLoaded({
 		background: true
 	}, function () {
-		$(".page-loader div").fadeOut();
-		$(".page-loader").delay(200).fadeOut("slow");
+		$('.page-loader div').fadeOut();
+		$('.page-loader').delay(200).fadeOut('slow');
 	});
 	$(window).trigger('scroll');
 	$(window).trigger('resize');
@@ -18,23 +18,23 @@ $(window).on('load', function () {
 // document - ready
 $(function () {
 	$(window).trigger('resize');
-	init_smooth_scroll();
-	init_project_colors();
+	initSmoothScroll();
+	initProjectColors();
 });
 
 $(window).on('resize', function () {
-	js_height_init();
+	initJsHeight();
 });
 
 /* ---------------------------------------------
  Smooth Scroll
  --------------------------------------------- */
-function init_smooth_scroll() {
+function initSmoothScroll() {
 	$('a[href*="#"]')
 	// Remove links that don't actually link to anything
 	.not('[href="#"]').not('[href="#0"]').click(function (event) {
 		// On-page links
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 			// Figure out element to scroll to
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -49,13 +49,12 @@ function init_smooth_scroll() {
 					// Must change focus!
 					var $target = $(target);
 					$target.focus();
-					if ($target.is(":focus")) {
+					if ($target.is(':focus')) {
 						// Checking if the target was focused
 						return false;
-					} else {
-						$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-						$target.focus(); // Set focus again
-					};
+					}
+					$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+					$target.focus(); // Set focus again
 				});
 			}
 		}
@@ -65,10 +64,10 @@ function init_smooth_scroll() {
 /* ---------------------------------------------
  JS Full Height
  --------------------------------------------- */
-function js_height_init() {
+function initJsHeight() {
 	(function ($) {
-		$(".js-height-full").height($(window).height());
-		$(".js-height-parent").each(function () {
+		$('.js-height-full').height($(window).height());
+		$('.js-height-parent').each(function () {
 			$(this).height($(this).parent().first().height());
 		});
 	})(jQuery);
@@ -83,10 +82,10 @@ $('.project-hero__video').coverVid(1920, 1080);
 	Dynamic Theme Color Creator
  --------------------------------------------- */
 
-function init_project_colors() {
+function initProjectColors() {
 	$('.project-colors__text').each(function () {
 		var color = $(this).text();
-		$(this).prev().css("background", color);
+		$(this).prev().css('background', color);
 	});
 }
 //# sourceMappingURL=project-page.js.map
