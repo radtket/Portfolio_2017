@@ -11,10 +11,18 @@
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
     "babel-minify": "^0.2.0",
     "babel-plugin-uglify": "^1.0.2",
     "babel-preset-env": "^1.6.1",
     "cssnano": "^3.10.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.8.0",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-pug": "^1.1.1",
     "grunt": "^1.0.1",
     "grunt-babel": "^7.0.0",
     "grunt-browser-sync": "^2.2.0",
@@ -37,7 +45,13 @@
     "pixrem": "^4.0.1",
     "postcss-flexboxfixer": "0.0.5",
     "postcss-scss": "^1.0.2",
-    "sass-mediaqueries": "^1.6.1"
+    "prettier": "^1.8.2",
+    "sass-mediaqueries": "^1.6.1",
+    "stylefmt": "^6.0.0",
+    "stylelint": "^8.3.1",
+    "stylelint-config-sass-guidelines": "^4.0.1",
+    "stylelint-order": "^0.7.0",
+    "stylelint-scss": "^2.1.0"
   },
   "dependencies": {
     "mixitup": "^3.2.1"

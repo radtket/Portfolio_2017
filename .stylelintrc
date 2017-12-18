@@ -1,0 +1,22 @@
+{
+  "plugins": [
+		"stylelint-order"
+	],
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "no-missing-end-of-source-newline": false,
+    "order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"order/properties-alphabetical-order": true,
+    "indentation": ["tab", {
+      "except": ["value"]
+    }],
+    "selector-max-compound-selectors": 10,
+    "max-nesting-depth": 10,
+    "selector-no-qualifying-type": [true, {
+      ignore: ["class"]
+    }]
+  }
+}

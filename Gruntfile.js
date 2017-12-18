@@ -2,7 +2,7 @@ const mozjpeg = require('imagemin-mozjpeg');
 const svgo = require('imagemin-svgo');
 
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     grunt.initConfig({
         watch: {
@@ -44,36 +44,36 @@ module.exports = function(grunt) {
         },
 
         postcss: {
-          options: {
-            // map: {
-            //     inline: false, // save all sourcemaps as separate files...
-            //     annotation: 'dev/css/maps/', // ...to the specified directory
-            // },
-            map: true,
-            processors: [
-              require('pixrem')(), // add fallbacks for rem units
-              require('postcss-flexboxfixer'),
-              require('autoprefixer')({browsers: ['last 2 versions', 'ie >= 9']}), // add vendor prefixes
-            ]
-          },
-          dist: {
-            src: 'dev/css/application.css',
-          },
+            options: {
+                // map: {
+                //     inline: false, // save all sourcemaps as separate files...
+                //     annotation: 'dev/css/maps/', // ...to the specified directory
+                // },
+                map: true,
+                processors: [
+                    require('pixrem')(), // add fallbacks for rem units
+                    require('postcss-flexboxfixer'),
+                    require('autoprefixer')({ browsers: ['last 2 versions', 'ie >= 9'] }), // add vendor prefixes
+                ]
+            },
+            dist: {
+                src: 'dev/css/application.css',
+            },
         },
 
 
         babel: {
             options: {
-              sourceMap: true,
-              presets: ['env']
+                sourceMap: true,
+                presets: ['env']
             },
             dist: {
-              files: {
-                'dev/src/js/compiled/main.js': 'dev/src/js/main.js',
-                'dev/src/js/compiled/project-page.js': 'dev/src/js/project-page.js'
-              }
+                files: {
+                    'dev/src/js/compiled/main.js': 'dev/src/js/main.js',
+                    'dev/src/js/compiled/project-page.js': 'dev/src/js/project-page.js'
+                }
             }
-      	},
+        },
 
 
         uglify: {
@@ -134,52 +134,52 @@ module.exports = function(grunt) {
         },
 
         responsive_images: {
-          clients: {
-            options: {
-              sizes: [{
-                width: 440,
-                name: 'small'
-              }, {
-                width: 640,
-                name: 'medium'
-              }, {
-                width: 840,
-                name: 'large'
-              }]
+            clients: {
+                options: {
+                    sizes: [{
+                        width: 440,
+                        name: 'small'
+                    }, {
+                        width: 640,
+                        name: 'medium'
+                    }, {
+                        width: 840,
+                        name: 'large'
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['img/clients/**/*.{jpg,gif,png}'],
+                    cwd: 'dev/src',
+                    dest: 'dev/'
+                }]
             },
-            files: [{
-              expand: true,
-              src: ['img/clients/**/*.{jpg,gif,png}'],
-              cwd: 'dev/src',
-              dest: 'dev/'
-            }]
-          },
-          portfolio: {
-            options: {
-              sizes: [{
-                width: 3000,
-                name: 'small'
-              }, {
-                width: 600,
-                name: 'large'
-              }]
+            portfolio: {
+                options: {
+                    sizes: [{
+                        width: 3000,
+                        name: 'small'
+                    }, {
+                        width: 600,
+                        name: 'large'
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['img/works/*.{jpg,gif,png}'],
+                    cwd: 'dev/src',
+                    dest: 'dev/'
+                }]
             },
-            files: [{
-              expand: true,
-              src: ['img/works/*.{jpg,gif,png}'],
-              cwd: 'dev/src',
-              dest: 'dev/'
-            }]
-          },
         },
 
         imagemin: {
             dynamic: {
                 options: {
                     svgoPlugins: [
-                      {removeViewBox: true},               // don't remove the viewbox atribute from the SVG
-                    	{removeUselessStrokeAndFill: true},  // don't remove Useless Strokes and Fills
-                    	{removeEmptyAttrs: true}             // don't remove Empty Attributes from the SVG
+                        { removeViewBox: true },               // don't remove the viewbox atribute from the SVG
+                        { removeUselessStrokeAndFill: true },  // don't remove Useless Strokes and Fills
+                        { removeEmptyAttrs: true }             // don't remove Empty Attributes from the SVG
                     ],
                     use: [mozjpeg(), svgo()],
                 },
@@ -193,19 +193,19 @@ module.exports = function(grunt) {
         },
 
         cssmin: {
-          options: {
-            // report: 'min',  <--- default
-            report: 'gzip'
-          },
-          target: {
-            files: [{
-              expand: true,
-              cwd: 'dev/css',
-              src: ['application.css'],
-              dest: 'dist/css',
-              ext: '.css'
-            }]
-          }
+            options: {
+                // report: 'min',  <--- default
+                report: 'gzip'
+            },
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'dev/css',
+                    src: ['application.css'],
+                    dest: 'dist/css',
+                    ext: '.css'
+                }]
+            }
         }
 
 
