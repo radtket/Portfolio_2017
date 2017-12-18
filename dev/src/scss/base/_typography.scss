@@ -7,139 +7,140 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
-  // margin: 0 0 $small-spacing;
-  font-weight: 400;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 1.6rem;
+	font-family: $heading-font-family;
+	font-size: 1.6rem;
+	// margin: 0 0 $small-spacing;
+	font-weight: 400;
+	margin: 0;
+	text-transform: uppercase;
 }
 
 p {
-  color: $base-gray;
-  margin: 0 0 $small-spacing;
-  line-height: 1.75;
-  letter-spacing: 0.05rem;
+	color: $base-gray;
+	letter-spacing: 0.05rem;
+	line-height: 1.75;
+	margin: 0 0 $small-spacing;
 }
+
 // Font Size 30px
-
 .headline--primary {
-  position: relative;
+	position: relative;
 
-  h2 {
-    color: $black-matte;
-    display: inline-block;
-    font-size: 3rem;
-    letter-spacing: 0.10em;
-    margin-bottom: 6rem;
-    position: relative;
-    text-transform: uppercase;
-    z-index: 1;
+	h2 {
+		color: $black-matte;
+		display: inline-block;
+		font-size: 3rem;
+		letter-spacing: 0.1em;
+		margin-bottom: 6rem;
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 2rem;
-      height: 2px;
-      background-color: $color-gold;
-    }
-  }
+		&::after {
+			background-color: $color-gold;
+			content: '';
+			height: 2px;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 2rem;
+		}
+	}
 
-  span {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: - 1.5rem;
-    font-size: 6rem;
-    color: rgba($dark-gray, 0.1);
-    font-weight: $font-weight--black;
-    opacity: 0.75;
-    z-index: 0;
-  }
+	span {
+		color: rgba($dark-gray, 0.1);
+		display: block;
+		font-size: 6rem;
+		font-weight: $font-weight--black;
+		left: - 1.5rem;
+		opacity: 0.75;
+		position: absolute;
+		top: 0;
+		z-index: 0;
+	}
 }
+
 // Font Size 24px
-
 .hero--profile__name {
-  color: $white;
-  font-size: 2.4rem;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
+	color: $white;
+	font-size: 2.4rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 }
-// Font Size 20px
 
+// Font Size 20px
 %headline--secondary {
-  font-family: $heading-font-family;
-  font-size: 2rem;
-  letter-spacing: 0.3rem;
-  // text-indent: -.3rem;
-  text-transform: uppercase;
-  margin-bottom: $small-spacing;
+	font-family: $heading-font-family;
+	font-size: 2rem;
+	letter-spacing: 0.3rem;
+	margin-bottom: $small-spacing;
+	// text-indent: -.3rem;
+	text-transform: uppercase;
 }
 
 .headline--secondary {
-  @extend %headline--secondary;
-  // margin-bottom: $small-spacing;
+	@extend %headline--secondary;
+	// margin-bottom: $small-spacing;
 }
 
 .hero--profile__position {
-  color: $color-gold;
-  font-size: 2rem;
-  letter-spacing: 0.3rem;
-  text-indent: -.3rem;
-  text-transform: uppercase;
-  margin-bottom: $base-spacing;
-  @include mq($min-width: 600px) {
-    margin-bottom: $base-spacing * 1.5;
-  }
+	color: $color-gold;
+	font-size: 2rem;
+	letter-spacing: 0.3rem;
+	margin-bottom: $base-spacing;
+	text-indent: -0.3rem;
+	text-transform: uppercase;
+	@include mq($min-width: 600px) {
+		margin-bottom: $base-spacing * 1.5;
+	}
 }
 
-%text__lead {
-  font-weight: $font-weight--light;
-  text-align: left;
+%text-lead {
+	font-weight: $font-weight--light;
+	text-align: left;
 }
+
 // Font Size 14px
 %small--uppercase {
-  color: $base-gray;
-  font-family: $heading-font-family;
-  font-size: 1.4rem;
-  letter-spacing: 0.10em;
-  margin-bottom: $small-spacing;
-  text-transform: uppercase;
+	color: $base-gray;
+	font-family: $heading-font-family;
+	font-size: 1.4rem;
+	letter-spacing: 0.1em;
+	margin-bottom: $small-spacing;
+	text-transform: uppercase;
 }
 
 .list--skills li {
-  @extend %small--uppercase;
+	@extend %small--uppercase;
 }
-// Font Size 12px
 
+// Font Size 12px
 %type--navigation {
-  font-family: $heading-font-family;
-  font-size: 1.2rem;
-  letter-spacing: 0.30em;
-  text-transform: uppercase;
+	font-family: $heading-font-family;
+	font-size: 1.2rem;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
 }
 
 %small-footer-font {
-  font-size: 1.2rem;
-  font-weight: $font-weight--bold;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
+	font-size: 1.2rem;
+	font-weight: $font-weight--bold;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
 }
 
 .hero--signature__footer {
-  @extend %small-footer-font;
-  color: $base-gray;
+	color: $base-gray;
+	@extend %small-footer-font;
 }
 
-%svg__icon {
-  height: 100%;
-  width: 50%;
-  max-width: $icon-size;
-  position: relative;
-  top: 0;
-  left: 0;
-  fill: $dark-gray;
-  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+%svg-icon {
+	fill: $dark-gray;
+	height: 100%;
+	left: 0;
+	max-width: $icon-size;
+	position: relative;
+	top: 0;
+	transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+	width: 50%;
 }

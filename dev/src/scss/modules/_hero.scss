@@ -45,7 +45,7 @@
     }
 
     &__text {
-      @extend %text__lead;
+      @extend %text-lead;
       color: $light-gray;
       @include mq($min-width: 600px) {
         text-align: justify;

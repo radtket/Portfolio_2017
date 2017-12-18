@@ -517,20 +517,20 @@ h4,
 h5,
 h6 {
   font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   margin: 0;
   text-transform: uppercase;
-  font-size: 16px;
-  font-size: 1.6rem;
 }
 
 p {
   color: #666;
-  margin: 0 0 12px;
-  margin: 0 0 1.2rem;
-  line-height: 1.75;
   letter-spacing: 0.5px;
   letter-spacing: 0.05rem;
+  line-height: 1.75;
+  margin: 0 0 12px;
+  margin: 0 0 1.2rem;
 }
 
 .headline--primary {
@@ -541,34 +541,34 @@ p {
   display: inline-block;
   font-size: 30px;
   font-size: 3rem;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   margin-bottom: 60px;
   margin-bottom: 6rem;
   position: relative;
   text-transform: uppercase;
   z-index: 1;
 }
-.headline--primary h2:after {
+.headline--primary h2::after {
+  background-color: #c0a062;
   content: '';
+  height: 2px;
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
   width: 20px;
   width: 2rem;
-  height: 2px;
-  background-color: #c0a062;
 }
 .headline--primary span {
+  color: rgba(51, 51, 51, 0.1);
   display: block;
-  position: absolute;
-  top: 0;
-  left: -15px;
-  left: -1.5rem;
   font-size: 60px;
   font-size: 6rem;
-  color: rgba(51, 51, 51, 0.1);
   font-weight: 700;
+  left: -15px;
+  left: -1.5rem;
   opacity: 0.75;
+  position: absolute;
+  top: 0;
   z-index: 0;
 }
 
@@ -576,7 +576,7 @@ p {
   color: #fff;
   font-size: 24px;
   font-size: 2.4rem;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -586,9 +586,9 @@ p {
   font-size: 2rem;
   letter-spacing: 3px;
   letter-spacing: 0.3rem;
-  text-transform: uppercase;
   margin-bottom: 12px;
   margin-bottom: 1.2rem;
+  text-transform: uppercase;
 }
 
 .hero--profile__position {
@@ -597,11 +597,11 @@ p {
   font-size: 2rem;
   letter-spacing: 3px;
   letter-spacing: 0.3rem;
-  text-indent: -3px;
-  text-indent: -.3rem;
-  text-transform: uppercase;
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
+  text-indent: -3px;
+  text-indent: -0.3rem;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 600px) {
   .hero--profile__position {
@@ -619,7 +619,7 @@ p {
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   margin-bottom: 12px;
   margin-bottom: 1.2rem;
   text-transform: uppercase;
@@ -629,7 +629,7 @@ p {
   font-family: "Oswald", sans-serif;
   font-size: 12px;
   font-size: 1.2rem;
-  letter-spacing: 0.30em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
@@ -637,7 +637,7 @@ p {
   font-size: 12px;
   font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -646,15 +646,15 @@ p {
 }
 
 .footer__social--link svg, .contact__item--icon svg {
+  fill: #333;
   height: 100%;
-  width: 50%;
+  left: 0;
   max-width: 16px;
   position: relative;
   top: 0;
-  left: 0;
-  fill: #333;
   -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  width: 50%;
 }
 
 /* Modules */

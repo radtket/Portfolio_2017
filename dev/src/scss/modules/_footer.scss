@@ -55,7 +55,7 @@
       transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 
       svg {
-        @extend %svg__icon;
+        @extend %svg-icon;
       }
 
       &:before {
