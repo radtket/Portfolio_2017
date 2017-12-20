@@ -2221,9 +2221,11 @@ blockquote cite {
 .project-colors {
   padding-top: 24px;
   padding-top: 2.4rem;
+  text-align: center;
+}
+.project-colors:last-of-type {
   padding-bottom: 24px;
   padding-bottom: 2.4rem;
-  text-align: center;
 }
 .project-colors__item {
   padding: 12px;

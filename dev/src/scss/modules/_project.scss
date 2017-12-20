@@ -191,8 +191,10 @@
 
 .project-colors {
   padding-top: $base-spacing;
-  padding-bottom: $base-spacing;
   text-align: center;
+  &:last-of-type {
+    padding-bottom: $base-spacing;
+  }
 
   &__item {
     padding: $small-spacing;
