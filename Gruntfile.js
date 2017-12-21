@@ -113,6 +113,7 @@ module.exports = function(grunt) {
 					'dist/index.html': 'dev/index.html',
 					'dist/client_r-s.html': 'dev/client_r-s.html',
 					'dist/client_green-can.html': 'dev/client_green-can.html',
+					'dist/client_aapa-2018.html': 'dev/client_aapa-2018.html',
 				},
 			},
 			dev: {
@@ -120,6 +121,7 @@ module.exports = function(grunt) {
 					'dev/index.html': 'dev/index.html',
 					'dev/client_r-s.html': 'dev/client_r-s.html',
 					'dev/client_green-can.html': 'dev/client_green-can.html',
+					'dev/client_aapa-2018.html': 'dev/client_aapa-2018.html',
 				},
 			},
 		},

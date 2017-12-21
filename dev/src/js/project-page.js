@@ -16,6 +16,14 @@ $(window).on('load', () => {
 	);
 	$(window).trigger('scroll');
 	$(window).trigger('resize');
+
+	// Hash menu forwarding
+	if (window.location.hash && $(window.location.hash).length) {
+		const hashOffset = $(window.location.hash).offset().top;
+		$('html, body').animate({
+			scrollTop: hashOffset,
+		});
+	}
 });
 
 // document - ready
