@@ -74,14 +74,14 @@ module.exports = function(grunt) {
 					compress: true,
 				},
 				src: ['dev/src/js/vendor/mixitup.min.js', 'dev/src/js/compiled/main.js'],
-				dest: 'dist/js/script.min.js',
+				dest: 'docs/js/script.min.js',
 			},
 			build_secondary: {
 				options: {
 					compress: true,
 				},
 				src: ['dev/src/js/vendor/covervid.min.js', 'dev/src/js/compiled/project-page.js'],
-				dest: 'dist/js/project-page.min.js',
+				dest: 'docs/js/project-page.min.js',
 			},
 			dev: {
 				options: {
@@ -110,10 +110,10 @@ module.exports = function(grunt) {
 					collapseWhitespace: true,
 				},
 				files: {
-					'dist/index.html': 'dev/index.html',
-					'dist/client_r-s.html': 'dev/client_r-s.html',
-					'dist/client_green-can.html': 'dev/client_green-can.html',
-					'dist/client_aapa-2018.html': 'dev/client_aapa-2018.html',
+					'docs/index.html': 'dev/index.html',
+					'docs/client_r-s.html': 'dev/client_r-s.html',
+					'docs/client_green-can.html': 'dev/client_green-can.html',
+					'docs/client_aapa-2018.html': 'dev/client_aapa-2018.html',
 				},
 			},
 			dev: {
@@ -192,7 +192,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: 'dev/img/',
 						src: ['**/*.{png,jpg,gif,svg}'],
-						dest: 'dist/img/',
+						dest: 'docs/img/',
 					},
 				],
 			},
@@ -209,7 +209,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: 'dev/css',
 						src: ['application.css'],
-						dest: 'dist/css',
+						dest: 'docs/css',
 						ext: '.css',
 					},
 				],
