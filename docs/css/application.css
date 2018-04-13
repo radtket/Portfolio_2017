@@ -1411,7 +1411,7 @@ input[type="password"]:focus {
 }
 @media (min-width: 1024px) {
   .hero--profile {
-    width: calc(41.66667% - 3.4rem);
+    width: calc(41.6666666667% - 3.4rem);
     float: left;
     margin-left: 2.4rem;
   }
@@ -1442,10 +1442,10 @@ input[type="password"]:focus {
 }
 @media (min-width: 1024px) {
   .hero--image {
-    width: calc(41.66667% - 3.4rem);
+    width: calc(41.6666666667% - 3.4rem);
     float: left;
     margin-left: 2.4rem;
-    margin-left: calc(8.33333% - 2.6rem + 4.8rem);
+    margin-left: calc(8.3333333333% - 2.6rem + 4.8rem);
   }
 }
 .hero--image img {
@@ -1604,7 +1604,7 @@ input[type="password"]:focus {
 }
 .works--item,
 .works .gap {
-  width: calc(33.33333%);
+  width: calc(33.3333333333%);
   float: left;
   margin-left: 0px;
   display: inline-block;
