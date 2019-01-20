@@ -1,0 +1,196 @@
+$custom-grid--thirds: (columns: 3,
+gutter: 0);
+
+#works>nav {
+	@include mq($max-width: 500px) {
+		text-align: center;
+	}
+}
+
+.works {
+	&--category {
+		@extend %headline--secondary;
+		color: $medium-gray;
+		display: block;
+		letter-spacing: 0.1em;
+		line-height: $base-line-height;
+		margin: auto auto $small-spacing;
+		position: relative;
+		transition: all 0.5s;
+
+		@include mq($min-width: 400px) {
+			display: inline-block;
+			margin-bottom: $base-spacing;
+			margin-right: $base-spacing;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		&::after {
+			background-color: $color-gold;
+			content: "";
+			height: 2px;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: all 0.7s;
+			width: $small-spacing;
+		}
+
+
+		&__active {
+			color: $black-matte;
+
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&--wrap {
+		@include grid-container;
+		-webkit-backface-visibility: hidden;
+		padding: 0;
+		text-align: center;
+	}
+
+	// Mix Card Sizes
+	&--item,
+	.gap {
+		@include grid-column(1, $custom-grid--thirds);
+		display: inline-block;
+		max-width: 300px;
+		vertical-align: top;
+
+		@include mq($max-width: 800px) {
+			max-width: 360px;
+			width: 50%;
+		}
+
+		@include mq($max-width: 500px) {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	&--item {
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+
+		&:hover {
+			img {
+				transform: scale(1.4);
+			}
+
+			.works--item__title {
+				opacity: 0;
+				top: $base-spacing;
+			}
+
+			.works--item__category {
+				letter-spacing: 0.75em;
+				opacity: 0;
+			}
+
+			.works--item__zoom {
+				opacity: 1;
+				transform: scale(1);
+			}
+
+			figure {
+				&::after {
+					background-color: $black-matte;
+					opacity: 0.1;
+				}
+			}
+		}
+
+		&__title {
+			@extend .hero--profile__name;
+			left: 0;
+			margin: 0 auto;
+			max-width: 80%;
+			position: relative;
+			top: 0;
+			transition: all 0.5s;
+		}
+
+		&__category {
+			@extend %type--navigation;
+			bottom: 0;
+			color: $light-gray;
+			left: 0;
+			margin: 0 0 -0.8em;
+			position: absolute;
+			transform: rotate(-90deg);
+			transform-origin: 0 0;
+			transition: all 0.5s;
+		}
+
+		&__zoom {
+			background-color: rgba($color-gold, 0.85);
+			border-radius: $round-border-radius;
+			height: 33.3333%;
+			left: $round-border-radius;
+			margin: 33.3333% * -0.5;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+			top: $round-border-radius;
+			transform: scale(0.5);
+			transition: all 0.7s;
+			width: 33.3333%;
+
+			&::after {
+				background: url("../img/icons/icon__zoom.png") 0 0 no-repeat;
+				background-size: cover;
+				content: "";
+				height: $round-border-radius * 0.5;
+				left: $round-border-radius;
+				position: absolute;
+				top: $round-border-radius;
+				transform: translate(-50%, -50%);
+				width: $round-border-radius * 0.5;
+			}
+		}
+
+		figure {
+			outline: none;
+			overflow: hidden;
+			position: relative;
+
+			&::after {
+				background-color: $black-matte;
+				content: "";
+				height: 100%;
+				left: 0;
+				opacity: 0.7;
+				position: absolute;
+				top: 0;
+				transition: all 0.5s;
+				width: 100%;
+			}
+
+			img {
+				display: block;
+				transition: all 8s linear;
+				width: 100%;
+			}
+
+			figcaption {
+				bottom: 0;
+				left: 0;
+				margin: $small-spacing;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 1;
+			}
+		}
+	}
+}

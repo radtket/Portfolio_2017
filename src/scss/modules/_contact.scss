@@ -1,0 +1,123 @@
+.contact__wrap {
+	line-height: 1;
+
+	@include mq($min-width: 800px) {
+		float: left;
+	}
+}
+
+.contact__item {
+	@include grid-container;
+	margin-bottom: $base-spacing;
+}
+
+.contact__info {
+	color: $medium-gray;
+	padding-bottom: $small-spacing / 2;
+	padding-top: $small-spacing / 2;
+	text-align: center;
+
+	@include mq($min-width: 800px) {
+		display: inline-block;
+		float: right;
+		text-align: right;
+	}
+
+	&--headline {
+		@extend %small-footer-font;
+		margin-bottom: $small-spacing / 2;
+	}
+
+	&--desc {
+		color: $base-gray;
+		margin-bottom: 0;
+	}
+}
+
+.contact__item--icon {
+	height: $large-spacing;
+	line-height: 1;
+	text-align: center;
+	width: $large-spacing;
+
+	@include mq($min-width: 800px) {
+		border-left: 1px solid $form-box-border;
+		display: inline-block;
+		float: right;
+		margin-left: $small-spacing;
+	}
+
+	@include mq($max-width: 800px) {
+		border-bottom: 1px solid $form-box-border;
+		margin-bottom: $small-spacing / 3;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	svg {
+		@extend %svg-icon;
+	}
+}
+
+.contact__form {
+	@extend %mobile__max-width;
+	margin-bottom: $small-spacing;
+
+	@include mq($min-width: 800px) {
+		float: right;
+		margin-left: $base-spacing;
+		width: calc(100% - 300px);
+	}
+
+	>nav {
+		padding: ($small-spacing / 2) 0;
+
+		#submit--btn {
+			float: right;
+
+			&::before {
+				background: url("../img/icons/icon__mail--send.png");
+			}
+		}
+	}
+
+	&--tip {
+		color: $medium-gray;
+		float: left;
+		font-size: 1.2rem;
+		line-height: 1;
+		margin-bottom: $small-spacing;
+		position: relative;
+
+		&::before {
+			// background-image: url(../img/icons/icon__information.png?text=fallback);
+			background-image: url("../img/icons/icon__information.svg");
+		}
+	}
+}
+
+
+// Badges
+$badges: ("loading": #f1c40f,
+"error": #e74c3c,
+"success": #2ecc71,
+);
+
+@each $badge-type,
+$color in $badges {
+	.alert {
+		display: block;
+		line-height: 1;
+		margin-bottom: $small-spacing;
+		margin-top: $small-spacing;
+		padding-bottom: $small-spacing;
+		padding-top: $small-spacing;
+		text-align: center;
+
+		&--#{$badge-type} {
+			background-color: lighten($color, 10%);
+			border-color: darken($color, 25%);
+			color: darken($color, 25%);
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.timeline {
+	border-left: .125rem solid;
+	margin-left: calc(1rem - .125rem);
+	padding-left: $base-spacing;
+	position: relative;
+
+	&__item {
+		position: relative;
+
+		&--point {
+			background: $color-gold;
+			border-radius: $round-border-radius;
+			box-shadow: 0 0 0 6px $white;
+			height: 1rem;
+			left: -3.1rem;
+			position: absolute;
+			top: .3rem;
+			width: 1rem;
+		}
+	}
+}
+
+.employers {
+	padding-bottom: $large-spacing;
+
+	@include mq($min-width: 1000px) {
+		display: flex;
+		flex-flow: row wrap;
+		margin-right: -$large-spacing;
+		position: relative;
+	}
+
+	&__details {
+
+		@include mq($min-width: 1000px) {
+			flex-basis: 40%;
+			flex-grow: 1;
+			flex-shrink: 0;
+			overflow: hidden;
+			padding-right: $large-spacing;
+		}
+
+		>li {
+			letter-spacing: .05rem;
+			line-height: $heading-line-height;
+			margin-bottom: $small-spacing / 2;
+		}
+
+		&--timeframe {
+			@extend %small-footer-font;
+			color: $color-gold;
+		}
+
+		&--heading {
+			color: $black-matte;
+			font-size: 2rem;
+		}
+
+		&--title {
+			color: $base-gray;
+		}
+
+		&--location {
+			color: $medium-gray;
+			font-size: 1.2rem;
+		}
+
+
+	}
+
+	&__description {
+		@include mq($min-width: 1000px) {
+			flex-basis: 60%;
+			flex-grow: 1;
+			flex-shrink: 0;
+			overflow: hidden;
+			padding-right: $large-spacing;
+		}
+	}
+}

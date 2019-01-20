@@ -1,0 +1,52 @@
+// Forms
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+textarea {
+	min-height: $form-height * 2;
+	padding-bottom: .8rem; // offset for lineheight
+	padding-top: .8rem; // offset for lineheight
+	resize: vertical;
+}
+
+textarea,
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"] {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: $white;
+	background-image: none;
+	border: 1px solid $form-box-border;
+	border-radius: 0;
+	box-shadow: $form-box-shadow;
+	color: $medium-gray;
+	display: inline-block;
+	font-family: $base-font-family;
+	font-size: 1.2rem;
+	height: $form-height;
+	letter-spacing: $base-letter-spacing;
+	margin-bottom: $small-spacing;
+	outline: 0;
+	padding: ($small-spacing / 2) $small-spacing;
+	text-transform: uppercase;
+	transition: all .2s cubic-bezier(.000, .000, .580, 1);
+	// transition: border-color $base-duration $base-timing;
+	vertical-align: middle;
+	width: 100%;
+
+	&:hover {
+		border-color: shade($base-border-color, 20%);
+	}
+
+	&:focus {
+		border-color: $dark-gray;
+		box-shadow: $form-box-shadow-focus;
+		color: $dark-gray;
+		outline: 0;
+	}
+}

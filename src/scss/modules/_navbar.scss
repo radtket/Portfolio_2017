@@ -1,0 +1,324 @@
+.navbar {
+	background-color: rgba($white, 0.97);
+	box-shadow: 0 1px 1px rgba($black, 0.1);
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+
+	&__logo {
+		display: inline-block;
+		float: left;
+		height: $navbar--height;
+		line-height: $navbar--height;
+		text-align: center;
+		width: $navbar--height;
+
+		svg {
+			display: block;
+			fill: $dark-gray;
+			height: 100%;
+			margin: auto;
+			max-width: 65%;
+		}
+	}
+
+	&__nav {
+		@include mq($max-width: 768px) {
+			background: rgba($black-matte, 0.97);
+			display: none;
+			left: 0;
+			overflow-y: hidden;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+
+			&.navigation-open {
+				display: block;
+			}
+		}
+
+		@include mq($min-width: 768px) {
+			float: right;
+		}
+	}
+
+	&__item {
+		// height: $navbar--height--mobile;
+		display: block;
+		height: 100%;
+		line-height: $navbar--height--mobile;
+
+		@include mq($max-width: 768px) {
+			border-bottom: 1px solid rgba($white, 0.1);
+			overflow: hidden;
+		}
+
+		@include mq($min-width: 768px) {
+			// height: $navbar--height;
+			display: inline-block;
+			line-height: $navbar--height;
+		}
+
+		&--link {
+			@extend %type--navigation;
+			color: $dark-gray;
+			display: inherit;
+			padding: 0 1.6rem;
+			transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+
+			@include mq($max-width: 768px) {
+				color: $white;
+				padding-left: $small-spacing;
+				padding-right: $small-spacing;
+				text-align: right;
+
+				&:hover {
+					background: rgba($black-matte, 0.9);
+					color: $color-gold;
+				}
+			}
+
+			@include mq($min-width: 850px) {
+				padding-left: $base-spacing;
+				padding-right: $base-spacing;
+			}
+		}
+
+		&--btn {
+			@include mq($min-width: 768px) {
+				background: $dark-gray;
+				border: 2px solid transparent;
+				border-radius: $base-spacing;
+				color: $white;
+				font-family: $base-font-family;
+				font-weight: $font-weight--bold;
+				letter-spacing: 0.1em;
+				line-height: 1;
+				padding-bottom: $small-spacing;
+				padding-top: $small-spacing;
+
+				&:hover,
+				&:focus {
+					background-color: rgba($black, 0.7);
+					color: rgba($white, 0.85);
+				}
+
+				&:disabled {
+					cursor: not-allowed;
+					opacity: 0.5;
+
+					&:hover {
+						background-color: $action-color;
+					}
+				}
+
+				&:active {
+					cursor: pointer !important;
+					outline: none !important;
+				}
+
+				&::before {
+					// background: url("../img/icons/icon__resume.png");
+					background: url("../img/icons/icon__resume.svg"), none;
+					background-position: center center !important;
+					background-repeat: no-repeat !important;
+					background-size: contain !important;
+					content: "";
+					display: block;
+					float: left;
+					height: 1.2rem;
+					margin-right: $small-spacing / 2;
+					transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+					width: 16px;
+				}
+			}
+		}
+	}
+}
+
+/* ==============================
+   Hamburger
+   ============================== */
+
+$hamburger-layer-height: 4px !default;
+$hamburger-layer-spacing: 6px !default;
+$hamburger-hover-transition-duration: 0.15s !default;
+$hamburger-hover-transition-timing-function: linear !default;
+
+.hamburger {
+	background-color: transparent;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	display: none;
+	float: right;
+	font: inherit;
+	height: $navbar--height;
+	margin: 0;
+	overflow: visible;
+	padding: 0;
+	text-transform: none;
+	transition-duration: $hamburger-hover-transition-duration;
+	transition-property: opacity, filter;
+	transition-timing-function: $hamburger-hover-transition-timing-function;
+	width: $navbar--height;
+
+	@include mq($max-width: 768px) {
+		align-items: center;
+		display: block;
+		justify-content: center;
+	}
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&__box {
+		display: block;
+		height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+		margin: auto;
+		position: relative;
+		vertical-align: middle;
+		width: $navbar--height--mobile;
+	}
+
+	&__inner {
+		bottom: 0;
+		display: block;
+		margin-top: $hamburger-layer-height / -2;
+		transition-delay: 0.13s;
+		transition-duration: 0.13s;
+		transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+		&,
+		&::before,
+		&::after {
+			background-color: $dark-gray;
+			height: $hamburger-layer-height;
+			position: absolute;
+			transition-property: transform;
+			width: $navbar--height--mobile;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+		}
+
+		&::before {
+			top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+			transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+				transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+		}
+
+		&::after {
+			bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+			top: ($hamburger-layer-spacing * 2 + $hamburger-layer-height * 2) * -1;
+			transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+				opacity 0.1s linear;
+		}
+	}
+
+	// Hamburger - IS ACTIVE state
+	&.is-active {
+		.hamburger__inner {
+			transform: translate3d(0,
+				($hamburger-layer-spacing + $hamburger-layer-height) * -1,
+				0) rotate(-45deg);
+			transition-delay: 0.22s;
+			transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+			&::after {
+				opacity: 0;
+				top: 0;
+				transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+					opacity 0.1s 0.22s linear;
+			}
+
+			&::before {
+				top: 0;
+				transform: rotate(-90deg);
+				transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+					transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+			}
+		}
+	}
+}
+
+/* ==============================
+   Work Navbar
+   ============================== */
+
+.work-nav {
+	@extend %button;
+	border: 0;
+	color: $dark-gray;
+	display: block;
+	float: left;
+	line-height: $navbar--height;
+	padding: 0 $base-spacing;
+	transition: all 0.2s cubic-bezier(0, 0, 0.58, 1);
+	width: 33.333%;
+
+	&:hover {
+		background: $color-gold;
+		color: $dark-gray;
+	}
+
+	&__prev {
+		text-align: left;
+
+		@include mq($max-width: 600px) {
+			padding-left: $small-spacing;
+			padding-right: 0;
+		}
+
+		span {
+			&::before {
+				background: url("../img/icons/left-arrow.svg");
+			}
+		}
+	}
+
+	&__all {
+		text-align: center;
+
+		@include mq($max-width: 600px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		span {
+			&::before {
+				background: url("../img/icons/x-letter.svg");
+			}
+		}
+	}
+
+	&__next {
+		text-align: right;
+
+		@include mq($max-width: 600px) {
+			padding-left: 0;
+			padding-right: $small-spacing;
+		}
+
+		span {
+			&::after {
+				@extend %btn--icon--pseudo;
+				background: url("../img/icons/right-arrow.svg");
+				margin-left: $small-spacing / 2;
+				margin-right: 0;
+			}
+		}
+	}
+
+	span {
+		@extend %small-footer-font;
+		display: inline-block;
+		line-height: 1;
+	}
+}

@@ -1,0 +1,88 @@
+.hero {
+	background-attachment: fixed;
+	background-color: $hero-bgimage--color;
+	background-image: url("../img/optimize-me---hero.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+	padding: 120px 0;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+	@include mq($max-width: 1024px) {
+		background-attachment: scroll;
+		padding: 120px 0;
+	}
+
+	@include mq($max-width: 799px) {
+		background-size: contain;
+		padding: 80px 0;
+	}
+
+	&--wrap {
+		@include grid-container;
+		margin: auto;
+		max-width: 1200px;
+		width: 100%;
+
+		@include mq($max-width: 799px) {
+			width: 85%;
+		}
+
+		@include mq($max-width: 600px) {
+			width: 90%;
+		}
+	}
+
+	&--profile {
+		margin-bottom: $base-spacing;
+
+		@include grid-media($hero-layout-grid--tablet-up) {
+			@include grid-column(6);
+		}
+
+		@include grid-media($hero-layout-grid--large-up) {
+			@include grid-column(5);
+		}
+
+		&__text {
+			@extend %text-lead;
+			color: $light-gray;
+
+			@include mq($min-width: 600px) {
+				text-align: justify;
+			}
+		}
+	}
+
+	&--signature {
+		text-align: right;
+
+		svg {
+			display: inline-block;
+			height: 100px;
+			vertical-align: middle;
+			width: 50%;
+		}
+	}
+
+	&--image {
+		@extend %mobile__max-width;
+
+		@include grid-media($hero-layout-grid--tablet-up) {
+			@include grid-column(6);
+		}
+
+		@include grid-media($hero-layout-grid--large-up) {
+			@include grid-column(5);
+			@include grid-push(1);
+		}
+
+		img {
+			display: inline-block;
+		}
+	}
+}

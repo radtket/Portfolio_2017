@@ -1,0 +1,32 @@
+.list--skills {
+	@include grid-container;
+	display: block;
+	margin-bottom: $base-spacing;
+
+	li {
+		line-height: 1;
+		position: relative;
+		vertical-align: middle;
+
+		@include mq($min-width: 450px) {
+			float: left;
+			width: 50%;
+		}
+
+		@include mq($min-width: 800px) {
+			width: 33.33333%;
+		}
+
+		&::before {
+			// background-image: url("../img/icons/icon__check-mark.png?text=fallback"); // Fallback PNG
+			background-image: url("../img/icons/icon__check-mark.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: "";
+			display: inline-block;
+			height: $small-spacing;
+			margin-right: $small-spacing;
+			width: $small-spacing;
+		}
+	}
+}

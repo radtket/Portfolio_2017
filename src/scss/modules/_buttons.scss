@@ -1,0 +1,100 @@
+%btn--icon--pseudo {
+	// background: url("../img/icons/icon__mail--send.png");
+	// background: url("../img/icons/icon__mail--send.svg"), none;
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	content: "";
+	display: inline-block;
+	height: $small-spacing;
+	margin-right: $small-spacing / 2;
+	position: relative;
+	top: -1px;
+	transition: all .2s cubic-bezier(0, 0, .58, 1);
+	vertical-align: middle;
+	width: $icon-size;
+}
+
+%button {
+	appearance: none;
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: none;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	outline: 0;
+	text-align: center;
+	text-decoration: none;
+	touch-action: manipulation;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	&:hover,
+	&:focus {
+		border-color: transparent;
+		box-shadow: none;
+		outline: 0;
+	}
+
+	&:active {
+		cursor: pointer !important;
+		outline: none !important;
+	}
+
+	&.disabled,
+	&[disabled],
+	&[disabled],
+	&:disabled {
+		cursor: not-allowed;
+		filter: alpha(opacity=50);
+		opacity: .5;
+	}
+}
+
+button {
+	@extend %button;
+	border: 0;
+	padding: 0;
+}
+
+.btn {
+	@extend %button;
+	@extend %small-footer-font;
+	background: $dark-gray;
+	border: 2px solid transparent;
+	border-radius: $base-spacing;
+	color: $white;
+	line-height: 1;
+	padding: $small-spacing $base-spacing;
+	transition: all .2s cubic-bezier(0, 0, .58, 1);
+
+	&:hover,
+	&:focus {
+		background-color: rgba($black, .7);
+		color: rgba($white, .85);
+	}
+
+	&.disabled,
+	&[disabled],
+	&[disabled],
+	&:disabled {
+		&:hover {
+			background-color: $action-color;
+		}
+	}
+
+	&--icon {
+		&::before {
+			@extend %btn--icon--pseudo;
+		}
+
+		&:hover {
+			// &::before {
+			//   background: url("../img/sent-mail--white.png");
+			//   background: url("../img/sent-mail--white.svg"), none;
+			// }
+		}
+	}
+}

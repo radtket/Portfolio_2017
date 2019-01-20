@@ -1,0 +1,94 @@
+/* ==============================
+   Client Slider
+   ============================== */
+
+.slick__clients {
+	.slick-slide {
+		display: block;
+		height: 100px;
+		margin-right: $small-spacing;
+		transform-style: preserve-3d;
+
+		img,
+		svg,
+		object {
+			display: block;
+			margin: auto;
+			max-height: 75%;
+			max-width: 75%;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: all .27s cubic-bezier(.3, .1, .58, 1);
+		}
+
+		object {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+// IE Fix
+.flexbox.flexboxlegacy {
+
+	// Clients Slider
+	.slick__clients {
+		.slick-track {
+			display: flex;
+			transform: translate3d(0, 0, 0);
+			transition-property: transform;
+		}
+
+		.slick-slide {
+			align-items: center;
+			display: flex;
+			float: none;
+			justify-content: center;
+
+			img,
+			svg,
+			object {
+				top: 0;
+				transform: none;
+			}
+		}
+	}
+}
+
+
+
+/* ==============================
+   Testimonial Slider
+   ============================== */
+
+blockquote {
+	margin: auto;
+	max-width: 700px;
+
+	.testimonial__avatar {
+		text-align: center;
+
+		>img {
+			border-radius: $round-border-radius;
+			display: inline-block;
+			height: 60px;
+			width: 60px;
+		}
+	}
+
+	p {
+		@extend %text-lead;
+		margin-bottom: $base-spacing;
+		margin-top: $base-spacing;
+	}
+
+	cite {
+		@extend %small-footer-font;
+		color: $base-gray;
+		display: block;
+		margin-right: $small-spacing / 2;
+		text-align: right;
+	}
+}

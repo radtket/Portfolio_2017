@@ -1,0 +1,370 @@
+.project-hero {
+	background-attachment: fixed;
+	background-color: $project-hero;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	@include mq($max-width: 1024px) {
+		background-attachment: scroll;
+	}
+
+	&::before {
+		background: rgba($black-matte, .5);
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&__table {
+		display: table;
+		height: 100%;
+		position: relative;
+		width: 100%;
+		z-index: 2;
+
+		&--cell {
+			display: table-cell;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+}
+
+
+.project-hero__title {
+	color: $white;
+	font-size: 6rem;
+	line-height: 1;
+	margin-bottom: $small-spacing;
+	text-transform: uppercase;
+
+	@include mq($min-width: 600px) {
+		font-size: 10rem;
+		margin-bottom: $base-spacing;
+	}
+
+	@include mq($min-width: 800px) {
+		font-size: 14rem;
+	}
+
+	&--date {
+		@extend %headline--secondary;
+		color: $medium-gray;
+		padding-left: $x-small-spacing;
+	}
+}
+
+
+.project-hero__wrap {
+	@include grid-container;
+	overflow: hidden;
+	position: relative;
+}
+
+
+.project-hero__line {
+	border-top: 2px solid $color-gold;
+	height: 2px;
+	margin: $small-spacing 0;
+
+	@include mq($min-width: 600px) {
+		float: left;
+		width: $base-spacing * 3;
+	}
+}
+
+
+.project-hero__body {
+
+	@include mq($min-width: 600px) {
+		float: left;
+		margin-left: $large-spacing;
+		width: 71%;
+	}
+
+	&--desc {
+		color: $medium-gray;
+		font-size: 1.8rem;
+		line-height: $base-line-height;
+		margin-bottom: $base-spacing;
+
+		@include mq($min-width: 600px) {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+
+.project-hero__role {
+	@extend %small-footer-font;
+	color: $white;
+	margin-bottom: $x-small-spacing;
+
+	&--desc {
+		color: $project-desc;
+		font-family: $base-font-family;
+		letter-spacing: $base-letter-spacing;
+		line-height: $heading-line-height;
+		margin-bottom: $small-spacing;
+		text-transform: none;
+	}
+}
+
+
+.project-hero__cta {
+	color: $white;
+	font-style: italic;
+	letter-spacing: $base-letter-spacing;
+}
+
+
+
+
+
+
+
+@keyframes scroll-down-anim {
+	0% {
+		bottom: 2px;
+	}
+
+	50% {
+		bottom: 7px;
+	}
+
+	100% {
+		bottom: 2px;
+	}
+}
+
+.scroll-down {
+	bottom: 20px;
+	height: 40px;
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	transition: all 500ms cubic-bezier(.250, .460, .450, .940);
+	width: 40px;
+
+	@include mq($max-width: 480px) {
+		bottom: 10px;
+		height: 34px;
+		line-height: 34px;
+	}
+
+	&::before {
+		background: $white;
+		border-radius: 2px;
+		bottom: 0;
+		content: "";
+		display: block;
+		height: 20px;
+		left: 50%;
+		margin: 0 0 0 -10px;
+		position: absolute;
+		transform: rotate(45deg);
+		transition: all 500ms cubic-bezier(.250, .460, .450, .940);
+		width: 20px;
+		z-index: 1;
+	}
+
+	&:hover {
+		&::before {
+			opacity: .6;
+		}
+	}
+
+	&__icon {
+		animation: scroll-down-anim 1s infinite;
+		bottom: 4px;
+		color: $black-matte;
+		display: block;
+		font-size: 15px;
+		height: 10px;
+		left: 50%;
+		margin-left: -5px;
+		position: absolute;
+		width: 10px;
+		z-index: 2;
+
+		@include mq($max-width: 480px) {
+			margin-left: -11px;
+			width: 22px;
+		}
+	}
+}
+
+
+/* ==============================
+ Branding Colors
+============================== */
+
+.project-colors {
+	padding-top: $base-spacing;
+	text-align: center;
+
+	&:last-of-type {
+		padding-bottom: $base-spacing;
+	}
+
+	&__item {
+
+		display: inline-block;
+		padding: $small-spacing;
+
+		@include mq($min-width: 600px) {
+
+			min-width: 80px;
+			padding: $base-spacing;
+		}
+	}
+
+	&__color {
+		border: 6px solid $black-matte;
+		border-radius: 100%;
+		height: 60px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60px;
+
+		@include mq($min-width: 600px) {
+			border: 6px solid $form-box-border;
+			height: 80px;
+			margin-bottom: $base-spacing;
+			width: 80px;
+		}
+	}
+
+	&__text {
+		@extend %small-footer-font;
+		border: 1px solid $form-box-border;
+		border-radius: 100px;
+		letter-spacing: $base-letter-spacing;
+		padding: 2px $small-spacing;
+
+		@include mq($max-width: 600px) {
+			display: none;
+		}
+	}
+}
+
+// IE Fix
+.flexbox.flexboxlegacy {
+	.project-colors {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: center;
+
+		&__item {
+			flex: 0 60px 0;
+			min-width: auto;
+
+			@include mq($min-width: 600px) {
+				flex: 0 0 120px;
+			}
+		}
+
+		&__color {
+			border: 0;
+			box-shadow: 0 0 0 4px $black-matte, 0 0 0 5px $dark-gray;
+			height: 0;
+			padding-bottom: 100%;
+
+			@include mq($min-width: 600px) {
+				box-shadow: 0 0 0 9px $black-matte, 0 0 0 10px $dark-gray;
+			}
+		}
+	}
+}
+
+/* ==============================
+ Branding Logo
+============================== */
+
+.project-logo {
+	display: block;
+	height: 100%;
+	margin: auto;
+	max-width: 400px;
+	padding-bottom: $large-spacing;
+}
+
+/* ==============================
+ Client Images
+============================== */
+
+.project-image {
+	display: block;
+	text-align: center;
+}
+
+
+/* ==============================
+ Browser Mockup
+============================== */
+.browser-mock {
+	box-shadow: 0 2px 6px $form-box-border;
+	margin-bottom: 40px;
+	// max-width: 840px;
+	max-width: 100%;
+	position: relative;
+
+	@include mq($min-width: 600px) {
+		display: inline-block;
+		margin-bottom: 80px;
+		overflow: hidden;
+
+		&::before {
+			background: $light-gray;
+			border: 1px solid $form-box-border;
+			border-top-left-radius: 3px;
+			border-top-right-radius: 3px;
+			color: $medium-gray;
+			content: "● ● ●";
+			display: block;
+			font-size: 1.5em;
+			padding: 2px 8px 6px;
+			text-align: left;
+		}
+
+		img {
+			border: 1px solid $form-box-border;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+			border-top: 0;
+		}
+
+		&--outline {
+			&::before {
+				background: transparent;
+				border: 1px solid $base-border-color;
+				color: $base-border-color;
+				content: "○ ○ ○";
+			}
+
+			img {
+				border-color: $base-border-color;
+			}
+		}
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	picture {
+		display: block;
+	}
+
+}
