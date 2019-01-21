@@ -1,12 +1,12 @@
 {
-	"name": "taylor_radtke",
+	"name": "portfolio-2017",
 	"version": "1.0.0",
-	"description": "porfolio page",
-	"main": "Gruntfile.js",
+	"main": "docs/index.html",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "gulp watch",
+		"build": "gulp"
 	},
-	"author": "",
+	"author": "Taylor Radtke",
 	"license": "ISC",
 	"devDependencies": {
 		"autoprefixer": "^9.4.5",
